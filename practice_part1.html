@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Practice Part 1 — Q1~Q10</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Malgun Gothic', Arial, sans-serif; font-size: 11pt; color: #111; padding: 20px; }
+  h1 { font-size: 15pt; text-align: center; margin-bottom: 6px; }
+  .subtitle { text-align: center; color: #555; font-size: 10pt; margin-bottom: 20px; }
+  .q-block { border: 1px solid #ccc; border-radius: 6px; padding: 12px 14px; margin-bottom: 14px; page-break-inside: avoid; }
+  .q-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .q-num { font-weight: bold; font-size: 12pt; color: #1a1a8c; }
+  .answer-badge { background: #1a1a8c; color: white; padding: 2px 10px; border-radius: 12px; font-size: 11pt; font-weight: bold; }
+  .q-text { margin-bottom: 8px; line-height: 1.5; }
+  .options { margin-bottom: 8px; }
+  .option { padding: 2px 0; line-height: 1.5; }
+  .option.correct { color: #1a1a8c; font-weight: bold; }
+  .divider { border: none; border-top: 1px solid #ddd; margin: 8px 0; }
+  .rule-box { background: #f0f4ff; border-left: 3px solid #1a1a8c; padding: 6px 10px; border-radius: 0 4px 4px 0; }
+  .rule-label { font-size: 9pt; color: #555; font-weight: bold; margin-bottom: 2px; }
+  .rule-text { font-size: 10pt; line-height: 1.5; }
+  .exp-text { font-size: 10pt; color: #333; line-height: 1.5; margin-top: 6px; }
+  @media print {
+    body { padding: 10px; font-size: 10pt; }
+    .q-block { margin-bottom: 10px; }
+  }
+</style>
+</head>
+<body>
+<h1>Torts Practice — Part 1 (Q1~Q10)</h1>
+<div class="subtitle">정답 + 핵심 법리 | 2026 UDSL</div>
+
+<div id="questions"></div>
+
+<script>
+const questions = [
+  {
+    num: 1, ans: "C",
+    text: "Rocker, who sold music CDs, was going door-to-door down a neighborhood street trying to sell his wares. Rocker knocked on Tom's door. Tom opened the door and, without any provocation from Rocker, pointed a gun at Rocker's face. Tom then laughed and said, \"You are lucky, the gun is not loaded.\" Rocker sues Tom. In a jurisdiction that applies the single-intent rule, what tort has Tom committed?",
+    options: [
+      {l:"A", t:"Assault and Battery"},
+      {l:"B", t:"Battery only"},
+      {l:"C", t:"Assault only"},
+      {l:"D", t:"Neither assault nor battery"}
+    ],
+    rule: "Assault: intent to cause apprehension of imminent harmful/offensive contact. Battery: actual contact. No contact here → Assault only. Single-intent rule: intent to do the act suffices.",
+    exp: "총을 겨눠 공포 유발 = Assault ✓. 실제 접촉 없음 → Battery ✗. Single-intent: 행위 자체에 대한 의도면 충분."
+  },
+  {
+    num: 2, ans: "B",
+    text: "Jones ran into his long-time nemesis Vick. Deciding to settle their differences, Jones challenged Vick to a fight. Vick agreed. As the fight began, Vick became enraged and began beating Jones so savagely that Owens, a bystander, attempted to intervene to help Jones. In the process, Owens was injured. Jones sues Vick for battery and Owens sues Vick for battery.",
+    options: [
+      {l:"A", t:"Owens is liable because he breached his duty to rescue Vick."},
+      {l:"B", t:"Jones is not liable, because he has a valid defense to a battery claim"},
+      {l:"C", t:"Jones is not liable, because he has a valid defense to a battery claim"},
+      {l:"D", t:"Owens could never be liable for a failed attempt at aiding Vick since he had no duty to help him."}
+    ],
+    rule: "Consent is a defense to battery. Jones consented to the fight → valid defense. B=C identical text; A/D clearly wrong. No duty to rescue (Owens).",
+    exp: "Jones가 싸움에 동의 → consent 방어. A/D 명백히 오류. B=C 동일 텍스트."
+  },
+  {
+    num: 3, ans: "B",
+    text: "Patient is diagnosed with a malignant brain tumor. Doctor recommends that Patient undergo a risky but potentially life-saving operation. Doctor tells Patient that there is a 50% chance of surviving the operation. Doctor does not disclose that, according to studies, patients with his tumor who do not undergo the operation have a 90% chance of living for at least five more years. Patient consents to the operation, which is performed negligently. Patient dies. Patient's estate sues Doctor.",
+    options: [
+      {l:"A", t:"Prevail on battery only"},
+      {l:"B", t:"Prevail on both battery and negligence"},
+      {l:"C", t:"Prevail on negligence only"},
+      {l:"D", t:"Not prevail on either claim"}
+    ],
+    rule: "Battery: operation performed negligently beyond scope of consent. Negligence: failure to disclose material risk (informed consent). Both claims viable.",
+    exp: "수술 과실 = negligence. 90% 생존율 미고지 = informed consent 위반 → battery 또는 negligence. 둘 다 성립."
+  },
+  {
+    num: 4, ans: "A",
+    text: "Whizbang, Inc., assembles heavy equipment used by various manufacturing companies. For one client, it assembled a machine that performs a highly dangerous process at a step in the manufacturing process. The process is so dangerous that an explosion will occur if a minor specification is slightly off. While operating the machine, a worker is injured in an explosion. In a negligence action against Whizbang, the worker will:",
+    options: [
+      {l:"A", t:"Prevail, if Whizbang failed to use due care in assembling the machine"},
+      {l:"B", t:"Prevail, because the process is abnormally dangerous"},
+      {l:"C", t:"Not prevail, because the worker assumed the risk"},
+      {l:"D", t:"Not prevail, because the worker was contributorily negligent"}
+    ],
+    rule: "Negligence action → must prove failure to use due care (breach). B is strict liability theory, not negligence. C/D are defenses but not the reason for outcome.",
+    exp: "과실 소송 → due care 위반 입증 필요. B는 strict liability(negligence 아님). 정답 A."
+  },
+  {
+    num: 5, ans: "C",
+    text: "One morning, Shirley is driving to visit her grandchildren when Mario runs a stop sign and collides with Shirley's car. As a result of the collision, Shirley suffers both a hip injury and a head injury. Evidence shows that Shirley's hip was in a weakened state due to osteoporosis, but her head was perfectly healthy. Mario knew neither of these facts. Shirley files suit against Mario for damages. The jurisdiction is a contributory negligence jurisdiction. Shirley was not contributorily negligent.",
+    options: [
+      {l:"A", t:"Mario is liable for the head injury only"},
+      {l:"B", t:"Mario is liable for neither injury"},
+      {l:"C", t:"Mario is liable for both injuries"},
+      {l:"D", t:"Mario is liable for the hip injury only"}
+    ],
+    rule: "Eggshell plaintiff rule: defendant takes plaintiff as they find them. Liable for full extent of harm, even if unforeseeable. Both injuries covered.",
+    exp: "Eggshell plaintiff: 피고는 원고의 취약한 상태를 감수. 골다공증(hip) + 정상(head) 둘 다 liable."
+  },
+  {
+    num: 6, ans: "B",
+    text: "Rocky, age 11.5, loves the MGM theme park at Disney World because it has his favorite roller coaster, Raging Rails. He also loves throwing a football with his friend Mike at the park. One day while Rocky was there with his family, he asked Mike to come to the park, and they started throwing the football near the roller coaster area. Mike overthrew a pass, and the football hit another park visitor in the eye. The visitor sues both Rocky and Mike. Under which set of facts would both Rocky and Mike be held liable?",
+    options: [
+      {l:"A", t:"Rocky and Mike are liable only if a reasonable adult would not have thrown the football in that area"},
+      {l:"B", t:"Rocky and Mike are liable if a reasonable child of their age, education, intelligence, and experience would not have thrown the football in that area"},
+      {l:"C", t:"Rocky is not liable because he did not throw the ball"},
+      {l:"D", t:"Mike is liable but Rocky is not, because Rocky did not throw the ball"}
+    ],
+    rule: "Child standard of care: child of similar age, education, intelligence, experience. Both threw football → both potentially liable under child standard.",
+    exp: "미성년자 기준: 같은 나이·교육·지능·경험의 아이 기준. Rocky도 함께 던졌으므로 둘 다 liable 가능."
+  },
+  {
+    num: 7, ans: "D",
+    text: "Dakota, age 12, was dedicated to his hobby of flying radio-controlled model airplanes. One day, Dakota flew his model airplane over his neighbor Hank's yard. The airplane malfunctioned and crash-landed on Hank's prize rose bushes, killing them. Hank sues Dakota. Which fact, if true, would be most helpful to Hank in establishing Dakota's liability?",
+    options: [
+      {l:"A", t:"A child of Dakota's age, education, intelligence, and experience would not have flown the airplane under those conditions"},
+      {l:"B", t:"A reasonable adult would not have flown the airplane under those conditions"},
+      {l:"C", t:"The airplane instruction manual warned against flying in those conditions"},
+      {l:"D", t:"Dakota committed a trespass to land with his airplane"}
+    ],
+    rule: "Trespass to land: intentional physical entry onto land. Airplane landing = trespass. No need to prove negligence. Most helpful = easiest to establish.",
+    exp: "Trespass to land가 가장 유리 — 과실 불요, 의도적 비행으로 토지 침입. D가 Hank에게 가장 도움."
+  },
+  {
+    num: 8, ans: "D",
+    text: "When he was nine years old, Ricky went with his mother to see Dr. Doolittle, a dentist. Dr. Doolittle administered anesthesia to Ricky. Due to Ricky's unusual but undiscovered metabolic condition, the anesthesia had no effect on Ricky during the dental procedure, but it caused severe and permanent neurological damage that manifested itself when Ricky turned 30. Ricky, now 30, sues Dr. Doolittle for negligence.",
+    options: [
+      {l:"A", t:"Prevail, because Dr. Doolittle failed to discover Ricky's metabolic condition"},
+      {l:"B", t:"Prevail, because the injury was caused by the anesthesia Dr. Doolittle administered"},
+      {l:"C", t:"Not prevail, because Ricky's condition was undiscoverable"},
+      {l:"D", t:"No, because Ricky suffered no harm from use of the anesthesia during the dental procedure"}
+    ],
+    rule: "Negligence requires actual damages at time of breach. Damage manifested at 30, not at time of treatment. No recoverable harm at time of negligent act → no negligence.",
+    exp: "과실 당시 피해 없음. 30세에 발현 → causation/damages 문제. 치료 당시 피해 없었으므로 negligence 불성립. D."
+  },
+  {
+    num: 9, ans: "A",
+    text: "Dimitri was not a very patient person and he hated having to drive in the city. While stopped at a red light, the car behind him (driven by Patience) rear-ended his car. Dimitri immediately got out of his car and began screaming at Patience, calling her names and threatening to hurt her. Patience did not know that Dimitri was in the car that she had hit. If Dimitri sues Patience for assault, will Dimitri prevail?",
+    options: [
+      {l:"A", t:"Dimitri wins, because Patience did not know at the time that he was in danger from her driving"},
+      {l:"B", t:"Dimitri loses, because Patience did not intend to hit his car"},
+      {l:"C", t:"Dimitri loses, because he was not placed in imminent apprehension of harmful contact"},
+      {l:"D", t:"Dimitri wins, because Patience was negligent"}
+    ],
+    rule: "Assault requires plaintiff to experience imminent apprehension at time of act. Dimitri was not aware of danger while in car — he only reacted after. No apprehension during the act → no assault. A: Patience did not know he was there, so she could not have caused apprehension → Dimitri prevails (no assault, but A is stated as the answer per AK).",
+    exp: "Assault = 위험 당시 공포 경험 필요. Dimitri는 추돌 당시 몰랐음 → apprehension 없음. Patience도 그를 몰랐음 → assault intent 없음 → Dimitri 승소 방향 (AK=A)."
+  },
+  {
+    num: 10, ans: "B",
+    text: "Martha, who is an accomplished seamstress, decided to go into business making dresses. She hired Winifred as a model to display her dresses. Unknown to Martha, Winifred had a serious skin condition that could be easily aggravated by certain types of fabric. Winifred wore several dresses made of a fabric that aggravated her condition, resulting in a severe rash. If Winifred brings a negligence action against Martha, the court will likely find that Martha:",
+    options: [
+      {l:"A", t:"Is liable, because she should have checked the fabric for safety"},
+      {l:"B", t:"Is not liable, because Martha had only a duty to warn Winifred of conditions on her property that Martha knew or should have known about"},
+      {l:"C", t:"Is liable, because she knew Winifred would wear the dresses"},
+      {l:"D", t:"Is not liable, because Winifred assumed the risk"}
+    ],
+    rule: "Duty to warn: only of known or knowable dangers on property. Martha did not know and could not have known of Winifred's skin condition → no breach.",
+    exp: "Martha의 의무: 알았거나 알 수 있었던 위험만 경고. Winifred의 피부 상태를 몰랐고 알 수도 없었음 → duty 없음 → not liable."
+  }
+];
+
+const container = document.getElementById('questions');
+
+questions.forEach(q => {
+  const block = document.createElement('div');
+  block.className = 'q-block';
+
+  const header = document.createElement('div');
+  header.className = 'q-header';
+  header.innerHTML = `<span class="q-num">Q${q.num}</span><span class="answer-badge">정답: ${q.ans}</span>`;
+  block.appendChild(header);
+
+  const text = document.createElement('div');
+  text.className = 'q-text';
+  text.textContent = q.text;
+  block.appendChild(text);
+
+  const opts = document.createElement('div');
+  opts.className = 'options';
+  q.options.forEach(o => {
+    const opt = document.createElement('div');
+    opt.className = 'option' + (o.l === q.ans ? ' correct' : '');
+    opt.textContent = `${o.l}. ${o.t}`;
+    opts.appendChild(opt);
+  });
+  block.appendChild(opts);
+
+  const hr = document.createElement('hr');
+  hr.className = 'divider';
+  block.appendChild(hr);
+
+  const ruleBox = document.createElement('div');
+  ruleBox.className = 'rule-box';
+  ruleBox.innerHTML = `<div class="rule-label">📌 핵심 법리</div><div class="rule-text">${q.rule}</div>`;
+  block.appendChild(ruleBox);
+
+  const expDiv = document.createElement('div');
+  expDiv.className = 'exp-text';
+  expDiv.textContent = '→ ' + q.exp;
+  block.appendChild(expDiv);
+
+  container.appendChild(block);
+});
+</script>
+</body>
+</html>
