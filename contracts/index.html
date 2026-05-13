@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contracts — MBE Study</title>
+<title>Contracts &#8212; MBE Study</title>
 <style>
 :root{--acc:#3d1880;--brd:#e0d0f0;--mut:#888;}
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -18,7 +18,27 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 .ctab.on{color:var(--acc);border-bottom-color:var(--acc);}
 .cls{display:none;padding:.8rem .9rem 4rem;max-width:1060px;margin:0 auto;}
 .cls.on{display:block;}
-/* KTK prac */
+/* ── 이론 탭 ── */
+.th-block{margin-bottom:1.2rem;}
+.th-block-hd{background:#2d2060;color:#fff;font-size:.8rem;font-weight:700;padding:.4rem 1rem;border-radius:6px 6px 0 0;}
+.th-card{border:1.5px solid #c9b8e8;border-top:none;overflow:hidden;margin-bottom:.1rem;}
+.th-card:last-child{border-radius:0 0 6px 6px;}
+.th-card-hd{background:#f4f0ff;color:#3d1880;font-size:.78rem;font-weight:700;padding:.3rem 1rem;border-bottom:1px solid var(--brd);}
+.th-row{display:grid;grid-template-columns:1fr 1fr;}
+.th-col{padding:.6rem .9rem;font-size:.78rem;line-height:1.72;color:#222;}
+.th-col-ko{border-right:1.5px solid #e0d4f8;}
+.th-lang{font-size:.62rem;font-weight:700;padding:.15rem .5rem;border-radius:3px;display:inline-block;margin-bottom:.4rem;}
+.th-lang.ko{background:#e8f0fc;color:#1a4d8f;}
+.th-lang.en{background:#e8f5e8;color:#1a6a1a;}
+.th-col h4{font-size:.78rem;font-weight:700;margin:.5rem 0 .2rem;color:#3d1880;}
+.th-col h4:first-of-type{margin-top:0;}
+.th-col ul{margin:.15rem 0 .25rem 1.1rem;padding:0;}
+.th-col li{margin:.12rem 0;}
+.rule-box{background:#fdf6e3;border-left:3px solid #c5a028;padding:.3rem .7rem;margin:.35rem 0;font-size:.75rem;border-radius:0 3px 3px 0;line-height:1.6;}
+.warn-box{background:#fff3f3;border-left:3px solid #d44;padding:.3rem .7rem;margin:.35rem 0;font-size:.75rem;border-radius:0 3px 3px 0;line-height:1.6;}
+.tip-box{background:#f0faf0;border-left:3px solid #2a8;padding:.3rem .7rem;margin:.35rem 0;font-size:.75rem;border-radius:0 3px 3px 0;line-height:1.6;}
+@media(max-width:640px){.th-row{grid-template-columns:1fr;}.th-col-ko{border-right:none;border-bottom:1.5px solid #e0d4f8;}}
+/* ── KTK 탭 ── */
 .ktk-prac-block{border:1.5px solid #c9b8e8;border-radius:8px;overflow:hidden;margin-bottom:1rem;}
 .ktk-prac-cl-hd{background:#2d2060;color:#fff;font-size:.78rem;font-weight:700;padding:.45rem 1rem;}
 .ktk-prac-card{border-top:1px solid #e0d0f0;padding:.7rem 1rem .8rem;}
@@ -31,7 +51,6 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 .ktk-prac-explain.kp-open{display:block;}
 .ktk-prac-answer-badge{display:inline-block;background:#1a6a1a;color:#fff;font-size:.7rem;font-weight:700;padding:.2rem .7rem;border-radius:12px;margin-bottom:.4rem;}
 .ktk-prac-exp-text{font-size:.8rem;line-height:1.75;color:#222;margin-bottom:.6rem;}
-/* jenspark */
 .jenspark-wrap{margin-top:.5rem;}
 .jenspark-lbl{font-size:.65rem;font-weight:700;color:#7a5c00;background:#fdf6e3;padding:.2rem .6rem;border-radius:3px;display:inline-block;margin-bottom:.35rem;}
 .jenspark-imgs{display:flex;gap:.5rem;flex-wrap:wrap;}
@@ -43,64 +62,827 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 </head>
 <body>
 <div class="top-bar">
-<a href="../index.html">← 과목 목록</a>
-<span class="top-title">📝 Contracts</span>
-<span style="margin-left:auto;font-size:.7rem;color:#b0a0e8">KTK 21문제</span>
+<a href="../index.html">&#8592; &#44284;&#47785; &#47785;&#47197;</a>
+<span class="top-title">&#128221; Contracts</span>
+<span style="margin-left:auto;font-size:.7rem;color:#b0a0e8">&#C774;&#B860; 19 | KTK 21&#BB38;&#C81C;</span>
 </div>
 <div class="ctabs">
-  <div class="ctab on" onclick="showCls('ktk_prac')">📋 KTK 문제풀이</div>
-  <div class="ctab" onclick="showCls('placeholder_fc')" style="opacity:.4;cursor:default">🃏 플래시카드 (준비 중)</div>
-  <div class="ctab" onclick="showCls('placeholder_vocab')" style="opacity:.4;cursor:default">📖 어휘 (준비 중)</div>
-  <div class="ctab" onclick="showCls('placeholder_irac')" style="opacity:.4;cursor:default">✍ IRAC (준비 중)</div>
+  <div class="ctab on" onclick="showCls('theory')">&#128218; &#C774;&#B860; (19&#D1A0;&#D53D;)</div>
+  <div class="ctab" onclick="showCls('ktk_prac')">&#128203; KTK &#BB38;&#C81C;&#D480;&#C774; (21&#BB38;&#C81C;)</div>
+  <div class="ctab" style="opacity:.4;cursor:default">&#127183; &#D50C;&#B798;&#C2DC;&#CE74;&#B4DC; (&#C900;&#BE44; &#C911;)</div>
+  <div class="ctab" style="opacity:.4;cursor:default">&#128214; &#C5B4;&#D718; (&#C900;&#BE44; &#C911;)</div>
 </div>
-<div class="cls on" id="ktk_prac">
-<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">KTK 문제풀이 (21문제) — 팩트패턴 분석 후 ▼ 버튼으로 정답·해설 확인</div>
+<div class="cls on" id="theory">
+<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">&#D55C;&#AE00;&#C774;&#B860;(&#C88C;) &#8644; &#C601;&#BB38;&#C774;&#B860;(&#C6B0;) &#BCCD;&#B82C;&#BC30;&#CE58; &mdash; 19&#D1A0;&#D53D;</div>
+<div class="th-block">
+<div class="th-block-hd">⚖️ 적용법 (Governing Law)</div>
+<div class="th-card">
+<div class="th-card-hd">Common Law vs UCC</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>적용 기준</h4>
+<ul>
+<li><b>Common Law</b> — 서비스·부동산·고용 계약</li>
+<li><b>UCC Article 2</b> — 동산(<i>Goods</i>) 매매</li>
+<li><b>혼합 계약</b> → 주된 목적 기준 (Predominant Purpose Test)</li>
+</ul>
+<div class="rule-box">📌 Goods = 계약 체결 시 식별 가능한 모든 이동 물건<br>
+(화폐·서비스·무형자산·부동산 제외)</div>
+<h4>UCC 상인 (Merchant)</h4>
+<ul>
+<li>해당 물품을 거래하거나 전문 지식 보유자</li>
+<li>상인 간 특별 규칙 적용 (Battle of Forms, SOF 확인서 등)</li>
+</ul>
+<div class="warn-box">⚠️ UCC가 침묵하면 Common Law로 보충</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Governing Law</h4>
+<ul>
+<li><b>Common Law</b> — Services, real property, employment</li>
+<li><b>UCC Article 2</b> — Sale of <i>goods</i></li>
+<li><b>Mixed K</b> → Predominant Purpose Test</li>
+</ul>
+<div class="rule-box">📌 Goods = all movable things identified at time of contracting<br>
+(excludes money, services, intangibles, real property)</div>
+<h4>Merchant</h4>
+<ul>
+<li>Deals in goods of the kind OR holds out as having special knowledge</li>
+<li>Special rules apply between merchants (Battle of Forms, SOF confirmation)</li>
+</ul>
+<div class="warn-box">⚠️ Where UCC is silent → Common Law fills the gap</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">UCC §2-207 — Battle of the Forms</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>Mirror Image Rule (Common Law)</h4>
+<ul>
+<li>승낙은 청약을 그대로 반영해야 함</li>
+<li>추가/변경 → 반청약(Counter-Offer), 원 청약 소멸</li>
+</ul>
+<h4>UCC §2-207</h4>
+<ul>
+<li>추가 조건 있어도 <b>승낙으로 취급</b></li>
+<li><b>상인 간</b> 추가 조건 → 자동 계약 편입 (단, ①중요 변경 ②청약자 반대 ③10일 내 이의 시 제외)</li>
+<li>비상인: 추가 조건 = 제안에 불과</li>
+</ul>
+<div class="rule-box">📌 대용 선적 (Accommodation) = Counter-Offer<br>
+→ 비합치 물품 + 설명 메모 발송 = 상대방 수락/거절 자유</div>
+<div class="warn-box">⚠️ 상충 조건(Conflicting terms) → Knock-out Rule: 공통 조건만 계약에 편입</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Common Law — Mirror Image Rule</h4>
+<ul>
+<li>Acceptance must exactly mirror the offer</li>
+<li>Any addition/change → Counter-Offer, original offer terminated</li>
+</ul>
+<h4>UCC §2-207</h4>
+<ul>
+<li>Additional terms → still an <b>acceptance</b></li>
+<li><b>Between merchants</b>: additional terms become part of K automatically<br>
+(unless ①material alteration ②offeror objects ③objected within 10 days)</li>
+<li>Non-merchants: additional terms = mere proposals only</li>
+</ul>
+<div class="rule-box">📌 Accommodation shipment = Counter-Offer<br>
+→ Non-conforming goods + explanatory note = buyer may accept or reject</div>
+<div class="warn-box">⚠️ Conflicting terms → Knock-out Rule: only common terms remain in K</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Firm Offer &amp; Option Contract</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>Common Law — 옵션 계약</h4>
+<ul>
+<li>청약은 원칙상 수락 전 언제든 <b>철회 가능</b></li>
+<li>옵션 계약: 철회 포기 약속 + <b>약인 필수</b> → 철회 불가</li>
+</ul>
+<h4>UCC §2-205 — 확정 청약 (Firm Offer)</h4>
+<ul>
+<li><b>상인</b>이 <b>서면</b>으로 청약 유지 명시</li>
+<li>약인 없어도 명시 기간 동안(최대 <b>3개월</b>) 철회 불가</li>
+<li>비상인 → UCC Firm Offer 적용 불가 → CL로 환원</li>
+</ul>
+<div class="warn-box">⚠️ MBE 함정: 비상인의 "유지" 약속 + 약인 없음 → 철회 가능!</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Common Law — Option Contract</h4>
+<ul>
+<li>General rule: offer is freely revocable before acceptance</li>
+<li>Option contract: promise not to revoke + <b>consideration required</b> → irrevocable</li>
+</ul>
+<h4>UCC §2-205 — Firm Offer</h4>
+<ul>
+<li><b>Merchant</b> gives <b>written</b> assurance offer will be held open</li>
+<li>Irrevocable for stated period (max <b>3 months</b>) without consideration</li>
+<li>Non-merchant → UCC Firm Offer inapplicable → back to Common Law</li>
+</ul>
+<div class="warn-box">⚠️ MBE trap: Non-merchant's written "hold open" + no consideration → freely revocable!</div>
+</div>
+</div>
+</div>
+</div>
+<div class="th-block">
+<div class="th-block-hd">📝 계약 형성 (Contract Formation)</div>
+<div class="th-card">
+<div class="th-card-hd">Offer &amp; Acceptance — 청약과 승낙</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>청약 요소</h4>
+<ul>
+<li>① 명확한 조건 ② 계약 의도 ③ 상대방 전달</li>
+</ul>
+<h4>청약 소멸</h4>
+<ul>
+<li>철회 (Revocation) / 거절 (Rejection) / 반청약 / 기간 경과 / 사망·무능력</li>
+<li><b>Mailbox Rule</b>: 승낙은 <b>발송 시</b> 효력 발생 (도착 불필요)</li>
+</ul>
+<h4>Mirror Image Rule (CL)</h4>
+<ul>
+<li>승낙에 변경 있으면 → 반청약, 원 청약 소멸</li>
+</ul>
+<div class="rule-box">📌 Unilateral K: 행위 시작 = 철회 불가 + 완성 조건부 지급</div>
+<div class="warn-box">⚠️ Mailbox Rule 예외: 청약자가 다른 방법 지정 / 옵션 계약 / 이메일은 논쟁적</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Offer Elements</h4>
+<ul>
+<li>① Definite terms ② Intent to contract ③ Communication to offeree</li>
+</ul>
+<h4>Termination of Offer</h4>
+<ul>
+<li>Revocation / Rejection / Counter-offer / Lapse / Death or incapacity</li>
+<li><b>Mailbox Rule</b>: acceptance effective upon <b>dispatch</b> (not receipt)</li>
+</ul>
+<h4>Mirror Image Rule (CL)</h4>
+<ul>
+<li>Any variation in acceptance → Counter-offer, original offer terminated</li>
+</ul>
+<div class="rule-box">📌 Unilateral K: part performance = offer irrevocable + payment conditioned on completion</div>
+<div class="warn-box">⚠️ Mailbox Rule exceptions: offeror specifies other method / option contract / electronic communications disputed</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Consideration — 약인</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>성립 요건</h4>
+<ul>
+<li>① 교환적 성격 (Bargained-for) ② 법적 가치 ③ 쌍방 존재</li>
+<li>법적 가치 = 법적 이익 또는 법적 불이익</li>
+</ul>
+<h4>주요 함정</h4>
+<ul>
+<li><b>과거 약인</b> (Past Consideration) → 무효</li>
+<li><b>기존 의무 원칙</b> (Pre-existing Duty Rule) → 이미 할 의무 있는 행위는 약인 불가<br>
+단, 예외: ① 예상치 못한 어려움 ② UCC 물품계약 수정 ③ 제3자에 대한 의무</li>
+<li><b>허위 약속</b> (Illusory Promise) → 선택권만 있고 의무 없는 약속 = 약인 무효</li>
+</ul>
+<h4>약속적 금반언 (Promissory Estoppel)</h4>
+<ul>
+<li>① 명확한 약속 ② 합리적 신뢰 ③ 실질적 불이익 → 약인 없어도 집행 가능</li>
+</ul>
+<div class="rule-box">📌 UCC: 물품계약 수정은 약인 불필요</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Elements</h4>
+<ul>
+<li>① Bargained-for exchange ② Legal value ③ Presence on both sides</li>
+<li>Legal value = legal benefit OR legal detriment</li>
+</ul>
+<h4>Key Traps</h4>
+<ul>
+<li><b>Past Consideration</b> → invalid</li>
+<li><b>Pre-Existing Duty Rule</b> → performing existing duty = no consideration<br>
+Exceptions: ① Unforeseen difficulty ② UCC goods modification ③ Duty owed to third party</li>
+<li><b>Illusory Promise</b> → appears to bind but actually imposes no obligation = no consideration</li>
+</ul>
+<h4>Promissory Estoppel</h4>
+<ul>
+<li>① Clear promise ② Reasonable reliance ③ Substantial detriment → enforceable without consideration</li>
+</ul>
+<div class="rule-box">📌 UCC: modification of goods contract needs NO new consideration</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Capacity — 계약 능력</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>미성년자 (Minors)</h4>
+<ul>
+<li>미성년 계약 = <b>취소 가능</b> (Voidable)</li>
+<li>18세 전 또는 성인 후 합리적 기간 내 취소 가능</li>
+<li>예외: <b>생필품</b> (Necessaries) — 취소 불가, 합리적 가격 지불</li>
+</ul>
+<h4>추인 (Ratification)</h4>
+<ul>
+<li>성인 후 이행 계속 / 이행 약속 / 장기간 침묵 → 묵시적 추인</li>
+<li>추인 후 취소권 소멸</li>
+</ul>
+<h4>정신장애</h4>
+<ul>
+<li>법원 선고 무능력자: <b>Void</b> (무효)</li>
+<li>미선고: <b>Voidable</b> — 사후 추인 가능</li>
+</ul>
+<div class="warn-box">⚠️ "as soon as possible" = 허위 약속 아님 — 이행 시기 유보에 불과</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Minors</h4>
+<ul>
+<li>Minor's contract = <b>Voidable</b></li>
+<li>Can disaffirm before 18 OR within reasonable time after majority</li>
+<li>Exception: <b>Necessaries</b> — cannot disaffirm; pay reasonable value</li>
+</ul>
+<h4>Ratification</h4>
+<ul>
+<li>Continue performing / promise to perform / long silence after majority → implied ratification</li>
+<li>Once ratified, cannot disaffirm</li>
+</ul>
+<h4>Mental Incompetence</h4>
+<ul>
+<li>Court-adjudicated: <b>Void</b></li>
+<li>Non-adjudicated: <b>Voidable</b> — may ratify later</li>
+</ul>
+<div class="warn-box">⚠️ "as soon as possible" ≠ illusory — it is merely a timing caveat, not negating obligation</div>
+</div>
+</div>
+</div>
+</div>
+<div class="th-block">
+<div class="th-block-hd">🔒 집행 가능성 (Enforceability)</div>
+<div class="th-card">
+<div class="th-card-hd">Statute of Frauds — 사기방지법</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>MY LEGS — 서면 필요 계약</h4>
+<ul>
+<li><b>M</b>arriage — 결혼 약속</li>
+<li><b>Y</b>ear — 1년 내 이행 불가 계약</li>
+<li><b>L</b>and — 토지 이익 관련 계약</li>
+<li><b>E</b>xecutor — 유언 집행인의 개인 채무 보증</li>
+<li><b>G</b>oods — UCC $500 이상 동산 매매</li>
+<li><b>S</b>uretyship — 타인 채무 보증</li>
+</ul>
+<h4>서면 요건</h4>
+<ul>
+<li>핵심 조건 + <b>이행 강제 대상 당사자의 서명</b></li>
+</ul>
+<h4>SOF 예외</h4>
+<ul>
+<li>부분 이행 (특히 토지) / 특별 제작품 / 사법상 인낙 / UCC 상인 확인서</li>
+</ul>
+<div class="rule-box">📌 UCC SOF: 수량 기재만으로 충분 / 상인 간 확인서 10일 내 이의 없으면 구속</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>MY LEGS — Writing Required</h4>
+<ul>
+<li><b>M</b>arriage — promise in consideration of marriage</li>
+<li><b>Y</b>ear — cannot be performed within 1 year</li>
+<li><b>L</b>and — interests in real property</li>
+<li><b>E</b>xecutor — executor's personal debt guarantee</li>
+<li><b>G</b>oods — UCC sale of goods ≥ $500</li>
+<li><b>S</b>uretyship — promise to answer for another's debt</li>
+</ul>
+<h4>Writing Requirements</h4>
+<ul>
+<li>Essential terms + <b>signature of party to be charged</b></li>
+</ul>
+<h4>Exceptions</h4>
+<ul>
+<li>Part performance (esp. land) / Specially manufactured goods / Judicial admission / UCC merchant confirmation</li>
+</ul>
+<div class="rule-box">📌 UCC SOF: quantity term sufficient / Merchant confirmation — no objection within 10 days = bound</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Parol Evidence Rule — 구두증거배제원칙</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>원칙</h4>
+<ul>
+<li>완전 통합 서면 계약의 조건을 <b>사전 또는 동시 합의</b>로 변경·모순하는 증거 배제</li>
+</ul>
+<h4>배제되는 증거</h4>
+<ul>
+<li>서명 전 구두 합의 / 서명 전 서면 합의 / 계약 내용과 모순되는 증거</li>
+</ul>
+<h4>허용되는 증거</h4>
+<ul>
+<li>계약 <b>이후</b> 수정 / 조건(Condition)의 미발생 / 사기·강박·착오 / 계약 해석 목적</li>
+</ul>
+<h4>UCC 해석 위계</h4>
+<div class="rule-box">Course of Performance &gt; Course of Dealing &gt; Trade Usage<br>
+(실제 이행 &gt; 거래 관행 &gt; 업계 관례)</div>
+<div class="warn-box">⚠️ 계약이 "침묵"하면 모순 아님 → Course of Performance로 보충 가능</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Rule</h4>
+<ul>
+<li>Bars use of <b>prior or contemporaneous</b> agreements to vary or contradict terms of a fully integrated written K</li>
+</ul>
+<h4>Excluded Evidence</h4>
+<ul>
+<li>Prior oral agreements / Prior written agreements / Contradicting express terms</li>
+</ul>
+<h4>Admissible Evidence</h4>
+<ul>
+<li><b>Subsequent</b> modifications / Condition precedent not occurring / Fraud, duress, mistake / Interpretation purposes</li>
+</ul>
+<h4>UCC Interpretation Hierarchy</h4>
+<div class="rule-box">Course of Performance &gt; Course of Dealing &gt; Trade Usage</div>
+<div class="warn-box">⚠️ Contract "silent" ≠ contradiction → CoP can supplement (not contradict) a silent term</div>
+</div>
+</div>
+</div>
+</div>
+<div class="th-block">
+<div class="th-block-hd">⚙️ 이행과 면책 (Performance &amp; Excuse)</div>
+<div class="th-card">
+<div class="th-card-hd">Conditions — 조건</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>조건의 종류</h4>
+<ul>
+<li><b>선행 조건</b> (Precedent): 이행 전 발생해야 하는 사건 — 엄격 이행 요구</li>
+<li><b>해제 조건</b> (Subsequent): 발생하면 기존 의무 소멸</li>
+<li><b>동시 조건</b> (Concurrent): 쌍방이 동시에 이행해야 함</li>
+</ul>
+<h4>조건 면제 방법</h4>
+<ul>
+<li><b>포기</b> (Waiver): 구두도 가능 — 한번 포기하면 철회 시 신뢰이익 보호</li>
+<li><b>금반언</b> (Estoppel): 포기 후 신뢰 행위 → 철회 불가</li>
+<li><b>불능</b>: 조건 발생이 불가능해진 경우</li>
+</ul>
+<div class="warn-box">⚠️ 조건 = 엄격 이행! 실질적 이행(Substantial Performance) 원칙 적용 안 됨</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Types of Conditions</h4>
+<ul>
+<li><b>Precedent</b>: event must occur before duty arises — strict compliance required</li>
+<li><b>Subsequent</b>: occurrence terminates existing duty</li>
+<li><b>Concurrent</b>: both parties must perform simultaneously</li>
+</ul>
+<h4>Excusing Conditions</h4>
+<ul>
+<li><b>Waiver</b>: can be oral — once waived with reliance, cannot retract</li>
+<li><b>Estoppel</b>: waiver + reliance → cannot retract</li>
+<li><b>Impossibility</b>: condition's occurrence becomes impossible</li>
+</ul>
+<div class="warn-box">⚠️ Conditions = strict compliance! Substantial performance doctrine does NOT apply to conditions</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Impossibility / Frustration of Purpose</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>이행 불능 (Impossibility)</h4>
+<ul>
+<li>대상물 멸실 / 특정인 사망 / 법률 변경 → 이행 자체 불가</li>
+</ul>
+<h4>상업적 이행 곤란 (Commercial Impracticability)</h4>
+<ul>
+<li>① 계약 후 예상치 못한 사건 ② 위험 미배분 ③ 상업적으로 비실용적</li>
+<li>단순 비용 증가 = 불충분. 극단적이어야 함</li>
+</ul>
+<h4>목적 좌절 (Frustration of Purpose)</h4>
+<ul>
+<li>이행 가능하나 이행 목적이 완전히 소멸</li>
+<li>① 목적 예견 가능했을 것 ② 예상치 못한 사건 ③ 목적 완전 좌절</li>
+</ul>
+<h4>위험 부담 원칙</h4>
+<div class="warn-box">⚠️ 전문가가 해당 위험을 예상했어야 함 → 이행 곤란 항변 실패</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Impossibility</h4>
+<ul>
+<li>Destruction of subject matter / Death of specified person / Supervening illegality → performance literally impossible</li>
+</ul>
+<h4>Commercial Impracticability</h4>
+<ul>
+<li>① Unanticipated event after K ② Risk not allocated to promisor ③ Commercially impracticable</li>
+<li>Mere cost increase = insufficient. Must be extreme</li>
+</ul>
+<h4>Frustration of Purpose</h4>
+<ul>
+<li>Performance possible, but purpose completely destroyed</li>
+<li>① Purpose foreseeable at K formation ② Unanticipated event ③ Purpose completely frustrated</li>
+</ul>
+<h4>Risk Allocation</h4>
+<div class="warn-box">⚠️ Expert should have foreseen the risk → impracticability defense fails</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Mutual Mistake — 착오</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>쌍방 착오 (Mutual Mistake)</h4>
+<ul>
+<li>양측이 중대한 사실에 대해 <b>공통으로 잘못 가정</b></li>
+<li>요건: ① 계약 당시 착오 ② 중대한 사실 ③ 위험 미배분</li>
+<li>구제: 취소(Rescission) 또는 개혁(Reformation)</li>
+</ul>
+<h4>일방 착오 (Unilateral Mistake)</h4>
+<ul>
+<li>원칙: 구제 없음</li>
+<li>예외: 상대방이 착오를 알았거나 알아야 했던 경우 / 사기적 유인</li>
+</ul>
+<h4>위험 부담</h4>
+<ul>
+<li>착오 주장자가 위험을 부담한 경우 → 취소 불가</li>
+</ul>
+<div class="rule-box">📌 Reformation: 계약서 오기(Scrivener's error) → 실제 합의대로 수정</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Mutual Mistake</h4>
+<ul>
+<li>Both parties share a <b>common erroneous assumption</b> about a material fact</li>
+<li>Elements: ① Mistake at time of K ② Material fact ③ Risk not allocated</li>
+<li>Remedy: Rescission or Reformation</li>
+</ul>
+<h4>Unilateral Mistake</h4>
+<ul>
+<li>General rule: no relief</li>
+<li>Exception: other party knew or should have known / fraudulent inducement</li>
+</ul>
+<h4>Risk Allocation</h4>
+<ul>
+<li>If mistaken party bore the risk → NO rescission</li>
+</ul>
+<div class="rule-box">📌 Reformation: scrivener's error (typo in contract) → rewrite to reflect actual agreement</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">UCC Perfect Tender &amp; Right to Cure</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>완전 이행 원칙 (Perfect Tender Rule)</h4>
+<ul>
+<li>UCC: 물품이 계약과 <b>조금이라도 다르면</b> 매수인은 거절 가능</li>
+<li>Common Law의 실질적 이행 원칙 적용 안 됨</li>
+</ul>
+<h4>치유권 (Right to Cure)</h4>
+<ul>
+<li>하자 발견 당시 <b>이행 기한이 남아있으면</b> 매도인에게 치유 기회 부여</li>
+<li>이행 기한 경과 후: 치유권 제한적 (합리적 믿음이 있었던 경우 일부 허용)</li>
+</ul>
+<h4>매수인의 선택</h4>
+<ul>
+<li>① 거절 (Reject) ② 수락 후 손해배상 ③ 일부 수락·일부 거절</li>
+</ul>
+<div class="warn-box">⚠️ 수락 후 취소(Revocation of Acceptance): 중대 하자 + 발견 어려웠던 경우만 가능</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Perfect Tender Rule</h4>
+<ul>
+<li>UCC: buyer may reject goods if they fail to conform <b>in any respect</b></li>
+<li>Common Law's substantial performance doctrine does NOT apply</li>
+</ul>
+<h4>Right to Cure</h4>
+<ul>
+<li>If defect found <b>before performance deadline</b> → seller gets opportunity to cure</li>
+<li>After deadline: Right to Cure limited (allowed if seller had reasonable belief tender was acceptable)</li>
+</ul>
+<h4>Buyer's Options</h4>
+<ul>
+<li>① Reject ② Accept + sue for damages ③ Accept part, reject the rest</li>
+</ul>
+<div class="warn-box">⚠️ Revocation of Acceptance: only if substantial impairment + difficulty of discovery</div>
+</div>
+</div>
+</div>
+</div>
+<div class="th-block">
+<div class="th-block-hd">💥 위반과 구제 (Breach &amp; Remedies)</div>
+<div class="th-card">
+<div class="th-card-hd">Material Breach vs Substantial Performance</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>중대 위반 (Material Breach)</h4>
+<ul>
+<li>비위반 당사자: 이행 정지 + 손해배상 청구 가능</li>
+</ul>
+<h4>중대 위반 판단 요소</h4>
+<ul>
+<li>① 박탈된 이익 ② 금전 배상 충분성 ③ 이행 정도 ④ 선의 ⑤ 치유 가능성 ⑥ 몰수 불균형</li>
+</ul>
+<h4>실질적 이행 (Substantial Performance)</h4>
+<ul>
+<li>대부분 이행 + 경미한 부족 → 계약금 청구 가능 (미흡분 손해배상 의무)</li>
+</ul>
+<h4>경미한 위반 (Minor Breach)</h4>
+<ul>
+<li>손해배상만 청구 가능, 계약 자체는 존속</li>
+</ul>
+<div class="rule-box">📌 UCC: Perfect Tender (조금이라도 다르면 거절 가능) — Substantial Performance 원칙 적용 안 됨</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Material Breach</h4>
+<ul>
+<li>Non-breaching party may: suspend performance + sue for full damages</li>
+</ul>
+<h4>Factors for Material Breach</h4>
+<ul>
+<li>① Benefit deprived ② Adequacy of money damages ③ Extent of performance ④ Good faith ⑤ Likelihood of cure ⑥ Forfeiture</li>
+</ul>
+<h4>Substantial Performance</h4>
+<ul>
+<li>Mostly performed + minor shortfall → may collect contract price (less damages for deficiency)</li>
+</ul>
+<h4>Minor Breach</h4>
+<ul>
+<li>Damages only; contract continues</li>
+</ul>
+<div class="rule-box">📌 UCC: Perfect Tender Rule (any deviation = right to reject) — Substantial Performance does NOT apply</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Anticipatory Repudiation — 예상 위반</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>성립</h4>
+<ul>
+<li>이행기 <b>전</b>에 이행 거절을 <b>명확하게</b> 표시</li>
+<li>명확한 거절 OR 이중 매매 등 이행 불가 행위</li>
+<li>모호한 발언 → 예상 위반 아님 (이행 확약 요청 가능)</li>
+</ul>
+<h4>피해 당사자의 4가지 선택</h4>
+<ul>
+<li>① 즉시 소송 ② 이행 촉구 ③ 계약 해제 ④ 기다리기</li>
+</ul>
+<h4>철회 (Retraction)</h4>
+<ul>
+<li>이행기 전까지 철회 가능 — 단, 상대방이 이미 계약 해제/입장 변경/소 제기 시 불가</li>
+</ul>
+<div class="rule-box">📌 UCC §2-609: 이행 불안 시 서면으로 이행 확약 요청 → 30일 내 미응답 = 예상 위반</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Elements</h4>
+<ul>
+<li><b>Unequivocal</b> statement of intent NOT to perform, made <b>before</b> due date</li>
+<li>Clear refusal OR making performance impossible (e.g., double sale)</li>
+<li>Ambiguous statement → NOT repudiation (request adequate assurance instead)</li>
+</ul>
+<h4>4 Options for Aggrieved Party</h4>
+<ul>
+<li>① Sue immediately ② Urge performance ③ Rescind ④ Wait</li>
+</ul>
+<h4>Retraction</h4>
+<ul>
+<li>Can retract before due date — NOT if aggrieved party has already rescinded / changed position / filed suit</li>
+</ul>
+<div class="rule-box">📌 UCC §2-609: Demand for adequate assurance in writing → no response within 30 days = repudiation</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Damages — 손해배상</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>이행이익 (Expectation Damages)</h4>
+<ul>
+<li>계약이 이행됐다면 받을 이익 = 가장 일반적</li>
+<li>= 이행이익 - 비용 절감액 - 다른 곳에서 벌 수 있는 이익</li>
+</ul>
+<h4>신뢰이익 (Reliance Damages)</h4>
+<ul>
+<li>계약을 믿고 지출한 비용 — 이행이익 증명 어려울 때 대안</li>
+</ul>
+<h4>원상회복 (Restitution)</h4>
+<ul>
+<li>피고의 부당이득 반환</li>
+</ul>
+<h4>손해경감 의무 (Duty to Mitigate)</h4>
+<ul>
+<li>합리적 노력으로 피할 수 있었던 손해 → 배상 불가</li>
+</ul>
+<div class="warn-box">⚠️ 예상 위반 통보 후에도 계속 지출 → 추가 지출 배상 불가!</div>
+<div class="rule-box">📌 Hadley v. Baxendale: 예견 가능한 손해만 배상 (특별손해 = 통지 필요)</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Expectation Damages</h4>
+<ul>
+<li>Put P in position they would have been in if K performed = most common</li>
+<li>= Expected profit - Costs saved - Income from other sources</li>
+</ul>
+<h4>Reliance Damages</h4>
+<ul>
+<li>Expenses incurred in reliance on K — alternative when expectation uncertain</li>
+</ul>
+<h4>Restitution</h4>
+<ul>
+<li>Return of defendant's unjust enrichment</li>
+</ul>
+<h4>Duty to Mitigate</h4>
+<ul>
+<li>Avoidable losses → NOT recoverable</li>
+</ul>
+<div class="warn-box">⚠️ Continued spending after notice of repudiation → no recovery for post-notice expenses!</div>
+<div class="rule-box">📌 Hadley v. Baxendale: only foreseeable damages recoverable (special damages require notice)</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Liquidated Damages &amp; Specific Performance</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>위약금 조항 (Liquidated Damages)</h4>
+<ul>
+<li>유효 요건: ① 계약 당시 손해 예측 어려움 ② 합리적 사전 추정</li>
+<li>실제 손해와 지나치게 다르면 → 페널티 = 무효</li>
+</ul>
+<h4>특정 이행 (Specific Performance)</h4>
+<ul>
+<li>금전 배상 부적절할 때만 허용</li>
+<li>허용: <b>부동산</b> (항상 고유), <b>독특한 동산</b> (희귀품·예술품)</li>
+<li>불허: <b>개인 서비스</b> (노예 금지 조항), 시장에서 대체 가능한 물품</li>
+</ul>
+<div class="rule-box">📌 대안: 개인 서비스의 경우 → 금지 명령(Injunction)으로 경쟁 활동 제한 가능</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Liquidated Damages (LD)</h4>
+<ul>
+<li>Valid if: ① Damages difficult to estimate at time of K ② Amount is reasonable forecast</li>
+<li>Grossly disproportionate to actual harm → Penalty = void</li>
+</ul>
+<h4>Specific Performance (SP)</h4>
+<ul>
+<li>Available ONLY when money damages are inadequate</li>
+<li>Available: <b>Real property</b> (always unique), <b>Unique chattels</b> (rare items, artwork)</li>
+<li>Unavailable: <b>Personal services</b> (13th Amendment), fungible goods</li>
+</ul>
+<div class="rule-box">📌 Alternative for personal services: Negative Injunction — bar competitive activities</div>
+</div>
+</div>
+</div>
+</div>
+<div class="th-block">
+<div class="th-block-hd">🤝 제3자 권리 (Third-Party Rights)</div>
+<div class="th-card">
+<div class="th-card-hd">Third-Party Beneficiary — 제3자 수혜자</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>의도적 수혜자 (Intended) vs 우연적 수혜자 (Incidental)</h4>
+<ul>
+<li><b>의도적</b>: 계약이 그 제3자에게 혜택을 주려는 목적 → <b>집행 가능</b></li>
+<li><b>우연적</b>: 부수적 이익 → <b>집행 불가</b></li>
+</ul>
+<h4>의도적 수혜자 유형</h4>
+<ul>
+<li>채권자형 (Creditor): 수약자가 기존 채무 이행하기 위해</li>
+<li>증여형 (Donee): 수약자가 선물하기 위해</li>
+</ul>
+<h4>권리 확정 (Vesting)</h4>
+<ul>
+<li>① 신뢰 행위 ② 소 제기 ③ 동의 표시 → 수정·취소 불가</li>
+<li>확정 전: 당사자들이 자유롭게 수정 가능</li>
+</ul>
+<div class="rule-box">📌 약속자 vs 수혜자: 약속자는 수약자에게 쓸 수 있는 방어 사유 수혜자에게도 주장 가능</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Intended vs Incidental Beneficiary</h4>
+<ul>
+<li><b>Intended</b>: K made for purpose of benefiting that third party → <b>enforceable rights</b></li>
+<li><b>Incidental</b>: merely a side effect → <b>no enforceable rights</b></li>
+</ul>
+<h4>Types of Intended Beneficiaries</h4>
+<ul>
+<li>Creditor beneficiary: promisee discharging a debt to TPB</li>
+<li>Donee beneficiary: promisee making a gift to TPB</li>
+</ul>
+<h4>Vesting of Rights</h4>
+<ul>
+<li>① Reliance ② Filing suit ③ Manifesting assent → parties cannot modify/rescind without TPB's consent</li>
+<li>Before vesting: parties may freely modify or rescind</li>
+</ul>
+<div class="rule-box">📌 Promisor vs TPB: promisor may raise any defense available against promisee</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Assignment &amp; Delegation — 양도와 위임</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>권리 양도 (Assignment)</h4>
+<ul>
+<li>계약상 <b>권리</b>를 제3자에게 이전</li>
+<li>원칙: 자유롭게 양도 가능</li>
+<li>예외 X: ① 의무를 실질적으로 증가시킬 때 ② 개인적 서비스 ③ 계약이 금지</li>
+<li><b>채무자 통지</b>: 통지 전 양도인에게 지불 = 면책 / 통지 후 = 면책 불가</li>
+</ul>
+<h4>의무 위임 (Delegation)</h4>
+<ul>
+<li>계약상 <b>의무</b> 이행을 제3자에게 위탁</li>
+<li>위임 후에도 <b>위임자(Delegator) 여전히 책임</b></li>
+<li>불가: 개인적 신뢰 기반 / 계약 금지</li>
+</ul>
+<h4>경개 (Novation)</h4>
+<ul>
+<li>위임 + 채권자 동의 + 위임자 면책 = Novation → 위임자 완전 면책</li>
+</ul>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Assignment of Rights</h4>
+<ul>
+<li>Transfer of contractual <b>rights</b> to a third party</li>
+<li>Generally freely assignable</li>
+<li>Not assignable if: ① Materially increases obligor's burden ② Personal services ③ Contract prohibits</li>
+<li><b>Notice to Obligor</b>: before notice → pay assignor = discharged / after notice → must pay assignee</li>
+</ul>
+<h4>Delegation of Duties</h4>
+<ul>
+<li>Delegating performance of contractual <b>duties</b> to a third party</li>
+<li>After delegation: <b>delegator still remains liable</b></li>
+<li>Non-delegable: personal trust-based / prohibited by contract</li>
+</ul>
+<h4>Novation</h4>
+<ul>
+<li>Delegation + obligee's consent + delegator's release = Novation → delegator fully released</li>
+</ul>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Accord &amp; Satisfaction + Implied Contract</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>대체변제합의 (Accord & Satisfaction)</h4>
+<ul>
+<li><b>Accord</b>: 기존 의무 대신 다른 이행을 수락하기로 한 합의 (기존 채무 아직 소멸 안 됨)</li>
+<li><b>Satisfaction</b>: Accord 실제 이행 → 기존 채무 소멸</li>
+<li>"Payment in Full" 수표 현금화 = Accord 동의</li>
+<li>선의 분쟁 (Good Faith Dispute): 약인으로 충분</li>
+</ul>
+<div class="warn-box">⚠️ Accord 위반 시: 채권자는 원래 채무 OR Accord 중 선택 가능</div>
+<h4>묵시적 계약</h4>
+<ul>
+<li><b>사실상 묵시적 계약</b>: 행동에서 계약 추론 (알고 받아들임 + 묵인)</li>
+<li><b>준계약</b> (Quasi-Contract): 부당이득 방지 위한 법적 의제 → 원상회복 청구</li>
+</ul>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Accord & Satisfaction</h4>
+<ul>
+<li><b>Accord</b>: agreement to accept different performance instead of original duty (original duty NOT yet discharged)</li>
+<li><b>Satisfaction</b>: performance of accord → original duty discharged</li>
+<li>Depositing "Payment in Full" check = acceptance of accord</li>
+<li>Good Faith Dispute: sufficient consideration for accord</li>
+</ul>
+<div class="warn-box">⚠️ If Accord breached: creditor may sue on original duty OR accord</div>
+<h4>Implied Contracts</h4>
+<ul>
+<li><b>Implied-in-Fact</b>: contract inferred from conduct (knowingly accepts + acquiesces)</li>
+<li><b>Quasi-Contract</b>: legal fiction to prevent unjust enrichment → restitution remedy</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cls" id="ktk_prac">
+<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">KTK &#BB38;&#C81C;&#D480;&#C774; (21&#BB38;&#C81C;) &mdash; &#D329;&#D2B8;&#D328;&#D134; &#BD84;&#C11D; &#D6C4; &#8595; &#BC84;&#D2BC;&#C73C;&#B85C; &#C815;&#B2F5;&#00B7;&#D574;&#C124; &#D655;&#C778;</div>
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Applicable Law &amp; Formation</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q3 <span style="font-weight:400;color:#888;font-size:.65rem">— Applicable Law — UCC Output Contract</span></div>
+<div class="ktk-prac-q-num">Q3 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Applicable Law — UCC Output Contract</span></div>
 <div class="ktk-prac-q-text">Bestbake, Co., a bakery product manufacturer, entered into a written agreement with Today&#x27;s Pastry Inc., a pastry retailer. Under the agreement, Today&#x27;s Pastry agreed to purchase all of Bestbake&#x27;s one-year output of baked buns. The agreement specified no fixed quantity. When Bestbake tendered its output, Today&#x27;s Pastry refused to accept any baked buns. In a breach of contract action by Bestbake, which of the following best explains why Today&#x27;s Pastry is liable?</div>
 <div class="ktk-prac-opt">(A) Nothing can be recovered, because the contract lacks a specific quantity term and is unenforceable under the UCC.</div>
-<div class="ktk-prac-opt">(B) Nothing can be recovered, because the contract lacked mutuality of obligation — Bestbake was not bound to produce any specific amount.</div>
+<div class="ktk-prac-opt">(B) Nothing can be recovered, because the contract lacked mutuality of obligation.</div>
 <div class="ktk-prac-opt">(C) Bestbake can recover, because UCC output contracts impose a best efforts obligation on both buyer and seller.</div>
 <div class="ktk-prac-opt">(D) Bestbake can recover only production costs, because the contract did not specify a purchase price.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="C">
-<div class="ktk-prac-answer-badge">정답: (C)</div>
-<div class="ktk-prac-exp-text">Because the contract involves the sale of goods, the UCC controls. Under the UCC, output contracts are agreements in which the buyer agrees to purchase all of a seller&#x27;s output. Such contracts impose an implied obligation of good faith — sellers must use best efforts to supply, and buyers must use best efforts to purchase. The absence of a fixed quantity term does not render the contract unenforceable under the UCC; output contracts satisfy the UCC Statute of Frauds because the output itself constitutes a sufficient quantity term.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (C)</div>
+<div class="ktk-prac-exp-text">Because the contract involves the sale of goods, the UCC controls. Under the UCC, output contracts impose an implied obligation of good faith — sellers must use best efforts to supply, and buyers must use best efforts to purchase. The absence of a fixed quantity term does not render the contract unenforceable under the UCC; output contracts satisfy the UCC Statute of Frauds because the output itself constitutes a sufficient quantity term.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/applicable_law_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="applicable_law_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 applicable_law_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; applicable_law_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/applicable_law_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="applicable_law_en_prac">
-<div class="placeholder-img" style="display:none">🖼 applicable_law_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; applicable_law_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q56 <span style="font-weight:400;color:#888;font-size:.65rem">— UCC §2-207 — Accommodation / Counter-Offer</span></div>
+<div class="ktk-prac-q-num">Q56 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; UCC §2-207 — Accommodation / Counter-Offer</span></div>
 <div class="ktk-prac-q-text">Zoe, a widget manufacturer, received a purchase order from Books for 1,000 conforming widgets. Zoe did not have conforming widgets in stock. Zoe sent Books a shipment of non-conforming (defective) widgets along with a note stating: &quot;We are sending defective widgets in case you can use them.&quot; Books received the shipment. Which of the following best describes the legal effect of Zoe&#x27;s response?</div>
 <div class="ktk-prac-opt">(A) Zoe&#x27;s shipment constitutes an acceptance of Books&#x27;s offer, creating a binding contract for 1,000 conforming widgets.</div>
 <div class="ktk-prac-opt">(B) Zoe&#x27;s shipment of non-conforming goods with an explanatory note constitutes a counter-offer, which Books may accept or reject.</div>
 <div class="ktk-prac-opt">(C) Zoe&#x27;s shipment constitutes a breach of the original contract, and Books may sue for the difference in value.</div>
-<div class="ktk-prac-opt">(D) There is no contract because Zoe failed to ship conforming goods in response to the purchase order.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<div class="ktk-prac-opt">(D) There is no contract because Zoe failed to ship conforming goods.</div>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="B">
-<div class="ktk-prac-answer-badge">정답: (B)</div>
-<div class="ktk-prac-exp-text">Under the UCC, when a seller responds to a purchase order by shipping non-conforming goods as an &#x27;accommodation&#x27; — accompanied by a notice that the goods are sent as a substitute — the shipment constitutes a counter-offer rather than an acceptance. Books may freely accept the counter-offer (and thereby be bound to pay the listed price for the defective widgets) or reject it (in which case no contract exists and Books simply returns the goods). If Zoe had shipped the non-conforming goods without the explanatory note, it would constitute both an acceptance and a breach.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (B)</div>
+<div class="ktk-prac-exp-text">Under the UCC, when a seller responds to a purchase order by shipping non-conforming goods as an &#x27;accommodation&#x27; — accompanied by a notice that the goods are sent as a substitute — the shipment constitutes a counter-offer rather than an acceptance. Books may freely accept the counter-offer (bound to pay for defective widgets) or reject it (no contract, just return the goods). If Zoe had shipped without the note, it would constitute both an acceptance and a breach.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/ucc_battle_forms_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="ucc_battle_forms_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 ucc_battle_forms_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; ucc_battle_forms_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/ucc_battle_forms_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="ucc_battle_forms_en_prac">
-<div class="placeholder-img" style="display:none">🖼 ucc_battle_forms_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; ucc_battle_forms_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -109,49 +891,49 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Offer, Acceptance &amp; Firm Offer</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q57 <span style="font-weight:400;color:#888;font-size:.65rem">— Firm Offer — Non-Merchant Revocation</span></div>
-<div class="ktk-prac-q-text">On November 1, Debby, a retired accountant, entered into a contract to sell law books to Solicitor for $10,000, payable on December 1 delivery. On November 10, Debby sent Solicitor a written note: &#x27;I&#x27;ve decided to include the book stacks. I&#x27;ll deliver them along with the books on December 1 at no extra charge. Please notify me by November 15 if you want them — I won&#x27;t offer them to anyone else until then.&#x27; On November 14, Solicitor faxed acceptance. On November 1, Debby told Solicitor she had decided not to include the stacks. Debby was not a merchant with respect to law books or bookshelves. Will Debby&#x27;s communication operate as a legally effective revocation of her offer to include the stacks?</div>
+<div class="ktk-prac-q-num">Q57 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Firm Offer — Non-Merchant Revocation</span></div>
+<div class="ktk-prac-q-text">On November 1, Debby, a retired accountant, entered into a contract to sell law books to Solicitor for $10,000, payable on December 1 delivery. On November 10, Debby sent Solicitor a written note: &#x27;I&#x27;ll include the book stacks — please notify me by November 15 if you want them. I won&#x27;t offer them to anyone else until then.&#x27; On November 14, Solicitor faxed acceptance. On November 1, Debby told Solicitor she had decided not to include the stacks. Debby was not a merchant with respect to law books or bookshelves. Will Debby&#x27;s communication operate as a legally effective revocation?</div>
 <div class="ktk-prac-opt">(A) Yes, because Solicitor had a pre-existing obligation to pay $10,000 for the law books.</div>
 <div class="ktk-prac-opt">(B) Yes, because Debby was not a merchant with respect to book stacks, so the UCC Firm Offer rule does not apply.</div>
 <div class="ktk-prac-opt">(C) No, because Debby gave written assurance that the offer would remain open until November 15.</div>
 <div class="ktk-prac-opt">(D) No, because Solicitor detrimentally relied on the promise to include the stacks.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="B">
-<div class="ktk-prac-answer-badge">정답: (B)</div>
-<div class="ktk-prac-exp-text">The UCC Firm Offer rule (§2-205) provides that a signed, written offer by a merchant assuring it will be held open is irrevocable for the stated period (up to 3 months) without consideration. However, this rule applies only to merchants. Debby was not a merchant with respect to law books or bookshelves. Under Common Law, which governs here, a promise to hold an offer open is not binding without consideration. The $10,000 book sale did not constitute consideration for the promise to hold the stack offer open. Therefore, without consideration, Debby&#x27;s promise to keep the offer open was not binding, and the offer was freely revocable.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (B)</div>
+<div class="ktk-prac-exp-text">The UCC Firm Offer rule (§2-205) applies only to merchants. Debby was not a merchant with respect to law books or bookshelves. Under Common Law, a promise to hold an offer open is not binding without consideration. The $10,000 book sale did not constitute consideration for the promise to hold the stack offer open. Therefore, without consideration, Debby&#x27;s promise was not binding, and the offer was freely revocable.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/firm_offer_option_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="firm_offer_option_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 firm_offer_option_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; firm_offer_option_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/firm_offer_option_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="firm_offer_option_en_prac">
-<div class="placeholder-img" style="display:none">🖼 firm_offer_option_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; firm_offer_option_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q77 <span style="font-weight:400;color:#888;font-size:.65rem">— Consideration — Pre-Existing Duty Rule</span></div>
-<div class="ktk-prac-q-text">Collector, the owner of an impressionist painting valued at $400,000, was victimized when a burglar stole it. Having insured the painting with Assisi Insurance Co. for $300,000, Collector offered Checker, a full-time investigator employed by Assisi, a reward of $25,000 if he successfully retrieved the painting undamaged. Assisi&#x27;s policy allows its investigators to keep rewards from clients. Checker located and returned the painting in undamaged condition. If Collector refuses to pay Checker, and Checker sues for $25,000, what is the probable result under the prevailing modern rule?</div>
-<div class="ktk-prac-opt">(A) Collector wins, because Checker owed Assisi a pre-existing duty to recover the painting if possible.</div>
-<div class="ktk-prac-opt">(B) Collector wins, because Assisi, Checker&#x27;s employer, had a pre-existing duty to ensure the painting was returned to Collector.</div>
-<div class="ktk-prac-opt">(C) Checker wins, because Collector would be unjustly enriched by receiving the $400,000 painting while paying only $300,000 in insurance proceeds.</div>
+<div class="ktk-prac-q-num">Q77 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Consideration — Pre-Existing Duty Rule</span></div>
+<div class="ktk-prac-q-text">Collector&#x27;s painting was stolen. Having insured it with Assisi Insurance Co. for $300,000, Collector offered Checker, Assisi&#x27;s full-time investigator, a reward of $25,000 if he retrieved the painting undamaged. Assisi&#x27;s policy allows investigators to keep rewards from clients. Checker located and returned the painting undamaged. If Collector refuses to pay, and Checker sues for $25,000, what is the probable result under the prevailing modern rule?</div>
+<div class="ktk-prac-opt">(A) Collector wins, because Checker owed Assisi a pre-existing duty to recover the painting.</div>
+<div class="ktk-prac-opt">(B) Collector wins, because Assisi had a pre-existing duty to ensure the painting was returned.</div>
+<div class="ktk-prac-opt">(C) Checker wins, because Collector would be unjustly enriched by receiving the $400,000 painting.</div>
 <div class="ktk-prac-opt">(D) Checker wins, because the pre-existing duty rule does not apply when the duty was owed to a third party rather than to the promisor.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="D">
-<div class="ktk-prac-answer-badge">정답: (D)</div>
-<div class="ktk-prac-exp-text">Under the traditional pre-existing duty rule, performing a duty one is already legally obligated to perform is not valid consideration. However, under the modern rule, the pre-existing duty rule does not apply when the duty was owed to a third party (Assisi) rather than to the promisor (Collector). Checker&#x27;s duty ran to Assisi, his employer — not to Collector, who made the reward offer. Since Checker owed no pre-existing duty to Collector, Checker&#x27;s performance constitutes valid consideration for Collector&#x27;s reward promise.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (D)</div>
+<div class="ktk-prac-exp-text">Under the modern rule, the pre-existing duty rule does not apply when the duty was owed to a third party (Assisi) rather than to the promisor (Collector). Checker&#x27;s duty ran to Assisi, not to Collector, who made the reward offer. Since Checker owed no pre-existing duty to Collector, Checker&#x27;s performance constitutes valid consideration for Collector&#x27;s reward promise.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/consideration_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="consideration_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 consideration_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; consideration_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/consideration_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="consideration_en_prac">
-<div class="placeholder-img" style="display:none">🖼 consideration_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; consideration_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -160,49 +942,49 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Capacity &amp; Ratification</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q78 <span style="font-weight:400;color:#888;font-size:.65rem">— Capacity — Minor&#x27;s Ratification</span></div>
-<div class="ktk-prac-q-text">Suzy White, a minor both in fact and appearance, purchased a telescope on credit from Patrick Smith, age 30, for an agreed sum of $100. Shortly after reaching the age of majority, White met Smith, apologized for the overdue payment of $100 for the telescope, but stated she discovered the telescope&#x27;s actual value was only $70 and promised to pay that reduced amount. White later retracted her promise and decided against paying Smith anything. In a breach of contract action by Smith against White, Smith&#x27;s most likely recovery is:</div>
+<div class="ktk-prac-q-num">Q78 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Capacity — Minor&#x27;s Ratification</span></div>
+<div class="ktk-prac-q-text">Suzy White, a minor both in fact and appearance, purchased a telescope on credit from Patrick Smith for $100. Shortly after reaching majority, White apologized for the overdue payment but stated the telescope&#x27;s actual value was only $70 and promised to pay that reduced amount. White later retracted her promise and decided against paying Smith anything. In a breach of contract action, Smith&#x27;s most likely recovery is:</div>
 <div class="ktk-prac-opt">(A) $0, because White disaffirmed the contract before the age of majority.</div>
 <div class="ktk-prac-opt">(B) $100, because White ratified the full original contract upon reaching majority.</div>
 <div class="ktk-prac-opt">(C) $70, because White&#x27;s promise upon reaching majority was an effective ratification at that reduced amount.</div>
-<div class="ktk-prac-opt">(D) The reasonable market value of the telescope, because necessaries doctrine applies.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<div class="ktk-prac-opt">(D) The reasonable market value of the telescope, because the necessaries doctrine applies.</div>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="C">
-<div class="ktk-prac-answer-badge">정답: (C)</div>
-<div class="ktk-prac-exp-text">When a minor reaches the age of majority, the minor may ratify contracts entered into during minority. Ratification can be express or implied by conduct. Here, White expressly ratified by promising to pay $70 after reaching majority. Although the original contract price was $100, White&#x27;s post-majority promise to pay $70 constitutes an effective ratification at the reduced amount. Once ratified, the contract becomes fully binding and White cannot disaffirm. White&#x27;s subsequent retraction is therefore ineffective — she is bound to pay $70.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (C)</div>
+<div class="ktk-prac-exp-text">When a minor reaches the age of majority, they may ratify contracts entered into during minority. Ratification can be express or implied. Here, White expressly ratified by promising to pay $70 after reaching majority. Although the original price was $100, White&#x27;s post-majority promise to pay $70 constitutes an effective ratification at the reduced amount. Once ratified, White cannot disaffirm. Her subsequent retraction is ineffective — she is bound to pay $70.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/capacity_minors_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="capacity_minors_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 capacity_minors_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; capacity_minors_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/capacity_minors_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="capacity_minors_en_prac">
-<div class="placeholder-img" style="display:none">🖼 capacity_minors_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; capacity_minors_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q91 <span style="font-weight:400;color:#888;font-size:.65rem">— Capacity — Illusory Promise (&#x27;as soon as possible&#x27;)</span></div>
-<div class="ktk-prac-q-text">Suzy White purchased a telescope from Patrick Smith after reaching the age of majority and promised to pay $100 &#x27;as soon as possible.&#x27; White later refused to pay anything. Smith sues for breach of contract. White argues that the phrase &#x27;as soon as possible&#x27; renders her promise illusory and therefore unenforceable. What effect does this quoted language have on the enforceability of the promise?</div>
+<div class="ktk-prac-q-num">Q91 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Capacity — Illusory Promise (&#x27;as soon as possible&#x27;)</span></div>
+<div class="ktk-prac-q-text">Suzy White purchased a telescope from Patrick Smith after reaching majority and promised to pay $100 &#x27;as soon as possible.&#x27; White later refused to pay anything. Smith sues for breach of contract. White argues that the phrase &#x27;as soon as possible&#x27; renders her promise illusory and therefore unenforceable. What effect does this language have on the enforceability of the promise?</div>
 <div class="ktk-prac-opt">(A) None — the promise remains enforceable because &#x27;as soon as possible&#x27; merely postpones the time of payment, not the obligation itself.</div>
 <div class="ktk-prac-opt">(B) It renders the promise illusory because White could always claim she lacks the ability to pay.</div>
 <div class="ktk-prac-opt">(C) It requires White to prove her ability to pay before the promise becomes binding.</div>
 <div class="ktk-prac-opt">(D) It requires Smith to prove White&#x27;s ability to pay at the time the promise was made.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="A">
-<div class="ktk-prac-answer-badge">정답: (A)</div>
-<div class="ktk-prac-exp-text">An illusory promise is one that appears to be a commitment but actually imposes no obligation on the promisor — for example, &#x27;I&#x27;ll pay if I feel like it.&#x27; The phrase &#x27;as soon as possible&#x27; is not illusory because it still imposes a real obligation to pay — it merely makes the payment time contingent on White&#x27;s financial ability. Courts interpret &#x27;as soon as possible&#x27; as an objective standard, not a subjective escape hatch. The promise creates a binding obligation to pay within a reasonable time when payment becomes feasible, and White&#x27;s absolute refusal to pay anything constitutes a breach.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (A)</div>
+<div class="ktk-prac-exp-text">An illusory promise is one that imposes no actual obligation on the promisor. &#x27;As soon as possible&#x27; is not illusory because it still imposes a real obligation to pay — it merely makes the payment time contingent on financial ability. Courts interpret this as an objective standard. The promise creates a binding obligation to pay within a reasonable time when payment becomes feasible, and White&#x27;s absolute refusal to pay constitutes breach.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/capacity_minors_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="capacity_minors_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 capacity_minors_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; capacity_minors_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/capacity_minors_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="capacity_minors_en_prac">
-<div class="placeholder-img" style="display:none">🖼 capacity_minors_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; capacity_minors_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -211,25 +993,25 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Parol Evidence &amp; Course of Performance</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q21 <span style="font-weight:400;color:#888;font-size:.65rem">— Parol Evidence Rule — Course of Performance</span></div>
-<div class="ktk-prac-q-text">Wavelaster Inc., a radio manufacturer, and Wetailers Co., a retailer, finalized a written agreement under which Wavelaster would sell and Wetailers would purchase all radio equipment, estimated at 20 units per month, from January 1999 to December 2001, at $50 per unit. In late December 2001, Wetailers returned 25 non-defective radios. The written agreement explicitly allowed buyers to return defective radios for a refund but was silent on returning non-defective radios. In a suit by Wavelaster against Wetailers, Wetailers seeks to introduce evidence that over the 3-year contract period, it had returned 125 non-defective radios which Wavelaster accepted. Wavelaster opposes admission of this evidence. The trial court is likely to rule the evidence:</div>
+<div class="ktk-prac-q-num">Q21 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Parol Evidence Rule — Course of Performance</span></div>
+<div class="ktk-prac-q-text">Wavelaster Inc. and Wetailers Co. finalized a written agreement for Wavelaster to sell and Wetailers to purchase all radio equipment, estimated at 20 units/month, January 1999 – December 2001, at $50/unit. In late December 2001, Wetailers returned 25 non-defective radios. The written agreement allowed returning defective radios but was silent on non-defective returns. In a suit by Wavelaster, Wetailers seeks to introduce evidence that over 3 years it had returned 125 non-defective radios which Wavelaster accepted. The trial court is likely to rule the evidence:</div>
 <div class="ktk-prac-opt">(A) Inadmissible, because the evidence is barred by the parol evidence rule.</div>
 <div class="ktk-prac-opt">(B) Inadmissible, because the express terms of the agreement contradict the course of performance evidenced.</div>
 <div class="ktk-prac-opt">(C) Admissible, because the evidence supports an agreement not within the relevant statute of frauds.</div>
-<div class="ktk-prac-opt">(D) Admissible, because course-of-performance evidence, when available, is considered the best indication of what the parties intended the writing to mean.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<div class="ktk-prac-opt">(D) Admissible, because course-of-performance evidence is considered the best indication of what the parties intended the writing to mean.</div>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="D">
-<div class="ktk-prac-answer-badge">정답: (D)</div>
-<div class="ktk-prac-exp-text">Under the UCC, course of performance — how the parties actually conducted themselves under the contract — is the best evidence of what the parties intended their contract to mean. The parol evidence rule bars evidence that contradicts an integrated written agreement, but it does not bar course-of-performance evidence used to interpret or explain ambiguous terms. The written contract was silent (not contradictory) on non-defective returns, so the course-of-performance evidence (125 returns accepted over 3 years) is admissible to interpret what the parties meant. Under UCC hierarchy: Course of Performance &gt; Course of Dealing &gt; Trade Usage.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (D)</div>
+<div class="ktk-prac-exp-text">Under the UCC, course of performance — how the parties actually conducted themselves under the contract — is the best evidence of what the parties intended. The parol evidence rule bars evidence that contradicts an integrated written agreement, but it does not bar course-of-performance evidence used to interpret ambiguous terms. The contract was silent (not contradictory) on non-defective returns, so 3 years of accepted returns is admissible to interpret what the parties intended. UCC hierarchy: Course of Performance &gt; Course of Dealing &gt; Trade Usage.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/parol_evidence_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="parol_evidence_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 parol_evidence_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; parol_evidence_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/parol_evidence_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="parol_evidence_en_prac">
-<div class="placeholder-img" style="display:none">🖼 parol_evidence_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; parol_evidence_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -238,49 +1020,49 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Conditions &amp; Waiver</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q53a <span style="font-weight:400;color:#888;font-size:.65rem">— Conditions — Waiver of Express Condition</span></div>
-<div class="ktk-prac-q-text">Kevin and Steve entered into a contract providing that Kevin would supply Steve with an engine, but only if Kevin notified Steve in writing no later than February 1. On January 1, Steve verbally told Kevin, &#x27;Just send the engine without the written notice — that&#x27;s fine with me.&#x27; Kevin shipped the engine without providing any written notice. Steve now refuses to accept the engine and pay, claiming the written notice condition was not satisfied. Will Steve prevail?</div>
-<div class="ktk-prac-opt">(A) Yes, because express conditions require strict compliance, and Kevin failed to provide written notice as required.</div>
+<div class="ktk-prac-q-num">Q53a <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Conditions — Waiver of Express Condition</span></div>
+<div class="ktk-prac-q-text">Kevin and Steve entered into a contract providing that Kevin would supply Steve with an engine, but only if Kevin notified Steve in writing no later than February 1. On January 1, Steve verbally told Kevin, &#x27;Just send the engine without the written notice — that&#x27;s fine with me.&#x27; Kevin shipped the engine without providing any written notice. Steve now refuses to accept and pay, claiming the written notice condition was not satisfied. Will Steve prevail?</div>
+<div class="ktk-prac-opt">(A) Yes, because express conditions require strict compliance, and Kevin failed to provide written notice.</div>
 <div class="ktk-prac-opt">(B) No, because Kevin substantially performed by shipping the engine on time.</div>
 <div class="ktk-prac-opt">(C) No, because Steve verbally waived the written notice condition before Kevin performed.</div>
 <div class="ktk-prac-opt">(D) Yes, because an oral statement cannot waive a written condition in a contract.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="C">
-<div class="ktk-prac-answer-badge">정답: (C)</div>
-<div class="ktk-prac-exp-text">A condition is an event that must occur before a party&#x27;s performance obligation becomes due, unless the condition is waived or excused. A party may waive a condition — including a written-notice condition — orally. Here, Steve&#x27;s verbal statement on January 1 constituted an express oral waiver of the written-notice condition. Once Steve waived the condition and Kevin performed in reliance on that waiver, Steve is estopped from retracting the waiver. Steve&#x27;s attempt to enforce the written-notice condition after waiving it is ineffective.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (C)</div>
+<div class="ktk-prac-exp-text">A condition may be waived — including a written-notice condition — orally. Here, Steve&#x27;s verbal statement on January 1 constituted an express oral waiver of the written-notice condition. Once Steve waived the condition and Kevin performed in reliance on that waiver, Steve is estopped from retracting the waiver. Steve&#x27;s attempt to enforce the written-notice condition after waiving it is ineffective.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/conditions_waiver_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="conditions_waiver_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 conditions_waiver_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; conditions_waiver_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/conditions_waiver_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="conditions_waiver_en_prac">
-<div class="placeholder-img" style="display:none">🖼 conditions_waiver_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; conditions_waiver_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q51 <span style="font-weight:400;color:#888;font-size:.65rem">— UCC Perfect Tender — Right to Cure</span></div>
-<div class="ktk-prac-q-text">Nathan ordered specialized industrial equipment from Carlillenes, with delivery required by July 1. On June 30, Nathan inspected the delivered equipment and discovered that one spare part was missing. Nathan immediately notified Carlillenes of the defect. Carlillenes offered to install the missing spare part by Monday, July 1. Which of the following best describes the parties&#x27; rights?</div>
+<div class="ktk-prac-q-num">Q51 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; UCC Perfect Tender — Right to Cure</span></div>
+<div class="ktk-prac-q-text">Nathan ordered specialized industrial equipment from Carlillenes, with delivery required by July 1. On June 30, Nathan inspected the delivered equipment and discovered one spare part was missing. Nathan immediately notified Carlillenes. Carlillenes offered to install the missing spare part by Monday, July 1. Which of the following best describes the parties&#x27; rights?</div>
 <div class="ktk-prac-opt">(A) Nathan may reject the equipment, but Carlillenes is also entitled to an opportunity to cure by July 1.</div>
-<div class="ktk-prac-opt">(B) Nathan must accept the equipment because the missing spare part is immaterial and does not impair the equipment&#x27;s value.</div>
-<div class="ktk-prac-opt">(C) Nathan may reject the equipment, and Carlillenes has no right to cure once the buyer has rightfully rejected.</div>
+<div class="ktk-prac-opt">(B) Nathan must accept the equipment because the missing spare part is immaterial.</div>
+<div class="ktk-prac-opt">(C) Nathan may reject, and Carlillenes has no right to cure once the buyer has rightfully rejected.</div>
 <div class="ktk-prac-opt">(D) Nathan must give Carlillenes a reasonable additional time beyond July 1 to install the spare part.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="A">
-<div class="ktk-prac-answer-badge">정답: (A)</div>
-<div class="ktk-prac-exp-text">Under the UCC&#x27;s Perfect Tender Rule, a buyer may reject goods that fail to conform to the contract in any respect, even if the non-conformity is trivial. Therefore, Nathan can reject the equipment because of the missing spare part. However, when a defect is discovered before the contract deadline and time for performance has not yet expired, the seller has a right to cure the defective delivery before the deadline. Here, the defect was discovered on June 30, one day before the July 1 deadline, giving Carlillenes the right to cure by installing the spare part by July 1. Nathan may reject, but must allow Carlillenes the opportunity to cure within the contract period.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (A)</div>
+<div class="ktk-prac-exp-text">Under the UCC&#x27;s Perfect Tender Rule, a buyer may reject goods that fail to conform in any respect, even trivially. Therefore, Nathan can reject for the missing part. However, when a defect is discovered before the contract deadline, the seller has a right to cure within that period. The defect was discovered June 30 — one day before the July 1 deadline — giving Carlillenes the right to cure by installing the part by July 1. Nathan may reject but must allow Carlillenes the opportunity to cure within the contract period.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/material_breach_cure_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="material_breach_cure_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 material_breach_cure_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; material_breach_cure_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/material_breach_cure_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="material_breach_cure_en_prac">
-<div class="placeholder-img" style="display:none">🖼 material_breach_cure_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; material_breach_cure_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -289,25 +1071,25 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Impracticability &amp; Mistake</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q34 <span style="font-weight:400;color:#888;font-size:.65rem">— Impracticability / Risk Allocation</span></div>
-<div class="ktk-prac-q-text">Const Inc. contracted with Newtech to design and construct a 15-story office building on Newtech&#x27;s land for $20 million. During excavation, workers encountered an unexpectedly thick granite layer, requiring excavation 1 foot deeper than designed. This increased construction costs by $3 million and is projected to result in a $2 million loss for Const Inc. Const Inc. notified Newtech that it would not continue without additional compensation. If Newtech refuses and sues Const Inc. for breach, how will the court most likely rule?</div>
+<div class="ktk-prac-q-num">Q34 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Impracticability / Risk Allocation</span></div>
+<div class="ktk-prac-q-text">Const Inc. contracted with Newtech to design and construct a 15-story office building for $20 million. During excavation, workers encountered an unexpectedly thick granite layer, requiring excavation 1 foot deeper than designed. This increased costs by $3 million and would result in a $2 million loss. Const Inc. notified Newtech it would not continue without additional compensation. If Newtech refuses and sues Const Inc. for breach, how will the court most likely rule?</div>
 <div class="ktk-prac-opt">(A) Const Inc. is excused under the modern doctrine of commercial impracticability due to the severe practical difficulty posed by the granite.</div>
 <div class="ktk-prac-opt">(B) Const Inc. is excused because the contract is void for mutual mistake — both parties assumed there was no subsurface granite.</div>
 <div class="ktk-prac-opt">(C) Newtech prevails, because Const Inc. assumed the risk that subsurface conditions might increase excavation costs.</div>
 <div class="ktk-prac-opt">(D) Newtech prevails, because Const Inc. should have known about the subsurface granite based on the site&#x27;s geological history.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="C">
-<div class="ktk-prac-answer-badge">정답: (C)</div>
-<div class="ktk-prac-exp-text">A contract may be rescinded for mutual mistake only if both parties acted under a common erroneous assumption about a material fact and the party seeking rescission did not bear the risk of the mistake. Impracticability excuses performance only when an unanticipated event makes performance commercially impracticable and the risk of that event was not allocated to the performing party. Here, Const Inc. is engaged in the business of excavation and had the opportunity to investigate the foundation before contracting. As an excavation professional, Const Inc. assumed the risk that subsurface conditions — including granite — might increase costs. Neither impracticability nor mutual mistake provides relief when the party asserting it bore the risk.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (C)</div>
+<div class="ktk-prac-exp-text">A contract may be rescinded for mutual mistake only if the party asserting mistake did not bear the risk of that mistake. Impracticability excuses performance only when the risk was not allocated to the performing party. Here, Const Inc. is engaged in the business of excavation and had the opportunity to investigate the foundation before contracting. As an excavation professional, Const Inc. assumed the risk that subsurface conditions might increase costs. Neither impracticability nor mutual mistake provides relief when the asserting party bore the risk.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/impossibility_frustration_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="impossibility_frustration_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 impossibility_frustration_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; impossibility_frustration_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/impossibility_frustration_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="impossibility_frustration_en_prac">
-<div class="placeholder-img" style="display:none">🖼 impossibility_frustration_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; impossibility_frustration_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -316,73 +1098,73 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Breach &amp; Remedies</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q53b <span style="font-weight:400;color:#888;font-size:.65rem">— Liquidated Damages — Penalty Analysis</span></div>
-<div class="ktk-prac-q-text">Melanie owns a fishing boat which she charters for $500 per day. On July 1, Paul booked the boat for July 15 for himself and his family, paying a $200 deposit. The contract allowed Melanie to retain the deposit if Paul canceled or failed to appear. Melanie told Paul to arrive at the dock by 5 a.m. on July 15. Paul did not arrive until noon because he had been attempting to charter a cheaper boat. By 10 a.m., Melanie had taken Tyra&#x27;s family on a trip for $400. Which of the following accurately describes the rights of the parties?</div>
-<div class="ktk-prac-opt">(A) Melanie may retain the full $200 deposit, because it was difficult to estimate Melanie&#x27;s actual damages and the amount was a reasonable forecast of anticipated loss.</div>
-<div class="ktk-prac-opt">(B) Melanie is entitled to retain only $50 (10% of the contract price) and must return $150 to Paul.</div>
+<div class="ktk-prac-q-num">Q53b <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Liquidated Damages — Penalty Analysis</span></div>
+<div class="ktk-prac-q-text">Melanie owns a fishing boat she charters for $500 per day. Paul booked the boat for July 15 and paid a $200 deposit. The contract allowed Melanie to retain the deposit if Paul failed to appear. Paul was told to arrive by 5 a.m. but didn&#x27;t arrive until noon because he had been trying to charter a cheaper boat. By 10 a.m., Melanie had taken Tyra&#x27;s family on a trip for $400. Which of the following accurately describes the rights of the parties?</div>
+<div class="ktk-prac-opt">(A) Melanie may retain the full $200 deposit, because it was a reasonable forecast of anticipated loss of profit.</div>
+<div class="ktk-prac-opt">(B) Melanie is entitled to retain only $50 (10% of the contract price) and must return $150.</div>
 <div class="ktk-prac-opt">(C) Melanie must return $100 to Paul to avoid unjust enrichment.</div>
 <div class="ktk-prac-opt">(D) Melanie must return $100 to Paul, because the liquidated damages clause operates as a penalty under the circumstances.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="D">
-<div class="ktk-prac-answer-badge">정답: (D)</div>
-<div class="ktk-prac-exp-text">A liquidated damages clause is enforceable only if (1) damages were difficult to estimate at the time of contracting, and (2) the stipulated amount was a reasonable forecast of compensatory damages. A clause that results in a recovery grossly disproportionate to actual damages constitutes an unenforceable penalty. Here, Melanie&#x27;s actual damages were limited: she earned $400 from Tyra&#x27;s trip, so her actual loss from Paul&#x27;s breach was approximately $100 ($500 - $400). Retaining the full $200 deposit — double her actual damages — would result in a windfall and constitutes a penalty. Melanie may retain $100 to compensate her actual loss but must return the remaining $100.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (D)</div>
+<div class="ktk-prac-exp-text">A liquidated damages clause is enforceable only if the amount is a reasonable forecast of compensatory damages. A clause resulting in recovery grossly disproportionate to actual damages is an unenforceable penalty. Here, Melanie&#x27;s actual damages were approximately $100 ($500 - $400 earned from Tyra). Retaining the full $200 deposit — double her actual loss — constitutes a penalty. Melanie may retain $100 to compensate her actual loss but must return the remaining $100.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/liquidated_damages_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="liquidated_damages_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 liquidated_damages_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; liquidated_damages_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/liquidated_damages_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="liquidated_damages_en_prac">
-<div class="placeholder-img" style="display:none">🖼 liquidated_damages_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; liquidated_damages_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q69 <span style="font-weight:400;color:#888;font-size:.65rem">— Breach — Expectation Damages + Duty to Mitigate</span></div>
-<div class="ktk-prac-q-text">Jay, a building contractor, entered into a contract with Gyson to perform construction work on Gyson&#x27;s warehouse for a projected profit of $3,000. Before Jay began any work, Gyson expressly and unequivocally repudiated the contract. Despite receiving clear notice of Gyson&#x27;s repudiation, Jay proceeded to purchase $5,000 worth of materials and began preliminary work before stopping. Jay then filed suit seeking $8,000 in damages ($5,000 in materials + $3,000 expected profit). What is Jay&#x27;s most likely recovery?</div>
+<div class="ktk-prac-q-num">Q69 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Breach — Expectation Damages + Duty to Mitigate</span></div>
+<div class="ktk-prac-q-text">Jay, a building contractor, entered into a contract with Gyson for a projected profit of $3,000. Before Jay began any work, Gyson expressly and unequivocally repudiated the contract. Despite receiving clear notice of Gyson&#x27;s repudiation, Jay proceeded to purchase $5,000 worth of materials and began preliminary work before stopping. Jay sues seeking $8,000 in damages. What is Jay&#x27;s most likely recovery?</div>
 <div class="ktk-prac-opt">(A) $0, because Jay&#x27;s failure to mitigate bars any recovery.</div>
 <div class="ktk-prac-opt">(B) $3,000 — the expected profit only, because the $5,000 post-breach expenditure was avoidable.</div>
 <div class="ktk-prac-opt">(C) $5,000 — the value of the benefit Jay conferred on Gyson.</div>
 <div class="ktk-prac-opt">(D) $8,000 — full expectation damages including all costs and profits.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="B">
-<div class="ktk-prac-answer-badge">정답: (B)</div>
-<div class="ktk-prac-exp-text">By default, aggrieved parties are entitled to expectation damages — the amount that would put the non-breaching party in the position they would have been had the contract been performed. However, the aggrieved party has a duty to mitigate damages: they cannot recover losses they could have reasonably avoided after breach. Here, Jay can recover the $3,000 profit he would have earned had the contract been performed. However, Jay cannot recover the $5,000 spent on materials after being notified of Gyson&#x27;s express repudiation, because those expenses were reasonably avoidable. Jay&#x27;s failure to mitigate after receiving clear notice of repudiation bars recovery of the post-breach expenditure.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (B)</div>
+<div class="ktk-prac-exp-text">Aggrieved parties are entitled to expectation damages, but have a duty to mitigate — they cannot recover losses reasonably avoidable after breach. Jay can recover the $3,000 profit he would have earned. However, Jay cannot recover the $5,000 spent after being notified of Gyson&#x27;s express repudiation, because those expenses were reasonably avoidable. Jay&#x27;s failure to mitigate after receiving clear notice of repudiation bars recovery of the post-breach expenditure.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/breach_remedies_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="breach_remedies_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 breach_remedies_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; breach_remedies_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/breach_remedies_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="breach_remedies_en_prac">
-<div class="placeholder-img" style="display:none">🖼 breach_remedies_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; breach_remedies_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q74 <span style="font-weight:400;color:#888;font-size:.65rem">— Anticipatory Repudiation — Dealer&#x27;s Best Defense</span></div>
-<div class="ktk-prac-q-text">On February 1, Dealer obtained a rare coin from Hellenes for $1,000 and in exchange gave Hellenes a signed written promise to deliver a similar coin &#x27;not later than December 31&#x27; at no cost. The coin market fell sharply from October 11. On October 15, Hellenes asked Dealer about performance. On October 17, Dealer responded that &#x27;it would be unfair to fulfill his obligation within the upcoming weeks due to the market&#x27;s surprising shift.&#x27; On November 15, Hellenes sued. The trial commenced December 1. If Dealer moves to dismiss Hellenes&#x27; complaint, what is Dealer&#x27;s best argument?</div>
+<div class="ktk-prac-q-num">Q74 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Anticipatory Repudiation — Dealer&#x27;s Best Defense</span></div>
+<div class="ktk-prac-q-text">On February 1, Dealer obtained a rare coin from Hellenes for $1,000 and gave Hellenes a signed written promise to deliver a similar coin &#x27;not later than December 31&#x27; at no cost. The coin market fell sharply from October 11. On October 17, Dealer responded to Hellenes&#x27; inquiry by saying &#x27;it would be unfair to fulfill his obligation within the upcoming weeks due to the market&#x27;s surprising shift.&#x27; On November 15, Hellenes sued. Trial commenced December 1. If Dealer moves to dismiss, what is Dealer&#x27;s best argument?</div>
 <div class="ktk-prac-opt">(A) Dealer did not repudiate the contract on October 17 and may still perform by the contract deadline of December 31.</div>
 <div class="ktk-prac-opt">(B) Even if Dealer repudiated, Hellenes&#x27; only remedy is specific performance because the coin is a unique chattel.</div>
-<div class="ktk-prac-opt">(C) Under the doctrine of impossibility and commercial impracticability, the market decline excuses Dealer&#x27;s performance.</div>
+<div class="ktk-prac-opt">(C) Under the doctrine of impossibility, the market decline excuses Dealer&#x27;s performance.</div>
 <div class="ktk-prac-opt">(D) Even if Dealer repudiated, Hellenes has no remedy without first demanding in writing that Dealer retract the repudiation.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="A">
-<div class="ktk-prac-answer-badge">정답: (A)</div>
-<div class="ktk-prac-exp-text">Anticipatory repudiation requires an unequivocal and definitive statement of intent not to perform before the performance deadline. Dealer&#x27;s statement on October 17 — that it &#x27;would be unfair&#x27; to perform &#x27;within the upcoming weeks&#x27; — is arguably ambiguous rather than an unequivocal refusal to perform by December 31. Dealer&#x27;s best argument for dismissal is that this ambiguous statement does not constitute an anticipatory repudiation, and Dealer still has until December 31 to perform. An ambiguous statement about performance difficulty is not the same as a clear repudiation. (Note: (B) is incorrect — UCC doesn&#x27;t restrict aggrieved party to specific performance. (C) is weak — market decline alone is not impracticability. (D) is incorrect — no written demand is required under UCC.)</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (A)</div>
+<div class="ktk-prac-exp-text">Anticipatory repudiation requires an unequivocal and definitive statement of intent not to perform. Dealer&#x27;s statement on October 17 — that it &#x27;would be unfair&#x27; to perform &#x27;within the upcoming weeks&#x27; — is arguably ambiguous, not a clear refusal to perform by December 31. Dealer&#x27;s best argument for dismissal is that this ambiguous statement does not constitute an anticipatory repudiation, and Dealer still has until December 31 to perform. (B) is incorrect — UCC doesn&#x27;t restrict aggrieved party to SP only. (C) is weak — market decline alone is not impracticability. (D) is incorrect — no written demand required.)</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/anticipatory_repudiation_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="anticipatory_repudiation_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 anticipatory_repudiation_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; anticipatory_repudiation_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/anticipatory_repudiation_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="anticipatory_repudiation_en_prac">
-<div class="placeholder-img" style="display:none">🖼 anticipatory_repudiation_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; anticipatory_repudiation_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -391,49 +1173,49 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Accord &amp; Satisfaction</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q22 <span style="font-weight:400;color:#888;font-size:.65rem">— Accord &amp; Satisfaction — &#x27;Payment in Full&#x27; Check</span></div>
-<div class="ktk-prac-q-text">Wavelaster Inc. and Wetailers Co. had a written radio supply agreement from January 1999 to December 2001 at $50/unit. In late December 2001, Wetailers returned 25 non-defective radios. Along with the returned radios, Wetailers included a check payable to Wavelaster for the balance due on all other goods delivered, conspicuously marked: &#x27;Payment in full for all goods sold to Wetailers Co. to date.&#x27; Wavelaster&#x27;s clerk, reading this notation and knowing that Wetailers had also returned the 25 non-defective radios for credit, deposited the check without protest. The canceled check was later returned to Wetailers. Which ground would best serve Wetailers in defense?</div>
+<div class="ktk-prac-q-num">Q22 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Accord &amp; Satisfaction — &#x27;Payment in Full&#x27; Check</span></div>
+<div class="ktk-prac-q-text">Wavelaster Inc. and Wetailers Co. had a radio supply agreement from 1999 to 2001 at $50/unit. In late December 2001, Wetailers returned 25 non-defective radios together with a check for the balance due on all other goods, conspicuously marked: &#x27;Payment in full for all goods sold to Wetailers Co. to date.&#x27; Wavelaster&#x27;s clerk, reading this notation and knowing about the 25 returned radios, deposited the check without protest. The canceled check was returned to Wetailers. Which ground would best serve Wetailers in defense?</div>
 <div class="ktk-prac-opt">(A) Wavelaster&#x27;s deposit of the check and its return to Wetailers estopped Wavelaster from claiming any additional amount.</div>
 <div class="ktk-prac-opt">(B) By depositing the check without protest and with knowledge of its wording, Wavelaster discharged any claim against Wetailers through accord and satisfaction.</div>
 <div class="ktk-prac-opt">(C) The deposit of the check constituted a novation, replacing Wavelaster&#x27;s original claim with the check amount.</div>
-<div class="ktk-prac-opt">(D) Wetailers&#x27; notation on the check constituted a unilateral modification of the contract, which Wavelaster accepted by depositing the check.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<div class="ktk-prac-opt">(D) Wetailers&#x27; notation on the check constituted a unilateral modification of the contract which Wavelaster accepted.</div>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="B">
-<div class="ktk-prac-answer-badge">정답: (B)</div>
-<div class="ktk-prac-exp-text">An accord is a contract under which the obligee (creditor) agrees to accept a different performance in satisfaction of the obligor&#x27;s (debtor&#x27;s) existing duty. Satisfaction occurs when the accord is performed, thereby discharging the original obligation. A &#x27;Payment in Full&#x27; check, when deposited by the creditor with knowledge of its notation, constitutes an accord and satisfaction. Wavelaster&#x27;s clerk read the &#x27;Payment in Full&#x27; notation and deposited the check anyway without protest — this constitutes Wavelaster&#x27;s acceptance of the accord. Once deposited, Wavelaster cannot later claim the balance for the 25 returned radios. Answer (A) is close but estoppel is a weaker and less precise ground than accord and satisfaction.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (B)</div>
+<div class="ktk-prac-exp-text">A &#x27;Payment in Full&#x27; check, when deposited by the creditor with knowledge of its notation, constitutes an accord and satisfaction. Wavelaster&#x27;s clerk read the &#x27;Payment in Full&#x27; notation and deposited the check without protest — this constitutes Wavelaster&#x27;s acceptance of the accord. Once deposited, Wavelaster cannot later claim the balance for the 25 returned radios. Answer (A) is close but estoppel is a weaker and less precise ground than accord and satisfaction.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/accord_satisfaction_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="accord_satisfaction_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 accord_satisfaction_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; accord_satisfaction_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/accord_satisfaction_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="accord_satisfaction_en_prac">
-<div class="placeholder-img" style="display:none">🖼 accord_satisfaction_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; accord_satisfaction_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q55 <span style="font-weight:400;color:#888;font-size:.65rem">— Accord &amp; Satisfaction — Good Faith Dispute</span></div>
-<div class="ktk-prac-q-text">Attorney represented Client in a real estate transaction and sent a bill for $8,000 in legal fees. Client disputed the amount, believing that due to an unexpected title problem that arose, the work was worth only $5,000. The parties exchanged several letters expressing their disagreement. Client then sent Attorney a check for $5,000 marked &#x27;Payment in full and final satisfaction of all legal fees owed.&#x27; Attorney read the notation and deposited the check without protest or reservation of rights. Attorney now sues for the remaining $3,000. What is the most likely outcome?</div>
+<div class="ktk-prac-q-num">Q55 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Accord &amp; Satisfaction — Good Faith Dispute</span></div>
+<div class="ktk-prac-q-text">Attorney represented Client in a real estate transaction and sent a bill for $8,000. Client disputed the amount, believing due to an unexpected title problem the work was worth only $5,000. The parties exchanged several letters expressing disagreement. Client then sent Attorney a check for $5,000 marked &#x27;Payment in full and final satisfaction of all legal fees owed.&#x27; Attorney read the notation and deposited the check without protest. Attorney now sues for the remaining $3,000. What is the most likely outcome?</div>
 <div class="ktk-prac-opt">(A) Attorney prevails, because the original $8,000 fee agreement controls and a unilateral check notation cannot modify it.</div>
 <div class="ktk-prac-opt">(B) Client prevails, because Attorney&#x27;s deposit of the check without protest constituted an accord and satisfaction discharging the remaining balance.</div>
 <div class="ktk-prac-opt">(C) Attorney prevails, because the check notation was not signed by Attorney as required to modify the fee agreement.</div>
 <div class="ktk-prac-opt">(D) Client prevails, because the fee agreement lacked consideration since the title problem was not anticipated.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="B">
-<div class="ktk-prac-answer-badge">정답: (B)</div>
-<div class="ktk-prac-exp-text">An accord and satisfaction requires (1) a good-faith dispute about the amount owed and (2) an unambiguous tender of a check as full payment, followed by the creditor&#x27;s deposit. A good-faith dispute about the amount owed provides sufficient consideration for the accord, even with a partial payment. Here, there was a legitimate, bona fide dispute about the amount of legal fees (the parties exchanged letters). Client unambiguously tendered the check as &#x27;full and final satisfaction.&#x27; Attorney read the notation and deposited the check without protest, thereby accepting the accord. The accord is satisfied, discharging the remaining $3,000 obligation.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (B)</div>
+<div class="ktk-prac-exp-text">An accord and satisfaction requires (1) a good-faith dispute about the amount owed and (2) an unambiguous tender of a check as full payment, followed by the creditor&#x27;s deposit. A good-faith dispute provides sufficient consideration. Here, there was a legitimate dispute (evidenced by letters). Client unambiguously tendered the check as &#x27;full and final satisfaction.&#x27; Attorney read the notation and deposited without protest, accepting the accord. The accord is satisfied, discharging the remaining $3,000 obligation.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/accord_satisfaction_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="accord_satisfaction_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 accord_satisfaction_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; accord_satisfaction_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/accord_satisfaction_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="accord_satisfaction_en_prac">
-<div class="placeholder-img" style="display:none">🖼 accord_satisfaction_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; accord_satisfaction_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -442,73 +1224,73 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Third-Party Beneficiary</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q57c <span style="font-weight:400;color:#888;font-size:.65rem">— Third-Party Beneficiary — Vesting of Rights</span></div>
-<div class="ktk-prac-q-text">Kailyn, owner of a taxi fleet, contracted with Phil, a petroleum dealer, for the purchase of Kailyn&#x27;s total gasoline requirements for one year. As part of the agreement, Phil agreed to exclusively engage Sally&#x27;s advertising agency for a year. When Sally learned of the Kailyn-Phil contract, she declined another advertising account to ensure she could serve both Phil and Kailyn. Sally was an intended beneficiary of the Kailyn-Phil contract. Kailyn performed his contract with Phil for six months, during which Phil engaged Sally&#x27;s advertising services. Kailyn and Sally then divorced, and Kailyn informed Phil he no longer needed to use Sally&#x27;s services. Phil told Sally he would stop using her services. In a lawsuit by Sally against Phil to enforce the contract, Sally would likely:</div>
+<div class="ktk-prac-q-num">Q57c <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Third-Party Beneficiary — Vesting of Rights</span></div>
+<div class="ktk-prac-q-text">Kailyn contracted with Phil for the purchase of Kailyn&#x27;s total gasoline requirements for one year. Phil also agreed to exclusively engage Sally&#x27;s advertising agency for a year. When Sally learned of the contract, she declined another advertising account. Sally was an intended beneficiary. Kailyn performed for six months, during which Phil engaged Sally&#x27;s services. Kailyn and Sally then divorced, and Kailyn told Phil he no longer needed to use Sally&#x27;s services. Phil told Sally he would stop. In Sally&#x27;s lawsuit against Phil to enforce the contract, Sally would likely:</div>
 <div class="ktk-prac-opt">(A) Succeed, because Phil and Kailyn could not, without Sally&#x27;s consent, modify the contract to discharge Phil&#x27;s duties to Sally once her rights vested.</div>
 <div class="ktk-prac-opt">(B) Succeed, because Kailyn acted in bad faith in releasing Phil from his duties to Sally.</div>
-<div class="ktk-prac-opt">(C) Not succeed, because the promisor and promisee of a third-party beneficiary contract retain the right to modify or terminate absent a contrary provision.</div>
+<div class="ktk-prac-opt">(C) Not succeed, because the promisor and promisee of a TPB contract retain the right to modify or terminate absent a contrary provision.</div>
 <div class="ktk-prac-opt">(D) Not succeed, because any agency relationship between Kailyn and Sally was terminated by their divorce.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="A">
-<div class="ktk-prac-answer-badge">정답: (A)</div>
-<div class="ktk-prac-exp-text">A third-party beneficiary&#x27;s rights vest when the beneficiary (1) manifests assent to the contract, (2) changes position in justifiable reliance, or (3) brings suit to enforce it. Once rights vest, the promisor and promisee cannot modify or rescind the contract without the beneficiary&#x27;s consent. Here, Sally was an intended beneficiary whose rights vested when she declined another advertising account in reliance on the Kailyn-Phil contract and began performing advertising services for six months. After Sally&#x27;s rights vested, Kailyn and Phil could not discharge Phil&#x27;s duties to Sally without Sally&#x27;s consent. Sally may enforce the contract against Phil.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (A)</div>
+<div class="ktk-prac-exp-text">A third-party beneficiary&#x27;s rights vest when the beneficiary (1) manifests assent, (2) changes position in justifiable reliance, or (3) brings suit to enforce it. Once rights vest, the promisor and promisee cannot modify or rescind without the beneficiary&#x27;s consent. Here, Sally was an intended beneficiary whose rights vested when she declined another account in reliance and began performing advertising services for six months. After Sally&#x27;s rights vested, Kailyn and Phil could not discharge Phil&#x27;s duties to Sally without her consent.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/third_party_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="third_party_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 third_party_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; third_party_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/third_party_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="third_party_en_prac">
-<div class="placeholder-img" style="display:none">🖼 third_party_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; third_party_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q33 <span style="font-weight:400;color:#888;font-size:.65rem">— Third-Party Beneficiary — Incidental Beneficiary</span></div>
-<div class="ktk-prac-q-text">On February 1, Beth contracted with Carlson to sell a specific rare coin for $12,000, with delivery and payment on May 1. Unknown to Carlson, Beth also contracted on March 1 with Harald to sell the same coin for $10,000, delivery April 1. The coin&#x27;s value fell to $8,000 by April 1, and Beth delivered the coin to Harald. The market recovered to $12,000 by May 1, but Beth failed to deliver to Carlson. Harald later told Carlson that Carlson should take legal action against Beth. Carlson now seeks to enforce the Beth-Harald contract as a third-party beneficiary. Will Carlson prevail in enforcing the Beth-Harald contract?</div>
+<div class="ktk-prac-q-num">Q33 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Third-Party Beneficiary — Incidental Beneficiary</span></div>
+<div class="ktk-prac-q-text">On February 1, Beth contracted with Carlson to sell a specific rare coin for $12,000, delivery May 1. Unknown to Carlson, Beth also contracted with Harald to sell the same coin for $10,000, delivery April 1. Beth delivered the coin to Harald on April 1. Carlson now seeks to enforce the Beth-Harald contract as a third-party beneficiary. Will Carlson prevail in enforcing the Beth-Harald contract?</div>
 <div class="ktk-prac-opt">(A) No, because Carlson is only an incidental beneficiary of the Beth-Harald contract and has no standing to enforce it.</div>
-<div class="ktk-prac-opt">(B) No, because the Beth-Harald contract was already fully performed by the time Carlson sought to enforce it.</div>
+<div class="ktk-prac-opt">(B) No, because the Beth-Harald contract was already fully performed before Carlson sought to enforce it.</div>
 <div class="ktk-prac-opt">(C) Yes, because Carlson was an intended creditor beneficiary of the Beth-Harald contract.</div>
 <div class="ktk-prac-opt">(D) Yes, because Harald&#x27;s disclosure to Carlson constituted an effective assignment of rights.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="A">
-<div class="ktk-prac-answer-badge">정답: (A)</div>
-<div class="ktk-prac-exp-text">A third party may enforce a contract only if they are an intended beneficiary — one the contracting parties intended to benefit. An incidental beneficiary — one who merely happens to benefit as a side effect — has no enforceable rights. Under the intent-to-benefit test, a party is an intended beneficiary only if the contract was made for the purpose of benefiting that party. Here, the Beth-Harald contract was made for Beth and Harald&#x27;s benefit. Harald was unaware of the Beth-Carlson contract; he did not intend the Beth-Harald deal to benefit Carlson. Carlson is merely an incidental beneficiary with no standing to enforce the Beth-Harald contract. Carlson&#x27;s remedy, if any, lies against Beth for breach of the Beth-Carlson contract.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (A)</div>
+<div class="ktk-prac-exp-text">A third party may enforce a contract only if they are an intended beneficiary — one the contracting parties intended to benefit. The Beth-Harald contract was made for Beth and Harald&#x27;s benefit. Harald was unaware of the Beth-Carlson contract; he did not intend the Beth-Harald deal to benefit Carlson. Carlson is merely an incidental beneficiary with no standing to enforce the Beth-Harald contract. Carlson&#x27;s remedy lies against Beth for breach of the Beth-Carlson contract.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/third_party_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="third_party_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 third_party_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; third_party_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/third_party_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="third_party_en_prac">
-<div class="placeholder-img" style="display:none">🖼 third_party_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; third_party_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q95 <span style="font-weight:400;color:#888;font-size:.65rem">— Third-Party Beneficiary — Incidental Beneficiary (Neighbor)</span></div>
-<div class="ktk-prac-q-text">Landowner contracted with Contractor to construct a large office building on Landowner&#x27;s lot. Neighbor, whose property adjoins Landowner&#x27;s, hoped the building would block the prevailing wind from his property and reduce his heating bills. Contractor failed to complete the building as contracted. Neighbor sues Contractor as a third-party beneficiary of the Landowner-Contractor contract. Which of the following best states why Neighbor cannot recover?</div>
-<div class="ktk-prac-opt">(A) Neighbor is only an incidental beneficiary of the Landowner-Contractor contract and has no enforceable rights under it.</div>
+<div class="ktk-prac-q-num">Q95 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Third-Party Beneficiary — Incidental Beneficiary (Neighbor)</span></div>
+<div class="ktk-prac-q-text">Landowner contracted with Contractor to construct a large office building on Landowner&#x27;s lot. Neighbor, whose property adjoins Landowner&#x27;s, hoped the building would block the prevailing wind and reduce his heating bills. Contractor failed to complete the building as contracted. Neighbor sues Contractor as a third-party beneficiary. Which of the following best states why Neighbor cannot recover?</div>
+<div class="ktk-prac-opt">(A) Neighbor is only an incidental beneficiary and has no enforceable rights under the Landowner-Contractor contract.</div>
 <div class="ktk-prac-opt">(B) Neighbor lacks privity of contract with Contractor and therefore has no tort or contract claim.</div>
 <div class="ktk-prac-opt">(C) Neighbor cannot enforce the contract because there is no showing that Contractor breached a duty owed to Neighbor personally.</div>
 <div class="ktk-prac-opt">(D) Neighbor&#x27;s interest — reduced heating bills — is too speculative to constitute a legally cognizable harm.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="A">
-<div class="ktk-prac-answer-badge">정답: (A)</div>
-<div class="ktk-prac-exp-text">Incidental beneficiaries are third parties who receive a practical benefit from a contract&#x27;s performance, but the contracting parties did not intend to confer a legal benefit on them. Under the intent-to-benefit test, a party is an incidental beneficiary — with no enforceable rights — when the contract was not made for the purpose of benefiting that party. Here, the Landowner-Contractor contract was made to construct a building for Landowner&#x27;s benefit. Any benefit to Neighbor (reduced wind, lower heating costs) is incidental and unintended by the contracting parties. Incidental beneficiaries have no standing to sue to enforce the contract.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (A)</div>
+<div class="ktk-prac-exp-text">Incidental beneficiaries receive a practical benefit from a contract&#x27;s performance, but the contracting parties did not intend to confer a legal benefit on them. Under the intent-to-benefit test, the Landowner-Contractor contract was made to construct a building for Landowner&#x27;s benefit. Any benefit to Neighbor is incidental and unintended by the contracting parties. Incidental beneficiaries have no standing to sue to enforce the contract.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/third_party_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="third_party_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 third_party_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; third_party_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/third_party_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="third_party_en_prac">
-<div class="placeholder-img" style="display:none">🖼 third_party_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; third_party_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -517,49 +1299,49 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Assignment &amp; Delegation</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q63 <span style="font-weight:400;color:#888;font-size:.65rem">— Assignment — Executory Contract / Rights vs. Duties</span></div>
-<div class="ktk-prac-q-text">Jay, a flour supplier, contracted with Smith, a bakery, to supply all of Smith&#x27;s flour requirements for one year starting November 1. Before performance began, Jay sold his entire business to Brooks Inc. and assigned all his contracts — including the Smith contract — to Brooks Inc. Jay notified Smith of the assignment. Brooks Inc. performed the contract and delivered flour to Smith. Smith seeks to argue that the assignment was invalid. Which of the following statements best supports Smith&#x27;s claim that she need not pay Brooks Inc.?</div>
+<div class="ktk-prac-q-num">Q63 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Assignment — Rights vs. Duties</span></div>
+<div class="ktk-prac-q-text">Jay, a flour supplier, contracted with Smith, a bakery, to supply all of Smith&#x27;s flour requirements for one year. Before performance began, Jay sold his entire business to Brooks Inc. and assigned all his contracts — including the Smith contract — to Brooks Inc. Jay notified Smith of the assignment. Brooks Inc. performed and delivered flour to Smith. Smith seeks to argue the assignment was invalid. Which of the following statements best supports why Smith&#x27;s payment obligation runs to Brooks Inc.?</div>
 <div class="ktk-prac-opt">(A) Smith never consented to dealing with Brooks Inc. as her flour supplier.</div>
 <div class="ktk-prac-opt">(B) The assignment language transferred rights only; the performance obligations remained with Jay.</div>
-<div class="ktk-prac-opt">(C) Both I (executory contracts are non-assignable) and III (assignment language transfers rights only, not duties) are accurate statements supporting Smith&#x27;s obligation to pay Jay.</div>
+<div class="ktk-prac-opt">(C) Both I (executory contracts are non-assignable) and III (assignment language transfers rights only) are accurate statements supporting Smith&#x27;s obligation to pay Jay.</div>
 <div class="ktk-prac-opt">(D) Both I and III are accurate: executory contracts and rights transfers support why Smith&#x27;s payment should go to Brooks Inc.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="D">
-<div class="ktk-prac-answer-badge">정답: (D)</div>
-<div class="ktk-prac-exp-text">Generally, contractual rights can be assigned freely. When Jay assigned the contract to Brooks Inc. and notified Smith, Brooks Inc. acquired the right to receive payment from Smith. The assignment language &#x27;transfer of all contracts&#x27; transferred Jay&#x27;s right to payment — not a discharge of Jay&#x27;s obligations. Executory contracts (those not yet performed) are generally assignable unless they materially change the obligor&#x27;s duties. Here, the flour-supply contract was assignable because supplying flour to Smith did not become materially different just because Brooks Inc. would supply it. Once Smith was notified of the assignment, she was obligated to pay Brooks Inc., not Jay. Statements I and III together support why Smith&#x27;s payment obligation runs to Brooks Inc.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (D)</div>
+<div class="ktk-prac-exp-text">When Jay assigned the contract to Brooks Inc. and notified Smith, Brooks Inc. acquired the right to receive payment from Smith. The flour-supply contract was assignable because supplying flour to Smith did not become materially different just because Brooks Inc. would supply it. Once Smith was notified of the assignment, she was obligated to pay Brooks Inc. Statements I and III together support why Smith&#x27;s payment obligation runs to Brooks Inc.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/assignment_delegation_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="assignment_delegation_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 assignment_delegation_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; assignment_delegation_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/assignment_delegation_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="assignment_delegation_en_prac">
-<div class="placeholder-img" style="display:none">🖼 assignment_delegation_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; assignment_delegation_en_prac.png</div>
 </figure></div>
 </div>
 </div>
 </div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q64 <span style="font-weight:400;color:#888;font-size:.65rem">— Assignment — Obligor&#x27;s Payment to Assignor After Notice</span></div>
-<div class="ktk-prac-q-text">Jay contracted with Smith to supply flour for one year. Before performance, Jay sold his business and assigned the Smith contract to Brooks Inc. Jay notified Smith of the assignment. Brooks Inc. performed the contract and delivered flour per the contract terms. Smith paid Jay directly (instead of Brooks Inc.), believing her obligation was still owed to Jay. Brooks Inc. now sues Smith for the contract price. Which of the following defenses is available to Smith?</div>
+<div class="ktk-prac-q-num">Q64 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Assignment — Obligor&#x27;s Payment to Assignor After Notice</span></div>
+<div class="ktk-prac-q-text">Jay contracted with Smith to supply flour for one year. Before performance, Jay sold his business and assigned the Smith contract to Brooks Inc. Jay notified Smith of the assignment. Brooks Inc. delivered flour per the contract terms. Smith paid Jay directly (instead of Brooks Inc.), believing her obligation was still owed to Jay. Brooks Inc. sues Smith for the contract price. Which defense is available to Smith?</div>
 <div class="ktk-prac-opt">(A) Smith was not required to pay Brooks Inc. because she never expressly consented to the assignment.</div>
 <div class="ktk-prac-opt">(B) Smith&#x27;s payment to Jay discharged her obligation because Jay remained liable to Brooks Inc. as the delegator.</div>
 <div class="ktk-prac-opt">(C) Smith&#x27;s payment to Jay discharges her obligation because she was not notified of the assignment.</div>
 <div class="ktk-prac-opt">(D) Smith has no valid defense — payment to Jay after receiving notice of the assignment does not discharge her obligation to Brooks Inc.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="D">
-<div class="ktk-prac-answer-badge">정답: (D)</div>
-<div class="ktk-prac-exp-text">Once an obligor (Smith) receives notice of an assignment, the obligor must pay the assignee (Brooks Inc.). Payment to the assignor (Jay) after receiving notice of the assignment does NOT discharge the obligor&#x27;s duty to the assignee. Smith received notice that Jay had assigned the contract to Brooks Inc. By paying Jay after that notice, Smith&#x27;s payment was ineffective as to Brooks Inc. Smith remains obligated to pay Brooks Inc. and her only recourse is to seek reimbursement from Jay for the duplicative payment. Therefore, Smith has no valid defense against Brooks Inc.&#x27;s suit.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (D)</div>
+<div class="ktk-prac-exp-text">Once an obligor receives notice of an assignment, the obligor must pay the assignee. Payment to the assignor after receiving notice does NOT discharge the obligor&#x27;s duty to the assignee. Smith received notice that Jay had assigned the contract to Brooks Inc. By paying Jay after that notice, Smith&#x27;s payment was ineffective as to Brooks Inc. Smith remains obligated to pay Brooks Inc. and her only recourse is to seek reimbursement from Jay.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/assignment_delegation_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="assignment_delegation_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 assignment_delegation_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; assignment_delegation_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/assignment_delegation_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="assignment_delegation_en_prac">
-<div class="placeholder-img" style="display:none">🖼 assignment_delegation_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; assignment_delegation_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -568,25 +1350,25 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="ktk-prac-block">
 <div class="ktk-prac-cl-hd">📌 Implied-in-Fact Contract</div>
 <div class="ktk-prac-card">
-<div class="ktk-prac-q-num">Q70 <span style="font-weight:400;color:#888;font-size:.65rem">— Implied-in-Fact Contract — vs. Quasi-Contract</span></div>
+<div class="ktk-prac-q-num">Q70 <span style="font-weight:400;color:#888;font-size:.65rem">&mdash; Implied-in-Fact Contract vs. Quasi-Contract</span></div>
 <div class="ktk-prac-q-text">In which of the following situations is an implied-in-fact contract most likely formed?</div>
-<div class="ktk-prac-opt">(A) A taxpayer mistakenly overpays taxes, and the government retains the overpayment without taking any action.</div>
+<div class="ktk-prac-opt">(A) A taxpayer mistakenly overpays taxes, and the government retains the overpayment.</div>
 <div class="ktk-prac-opt">(B) Doctor treats Ryder, an unconscious accident victim at the scene of a crash, and Ryder fully recovers.</div>
 <div class="ktk-prac-opt">(C) Doctor fixes Neighbor&#x27;s driveway while Neighbor watches and does not object to the work being done.</div>
 <div class="ktk-prac-opt">(D) Contractor performs landscaping on the wrong house while the owner is away on vacation and unaware.</div>
-<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">답·해설 보기</button>
+<button class="ktk-prac-btn" onclick="toggleKtkExp(this)">&#8595; &#45813;&#xB7;&#D574;&#C124; &#BCF4;&#AE30;</button>
 <div class="ktk-prac-explain" data-correct="C">
-<div class="ktk-prac-answer-badge">정답: (C)</div>
-<div class="ktk-prac-exp-text">An implied-in-fact contract arises from conduct rather than words — courts infer an agreement from the parties&#x27; behavior and surrounding circumstances. The key element is that both parties manifested mutual assent through conduct. In (C), Neighbor observed Doctor fixing the driveway and did not object — this creates a reasonable inference that Neighbor agreed to pay for the benefit received, forming an implied-in-fact contract. Contrast (B): because Ryder was unconscious, he could not manifest assent, so no implied-in-fact contract is formed (though quasi-contract/unjust enrichment may apply). In (A), a mistaken tax overpayment cannot create an implied obligation on the government. In (D), the absent owner had no opportunity to accept or reject.</div>
+<div class="ktk-prac-answer-badge">&#51221;&#45813;: (C)</div>
+<div class="ktk-prac-exp-text">An implied-in-fact contract arises from conduct rather than words — courts infer an agreement from the parties&#x27; behavior. The key element is that both parties manifested mutual assent through conduct. In (C), Neighbor observed Doctor fixing the driveway and did not object — this creates a reasonable inference that Neighbor agreed to pay for the benefit received. Contrast (B): Ryder was unconscious, so he could not manifest assent; (A) and (D) also lack the mutual assent element.</div>
 <div class="jenspark-wrap">
-<div class="jenspark-lbl">Jenspark 개념 이미지</div>
+<div class="jenspark-lbl">Jenspark &#44060;&#45392; &#51060;&#48120;&#51648;</div>
 <div class="jenspark-imgs"><figure class="topic-fig">
 <img class="topic-img" src="images/implied_contract_ko_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="implied_contract_ko_prac">
-<div class="placeholder-img" style="display:none">🖼 implied_contract_ko_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; implied_contract_ko_prac.png</div>
 </figure>
 <figure class="topic-fig">
 <img class="topic-img" src="images/implied_contract_en_prac.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="implied_contract_en_prac">
-<div class="placeholder-img" style="display:none">🖼 implied_contract_en_prac.png</div>
+<div class="placeholder-img" style="display:none">&#128444; implied_contract_en_prac.png</div>
 </figure></div>
 </div>
 </div>
@@ -599,14 +1381,16 @@ function showCls(id){
   document.querySelectorAll('.cls').forEach(c=>c.classList.remove('on'));
   var el=document.getElementById(id);
   if(el) el.classList.add('on');
-  var tabs=document.querySelectorAll('.ctab');
-  tabs.forEach(t=>{ if(t.getAttribute('onclick') && t.getAttribute('onclick').includes("'"+id+"'")) t.classList.add('on'); });
+  document.querySelectorAll('.ctab').forEach(t=>{
+    var oc=t.getAttribute('onclick')||'';
+    if(oc.indexOf("'"+id+"'")>=0) t.classList.add('on');
+  });
 }
 function toggleKtkExp(btn){
   var exp=btn.nextElementSibling;
   if(!exp) return;
   exp.classList.toggle('kp-open');
-  btn.textContent=exp.classList.contains('kp-open')?'답·해설 닫기':'답·해설 보기';
+  btn.textContent=exp.classList.contains('kp-open')?'답\u00B7해설 닫기':'답\u00B7해설 보기';
 }
 </script>
 </body>
