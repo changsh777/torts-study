@@ -12,6 +12,10 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 .top-bar a{color:#c9b8f8;text-decoration:none;font-weight:700;}
 .top-bar a:hover{color:#fff;}
 .top-title{font-weight:700;font-size:.85rem;}
+.mbts{display:flex;gap:4px;margin-left:auto;}
+.mbt{padding:3px 11px;border-radius:20px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:rgba(255,255,255,.6);font-size:.7rem;font-weight:700;cursor:pointer;font-family:inherit;transition:.15s;}
+.mbt.on{background:#fff;color:#2d2060;border-color:#fff;}
+.mbt:hover{background:rgba(255,255,255,.15);}
 .ctabs{position:sticky;top:36px;z-index:299;background:#fff;border-bottom:2px solid var(--brd);display:flex;overflow-x:auto;}
 .ctab{padding:.55rem 1.2rem;font-size:.78rem;font-weight:700;color:var(--mut);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;transition:.15s;}
 .ctab:hover{color:var(--acc);background:#f4f0ff;}
@@ -64,7 +68,13 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <div class="top-bar">
 <a href="../index.html">&#8592; 과목 목록</a>
 <span class="top-title">&#128221; Contracts</span>
-<span style="margin-left:auto;font-size:.7rem;color:#b0a0e8">이론 19토픽 | KTK 21문제</span>
+<div class="mbts">
+  <button class="mbt on" onclick="setMode(0)">0회독</button>
+  <button class="mbt" onclick="setMode(1)">1회독</button>
+  <button class="mbt" onclick="setMode(2)">2회독</button>
+  <button class="mbt" onclick="setMode(3)">3회독</button>
+  <button class="mbt" onclick="setMode(4)">4회독 실전</button>
+</div>
 </div>
 <div class="ctabs">
   <div class="ctab on" onclick="showCls('g0')">⚖️ 적용법 (Governing Law)</div>
@@ -1394,6 +1404,10 @@ Exceptions: ① Unforeseen difficulty ② UCC goods modification ③ Duty owed t
 </div>
 </div>
 <script>
+function setMode(n){
+  document.body.className=document.body.className.replace(/\bm\d\b/g,'').trim()+' m'+n;
+  document.querySelectorAll('.mbt').forEach((b,i)=>{b.classList.toggle('on',i===n);});
+}
 function showCls(id){
   document.querySelectorAll('.ctab').forEach(t=>t.classList.remove('on'));
   document.querySelectorAll('.cls').forEach(c=>c.classList.remove('on'));
