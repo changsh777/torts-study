@@ -126,6 +126,13 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
   border-radius:7px;margin:.4rem auto .6rem;opacity:.92;}
 /* KTK IRAC */
 .ktk-irac-wrap{border-top:1.5px solid #c9b8e8;}
+.irac-model-wrap{margin-top:.6rem;}
+.irac-model-btn{background:none;border:1px solid #c9b8e8;border-radius:5px;padding:.3rem .8rem;font-size:.78rem;color:#4a2d7a;cursor:pointer;width:100%;}
+.irac-model-btn:hover{background:#f3eeff;}
+.irac-model-body{margin-top:.4rem;padding:.5rem .7rem;background:#faf8ff;border-radius:6px;border:1px solid #e4d8f8;}
+.irac-model-row{display:flex;gap:.6rem;padding:.25rem 0;border-bottom:1px dotted #e0d0f0;align-items:flex-start;}
+.irac-model-row:last-child{border-bottom:none;}
+.irac-model-txt{font-size:.82rem;line-height:1.7;color:#1a3a5c;}
 .ktk-irac-fact{font-size:.78rem;line-height:1.7;background:#fff;border:1px solid #c0c8d8;
   border-radius:5px;padding:.55rem .8rem;margin-bottom:.6rem;color:#333;}
 /* KTK 이론 좌한글 우영문 */
@@ -2300,6 +2307,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Which legal framework governs the transaction for custom-designed metal widgets?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">UCC Article 2 governs contracts specifically for the sale of goods identified at the time of agreement.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">The widgets, being custom-designed and tangible goods, fall under UCC Article 2 despite manufacturing involvement, as the primary purpose is their delivery.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">UCC Article 2 governs this transaction.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Offer / Acceptance / Firm Offer</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">Mirror Image Rule (Common Law): Acceptance는 Offer 조건 그대로여야. 조건 변경 = Counteroffer → 원래 Offer 소멸.<br>UCC §2-207 Battle of the Forms: 추가·다른 조건 있어도 Acceptance 성립. 추가 조건은 상인간 자동 포함(중요 변경 아닌 경우).<br>Firm Offer (UCC §2-205): 상인이 서면으로 offer open → Consideration 없이 최대 3개월 철회 불가.<br>Mailbox Rule: 수락 편지는 보내는 순간 효력 발생. Option Contract·지정 방법은 도착해야.</div><img class="topic-img ko-img" src="images/cl1_offer_accept_ko_info.png" loading="lazy">
@@ -2336,6 +2348,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Whether Wetailers can introduce evidence of non-defective returns under the contract with Wavelaster Inc.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">Under UCC principles, course-of-performance evidence supplements silent contract terms to clarify intent.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">The parties' conduct over three years, including handling of non-defective returns, indicates an implied agreement beyond the written silence.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">The trial court should admit the evidence as it reflects the course of performance clarifying the parties' intent regarding returns.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Capacity</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">미성년자(Infancy): 계약 voidable — 미성년자 단독으로 성년 전후 disaffirm 가능. 성년 후 합리적 시간 내 취소 없으면 ratify 간주 가능.<br>Necessities 예외: 음식·의복·주거·의료는 미성년자도 quasi-contract 책임 (실제 가치 기준, 계약가 아님).<br>Mental Incapacity: 계약 시점에 행위 성질·결과 이해 불가 = voidable. 법원 adjudication 있으면 void.</div><img class="topic-img ko-img" src="images/cl7_equitable_ko_info.png" loading="lazy">
@@ -2364,6 +2381,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Can a minor disaffirm a contract for the purchase of a used car and recover full payment despite depreciation and use?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">Traditional common law permits minors to disaffirm contracts voidable at their election, entitling them to recover full consideration paid irrespective of depreciation or use, unless the goods are necessities.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">Applying the rule, the minor can disaffirm the contract and seek return of the full $8,000 paid, despite the car's depreciation to $5,500 and regular use over two months, as automobiles are not considered necessities.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">Therefore, the minor is entitled to recover the full $8,000 paid for the car.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Parol Evidence</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">완전 통합(Total Integration): 서면이 최종·완전 합의 → prior/contemporaneous 구두 합의 모두 배제.<br>부분 통합(Partial Integration): 추가 조건 배제, 모순 조건 배제, 설명·해석은 가능.<br>PER 예외: 사기·강박(fraud/duress), Condition Precedent, 서명 후 수정(Modification), 모호성(Ambiguity) 해석 — 이 경우엔 외부 증거 허용.</div><img class="topic-img ko-img" src="images/cl4_per_ko_info.png" loading="lazy">
@@ -2400,6 +2422,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Does the buyer's evidence of an oral promise regarding exterior repainting contradict the integrated written contract?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">The parol evidence rule prohibits extrinsic evidence when a contract contains a merger clause indicating it is the complete agreement between parties.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">The merger clause signifies the written contract is fully integrated, limiting consideration to its terms alone under the four-corners approach.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">The oral promise to repaint is inadmissible as it contradicts the integrated written agreement.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Conditions &amp; Waiver</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">Express Condition: 엄격 충족(Strict Compliance) 필수 — 하루 늦어도 조건 미충족. Substantial Performance는 Promise에만 적용.<br>Waiver: 조건 포기 가능. 중요(material) 조건 포기는 Consideration 필요. 반복 행동으로 묵시적 포기(Waiver by Conduct) 성립 가능.<br>Constructive Condition: 순서 있는 이행에서 선행 의무가 후행 의무의 묵시적 조건 — 먼저 이행 안 하면 상대 의무 미발생.</div><img class="topic-img ko-img" src="images/cl5_breach_ko_info.png" loading="lazy">
@@ -2431,6 +2458,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Does a one-day delay in providing timely notice under an express condition satisfy the lease renewal option requirement?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">Express conditions under common law must be strictly adhered to without deviation in timing or form.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">The tenant's notice was sent one day late, failing strictly to meet the 'by September 1' deadline explicitly stipulated in the lease agreement.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">The tenant lost the right to exercise the lease renewal option due to non-compliance with the strict timing requirement of the express condition.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Impracticability</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">Impossibility (Common Law): 이행이 객관적으로 불가능 — 이행 대상 물건 멸실, 법령 변경, 지정 인물 사망.<br>Commercial Impracticability (UCC §2-615): 예측 불가 사태로 이행이 극단적 부담 → 가능한 만큼만 이행 후 합리적 배분 의무.<br>Frustration of Purpose: 이행은 가능하지만 계약 목적 자체 소멸. 양측이 예측 불가했어야 적용 (Coronation Cases).</div><img class="topic-img ko-img" src="images/cl8_impossibility_ko_info.png" loading="lazy">
@@ -2461,6 +2493,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Can the farmer be excused from delivering the remaining 800 bushels of wheat due to drought under UCC § 2-615?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">UCC § 2-615 permits exemption from performance due to unforeseen contingencies rendering fulfillment impracticable.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">The drought qualifies as an unforeseen contingency under UCC § 2-615, making partial performance practicable with only 200 bushels available.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">The farmer is likely excused from delivering the remaining 800 bushels but must deliver the available 200 bushels and notify the buyer of the partial fulfillment.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Breach &amp; Remedies</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">기대이익(Expectation): 계약 이행 시 있었을 위치 = 이행이익. 예견 가능·확실성·회피 불가 요건 충족 시 회복.<br>Hadley v. Baxendale: 결과손해(Consequential)는 계약 체결 시 양측이 예견 가능한 것만. 특수 사정은 사전 고지 필요.<br>Mitigation: 비위반 당사자는 합리적 조치로 손해 최소화 의무. 유사 대체 기회 거부 시 그 부분 회복 불가.<br>Jacob &amp; Youngs: 실질적 이행 후 경미 breach → 교체비용 아닌 시장가치 차이(diminution in value).</div><img class="topic-img ko-img" src="images/cl6_expectation_ko_info.png" loading="lazy">
@@ -2501,6 +2538,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Can the homeowner recover damages based on the cost of replacing pipes rather than the diminution in market value under Jacob &amp; Youngs v. Kent?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">Jacob &amp; Youngs v. Kent mandates diminution in market value as the measure of damages for unintentional breaches where replacement cost grossly exceeds benefit.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">Here, the functionally identical pipes result in negligible market value change, making replacement cost disproportionate and wasteful.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">The homeowner should recover nominal damages reflecting no significant diminution in market value due to the functionally equivalent pipes used.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Accord &amp; Satisfaction</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">Accord: 기존 의무 대신 다른 이행을 하기로 하는 새 합의. Satisfaction 전까지 기존 의무는 존속.<br>Satisfaction: 합의된 이행 완료 → 기존 의무 소멸. Accord만 있고 Satisfaction 없으면 원래 의무 + breach 청구 가능.<br>Full-Payment Check (UCC §3-311): 분쟁 있는 채권에 'Full Payment' 명시 수표를 상대방이 입금하면 자동 accord &amp; satisfaction.</div><img class="topic-img ko-img" src="images/cl8_modification_ko_info.png" loading="lazy">
@@ -2531,6 +2573,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Does depositing a check marked as 'Full and final payment' for undisputed funds constitute accord and satisfaction under UCC § 3-311 despite a prior dispute?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">UCC § 3-311 supports accord and satisfaction when a creditor cashes a check marked as full payment despite a dispute, provided it is conspicuous and in good faith.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">The seller received a check explicitly marked as 'Full and final payment' for undisputed funds while aware of the defect claim, leading to deposit, fulfilling key elements under UCC § 3-311.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">The seller's acceptance and deposit of the check likely constitutes accord and satisfaction, barring further claims for the disputed amount under UCC § 3-311.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Third-Party Beneficiary</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">Intended Beneficiary: 계약 당사자들이 직접 이익을 주려 했던 제3자 → 독립 청구권 보유.<br>Incidental Beneficiary: 부수적으로 이익 받는 자 → 청구권 없음 (도서관 건축·고용 예시).<br>Vesting: 수익자가 신뢰해 행동하거나 소송 제기 시 당사자들 단독 수정·취소 불가.<br>Creditor Beneficiary: 채권자 지위 제3자도 Intended Beneficiary로 직접 소송 가능.</div><img class="topic-img ko-img" src="images/cl8_tpb_ko_info.png" loading="lazy">
@@ -2561,6 +2608,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Can Smith, an unemployed local resident not hired by Builder, enforce Builder’s contract to hire local workers as a third-party beneficiary?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">Under contract law, only intended beneficiaries have enforceable rights under a contract, distinguishing them from incidental beneficiaries who lack such enforceability.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">The primary purpose of the contract was to construct a public library for the community, not specifically to benefit individual local workers directly; thus, Smith’s right to enforce the hiring provision is incidental rather than intended.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">Smith cannot enforce the contract as an intended beneficiary due to being classified as an incidental beneficiary.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Assignment &amp; Delegation</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">Assignment (권리 이전): 원칙적으로 가능. Anti-Assignment Clause 위반 = breach지 void 아님 ('shall be void' 명시 시에만 void).<br>Delegation (의무 이전): Delegatee가 이행해도 Delegator는 여전히 보증인으로 책임. 개인 서비스 의무는 동의 없이 위임 불가.<br>Novation: 원 당사자를 새 당사자로 완전 대체 → 원 당사자 의무 소멸 (상대방 동의 필수).</div><img class="topic-img ko-img" src="images/cl8_assignment_ko_info.png" loading="lazy">
@@ -2591,6 +2643,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Can the client void an assignment made without consent under an anti-assignment clause?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">Anti-assignment clauses typically render unauthorized assignments breaches rather than void transactions unless explicitly stated as void.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">The clause here prohibits assignment without consent but does not explicitly declare assignments void; thus, it constitutes a breach rather than voiding the assignment itself.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">The assignment remains effective but constitutes a breach of contract by the consultant.</span></div>
+</div></div>
 </div></div>
 </div>
 <div class="ktk-block-group"><div class="ktk-prac-block"><div class="ktk-prac-cl-hd">Implied Contract</div><div class="ktk-theory-row"><div class="ktk-ko-theory"><div class="ktk-ko-theory-lbl">📝 핵심 이론</div><div class="ktk-ko-theory-txt">Implied-in-Fact Contract: 행위로부터 묵시적 합의 추론 — 말 없어도 행동으로 Mutual Assent 성립 (의식 있는 상태여야).<br>Quasi-Contract (Implied-in-Law): 합의 없어도 부당이득(Unjust Enrichment) 방지 위해 법이 부과. Restitution interest 측정.<br>Promissory Estoppel: 약속 + 합리적 신뢰 + 불이익 발생 → Consideration 없어도 약속 집행 (주로 reliance damages).</div><img class="topic-img ko-img" src="images/cl2_pe_ko_info.png" loading="lazy">
@@ -2620,6 +2677,11 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 <div class="irac-slot"><div class="irac-slot-lbl li-r">R</div><div class="irac-slot-hint">적용 Rule — 위 핵심 이론 요소</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-a">A</div><div class="irac-slot-hint">각 요소를 팩트에 대입: 충족 / 불충족 근거</div></div>
 <div class="irac-slot"><div class="irac-slot-lbl li-c">C</div><div class="irac-slot-hint">결론 — liable / not liable, 이유 한 줄</div></div>
+<div class="irac-model-wrap"><button class="irac-model-btn" onclick="toggleIracModel(this)">▶ 모범 IRAC 펼치기</button><div class="irac-model-body" style="display:none;"><div class="irac-model-row"><span class="irac-slot-lbl li-i">I</span><span class="irac-model-txt">Does Neighbor's observation of Doctor fixing the driveway without objection imply mutual assent for payment?</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-r">R</span><span class="irac-model-txt">An implied-in-fact contract requires demonstrated mutual assent through conduct rather than explicit agreement.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-a">A</span><span class="irac-model-txt">Neighbor's lack of objection to Doctor's work suggests implied acceptance and agreement to pay for the driveway repair.</span></div>
+<div class="irac-model-row"><span class="irac-slot-lbl li-c">C</span><span class="irac-model-txt">Scenario (C) most likely creates an implied-in-fact contract due to manifested mutual assent through conduct.</span></div>
+</div></div>
 </div></div>
 </div>
 </div>
@@ -2669,6 +2731,12 @@ function selectKtkOpt(btn,isCorrect){
   tapFix('.ctab',function(el){var m=(el.getAttribute('onclick')||'').match(/showCls\('([^']+)'\)/);if(m) showCls(m[1]);});
   tapFix('.mbt',function(el){var m=(el.getAttribute('onclick')||'').match(/setMode\((\d+)\)/);if(m) setMode(parseInt(m[1]));});
 })();
+function toggleIracModel(btn){
+  var body=btn.nextElementSibling;
+  var open=body.style.display!=='none';
+  body.style.display=open?'none':'';
+  btn.textContent=open?'▶ 모범 IRAC 펼치기':'▼ 모범 IRAC 접기';
+}
 </script>
 </body>
 </html>
