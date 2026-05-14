@@ -100,8 +100,8 @@ body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5
 .ktk-prac-opt{display:block;width:100%;text-align:left;font-size:.8rem;padding:.35rem .6rem;
   margin:.2rem 0;border-radius:4px;background:#f9f9f7;border:1px solid #e0e0e0;
   cursor:pointer;font-family:inherit;transition:.12s;}
-.ktk-prac-opt:hover:not(:disabled){background:#eeeef8;border-color:#9090c0;}
-.ktk-prac-opt:disabled{cursor:default;}
+.ktk-prac-opt:hover{background:#eeeef8;border-color:#9090c0;}
+.ktk-answered .ktk-prac-opt{pointer-events:none;cursor:default;}
 /* 클릭 후 피드백 */
 .opt-correct{background:#d4edda!important;border-color:#28a745!important;
   color:#155724!important;font-weight:700;}
@@ -2623,13 +2623,11 @@ function showCls(id){
 }
 function selectKtkOpt(btn,isCorrect){
   var card=btn.closest('.ktk-prac-card');
-  if(card.dataset.answered) return;   // 이미 답한 카드는 잠금
-  card.dataset.answered='1';
-  // 모든 옵션 비활성화
-  card.querySelectorAll('.ktk-prac-opt').forEach(function(o){o.disabled=true;});
-  // 클릭한 버튼 표시
+  if(card.classList.contains('ktk-answered')) return;
+  card.classList.add('ktk-answered');
+  // 클릭 버튼 표시
   btn.classList.add(isCorrect?'opt-correct':'opt-wrong');
-  // 오답이면 정답도 표시
+  // 오답이면 정답도 초록으로 표시
   if(!isCorrect){
     card.querySelectorAll('.ktk-prac-opt').forEach(function(o){
       if((o.getAttribute('onclick')||'').indexOf(',true)')>=0)
