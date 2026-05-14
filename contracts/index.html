@@ -6,7 +6,7 @@
 <title>Contracts &#8212; MBE Study</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap');
-:root{--bg:#f4f2ee;--sur:#fff;--brd:#e0dbd0;--acc:#1a3a5c;--acc2:#c8472a;--gold:#b07d10;--txt:#1c1c1c;--mut:#6b6560;}
+:root{--bg:#f4f2ee;--sur:#fff;--brd:#e0dbd0;--acc:#1a3a5c;--acc2:#c8472a;--gold:#b07d10;--txt:#1c1c1c;--mut:#6b6560;--r0bg:#f0f7ee;--r0brd:#7ab87a;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt);font-size:14px;line-height:1.75;}
 .top{position:sticky;top:0;z-index:300;background:#2d2060;padding:.6rem 1.2rem;display:flex;align-items:center;gap:.8rem;box-shadow:0 2px 8px rgba(0,0,0,.25);}
@@ -29,7 +29,24 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 .tp-hd{display:flex;align-items:center;gap:9px;background:var(--acc);color:#fff;padding:.75rem 1.1rem;border-radius:10px 10px 0 0;margin-top:1.8rem;}
 .tp-n{background:var(--acc2);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;flex-shrink:0;}
 .tp-t{font-size:.92rem;font-weight:700;}
+/* 0회독 */
+.r0{background:var(--r0bg);border:1.5px solid var(--r0brd);border-top:none;padding:1rem 1.2rem;}
+.r0-lbl{font-size:.62rem;font-weight:700;letter-spacing:1px;color:#2d6a2d;text-transform:uppercase;margin-bottom:.5rem;}
+.r0-txt{font-size:.88rem;line-height:1.8;margin-bottom:.7rem;}
+.r0-txt strong{color:#1a3a5c;}
+.r0-txt em{color:#c8472a;font-style:normal;font-weight:700;}
+.r0-txt .story{background:#fff;border-left:3px solid var(--r0brd);padding:.5rem .9rem;margin:.6rem 0;border-radius:0 6px 6px 0;font-style:italic;color:#444;}
+/* 회독 모드 트랜지션 */
+.r0,.r1,.r2,.r3{transition:opacity .2s;}
+body.m0 .r1,body.m0 .r2,body.m0 .r3{opacity:.07;pointer-events:none;}
+body.m1 .r0{opacity:.25;}
+body.m2 .r0{opacity:.25;}
+body.m2 .r1{opacity:.3;}
+body.m3 .r0{opacity:.06;pointer-events:none;}
+body.m3 .r1{opacity:.1;pointer-events:none;}
+body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);}
 /* UDSL */
+.r1.udsl-wrap{border:1px solid var(--brd);border-top:none;background:#fcfcfa;}
 .udsl-wrap{border:1px solid var(--brd);border-top:none;background:#fcfcfa;}
 .udsl-hd{background:#2c4a6e;color:#fff;padding:.55rem 1.1rem;font-size:.8rem;font-weight:700;display:flex;align-items:center;gap:8px;}
 .udsl-bdg{font-size:.6rem;background:var(--acc2);color:#fff;padding:2px 7px;border-radius:10px;}
@@ -90,7 +107,14 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="cls on" id="cl1">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">UDSL 슬라이드 원문 &mdash; Class 1 — Common Law Formation</div>
 <div class="tp-hd" id="tp-cl1-intro"><div class="tp-n">1</div><div class="tp-t">Introduction to Contract Law</div></div>
-<div class="udsl-wrap">
+<div class="r0"><div class="r0-lbl">0회독 — 처음 읽는 사람을 위한 설명</div><div class="r0-txt"><strong>Contract Law가 뭐냐면...</strong> 약속을 법으로 강제할 수 있느냐의 문제야. 누군가 "내가 이렇게 할게"라고 약속했는데 안 지키면, 법원이 그 약속을 강제해줄 수 있어. 그 약속을 <em>계약(Contract)</em>이라고 해.
+
+<strong>왜 두 가지 법이 있냐면...</strong> 미국에는 Common Law와 UCC 두 가지 계약법이 있어. 서비스·부동산은 Common Law, 물건(Goods) 매매는 UCC야. 시험에서 가장 먼저 할 일이 "이게 Common Law야 UCC야?" 구분하는 거야.
+
+<strong>핵심 체크포인트:</strong> Goods = 계약 체결 시점에 식별 가능하고 움직일 수 있는 물건. 소프트웨어, 서비스, 부동산은 Goods 아님. 섞였으면 <em>Predominant Purpose Test</em>로 주된 목적이 뭔지 봐.
+
+<div class="story">예시 — "변호사 고용 + 법률 서적 구입"을 묶어 계약했어. 주된 목적이 법률 서비스(Common Law)냐, 책 구입(UCC)이냐에 따라 어느 법이 적용될지 달라져. MBE에서 이 구분 자주 나와.</div></div></div>
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Introduction to Contracts<span class="udsl-slide-ref">slide 13</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Contract law is state law.  There are thus 50 different jurisdictions in the U.S., and each state can have different rules.  However, the law is generally the same in each state.  I will mention important distinctions</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Introduction to Contracts<span class="udsl-slide-ref">slide 14</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Contract law is traditionally common law<br>The common law is slowly created over time through court decisions.  There is no official text of body of law other than court cases<br>The common law is constantly changing over time as the courts decide new cases.  We will often cover a traditional rule and a modern approach.  Some states often still use the traditional approach, and the bar exam will occasionally ask you about the traditional rules</div></div></div>
@@ -100,7 +124,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">The Uniform Commercial Code “UCC”<span class="udsl-slide-ref">slide 18</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Statutory analysis is different:<br>Courts must follow the UCC when applicable; they cannot overrule it<br>However, the meaning of the UCC can be ambiguous—subject to two or more interpretations—and thus courts interpret the provisions of the UCC<br>For example, under § 2-207, courts must decide when terms are “different” or “additional”</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Common Law<span class="udsl-slide-ref">slide 19</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>When precedent does not control the decision, courts often look to underlying policy concerns.  They ask:  how should this case be resolved, to further efficiency, reach a fair result, etc.?<br>These policy judgments are influenced by contract theory</div></div></div>
 </div>
-<div class="rule-irac-wrap">
+<div class="rule-irac-wrap r3">
 <div class="rule-irac-hd">⚖ Rule Statements<span class="ri-bdg">3회독</span></div>
 <div class="rule-stmt"><div class="rule-lbl">RULE STATEMENTS — UDSL 원문 그대로</div><div class="rule-item">&#x25B8; ▶The formation of a contract requires a bargain in which there is a manifestation of mutual assent to the exchange and consideration.</div>
 <div class="rule-item">&#x25B8; ▶A bilateral contract is a contract that involves an exchange of promises</div>
@@ -128,7 +152,16 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 </div>
 </div>
 <div class="tp-hd" id="tp-cl1-offer-accept"><div class="tp-n">2</div><div class="tp-t">Mutual Assent — Offer &amp; Acceptance</div></div>
-<div class="udsl-wrap">
+<div class="r0"><div class="r0-lbl">0회독 — 처음 읽는 사람을 위한 설명</div><div class="r0-txt"><strong>Mutual Assent가 뭐냐면...</strong> 계약이 생기려면 양쪽이 "응, 그러자"고 동의해야 해. 이게 Offer + Acceptance야. 한쪽이 제안하고, 다른 쪽이 그 조건 그대로 받아들이면 계약 성립.
+
+<strong>Offer의 핵심은...</strong> 합리적인 사람이 봤을 때 "저 사람 말대로 수락하면 계약이 된다"고 느껴야 해. 그냥 구경해 보라는 말(preliminary negotiation)은 Offer 아님.
+
+<strong>가장 중요한 함정:</strong> Common Law에서 Acceptance는 <em>Mirror Image Rule</em> — 조건을 하나라도 바꾸면 Counteroffer야, Acceptance가 아니야. Counteroffer는 원래 Offer를 죽이고 새 Offer를 만들어.
+
+<div class="story">판례 스토리 — Lonergan v. Scolnick: 땅 팔려는 사람이 편지로 "빠른 답장 없으면 다른 사람한테 팔 거야"라고 했어. 법원은 이게 Offer가 아니라 preliminary negotiation이라고 했어. 상대방 Acceptance만으로 계약이 체결될 정도로 구체적이지 않았거든.</div>
+
+<strong>Mailbox Rule:</strong> 편지로 수락하면 <em>보내는 순간</em> 계약 성립. 단 Offer가 특정 방법을 지정했거나 Option Contract이면 도착해야 효력 발생.</div></div>
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Meaning of the Contract<span class="udsl-slide-ref">slide 20</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Contract Formation<br>Breach of the Contract<br>Defenses<br>Course Topics<br>Damages</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Contract Formation<span class="udsl-slide-ref">slide 21</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Contract formation has two elements:<br>Mutual assent (offer and acceptance); and<br>Consideration<br>우리가 상식적으로 인식하는 “계약”과 Contracts에서 의미하는 “계약”은 다른 개념!!<br>Valid &amp; Legally Enforceable Contract = 교환하겠다는 쌍방의 합의 + consideration<br>A “이거 너 줄게“  ↔  B “만원 너 줄게“<br>A: 내가 가진 물건을 너에게 주겠다는 “약속“<br>B: 내가 가진 돈을 너에게 주겠다는 “약속“<br>돈과 물건을 교환하겠다는 합의 + consideration (이건 나중에 설명 나옴)<br>Consideration이 있는 서로간의 약속이 만났을 때 contract 성립<br>서로 약속하려면 누군가가 먼저 말을 꺼내야 하고 상대방이 오케이 해야 하는데…<br>쌍방이 의사를 주고 받아 약속을 맺으면 – bilateral<br>한 명이 불특정 다수를 향해 약속하고 불특정 다수 중 누군가가 그 한명이 약속의 대가로 요구한 것을 이행하면 - unilateral</div></div></div>
@@ -194,7 +227,16 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Leonard v. Pepsico, Inc.:<span class="udsl-slide-ref">slide 81</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Pepsi advertisement listed a Harrier jet as available for 7 million “Pepsi points.”  7 million points could be purchased for $700,000, and the jet was worth $24 million.<br>http://www.youtube.com/watch?v=U_n5SNrMaL8<br>https://www.youtube.com/watch?v=h7XliS0DYRo<br>Contract?<br>If you were in-house counsel for Pepsi, what might you advise?</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl1-consideration"><div class="tp-n">3</div><div class="tp-t">Consideration</div></div>
-<div class="udsl-wrap">
+<div class="r0"><div class="r0-lbl">0회독 — 처음 읽는 사람을 위한 설명</div><div class="r0-txt"><strong>Consideration이 뭐냐면...</strong> 약속을 법으로 강제하려면 그냥 선물이 아니라 <em>교환(bargain)</em>이어야 해. 내가 뭔가를 해줄게 → 너도 뭔가를 해줘. 이 교환 관계가 Consideration이야.
+
+<strong>왜 선물은 안 되냐면...</strong> 법원은 순수한 선물 약속은 강제하지 않아. 할머니가 "용돈 줄게"라고 했다가 안 줘도 소송 못 해. 내가 그 약속을 믿고 뭔가를 포기하거나 행동하지 않았다면.
+
+<strong>핵심 공식:</strong> Consideration = 약속자(Promisor)에게 이익 <em>OR</em> 약속받은 자(Promisee)에게 손해·부담. 둘 중 하나면 충분해. 그리고 이게 약속의 교환(bargained-for)으로 이루어져야 해.
+
+<div class="story">판례 스토리 — Hamer v. Sidway: 삼촌이 조카에게 "21살까지 술·담배·도박 안 하면 $5,000 줄게"라고 했어. 조카가 실제로 안 했어. 법원 "이건 선물이 아니야 — 조카가 자기 권리를 포기하는 부담을 졌으니 Consideration 성립"이라고 했어.</div>
+
+<strong>Adequacy 불문 원칙:</strong> 교환의 가치가 불균등해도 괜찮아. $1짜리 물건을 $1,000에 팔아도 Consideration은 성립해 — 사기·강박이 없는 한.</div></div>
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Consideration<span class="udsl-slide-ref">slide 82</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Restatement (Second) of Contracts § 17(1):<br>the formation of a contract requires a bargain in which there is a manifestation of mutual assent to the exchange and a consideration<br>If there is no consideration, there is no contract.  A promise that is not supported by consideration is not enforceable under contract law.<br>Valid and enforceable contract = Mutual Assent + Consideration<br>Offer + Acceptance</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Consideration<span class="udsl-slide-ref">slide 83</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Consideration consists of a benefit to the promisor or a detriment to the promisee<br>Benefit = some right, interest, profit or benefit<br>Detriment = forbearance, detriment, loss or responsibility given, suffered or undertaken<br>AND<br>Consideration must be bargained for as the exchange for the promise.  This means the promise must induce the detriment and the detriment must induce the promise<br>Valid &amp; Legally Enforceable Contract = 교환하겠다는 쌍방의 합의 + consideration<br>A “이거 너 줄게“  ↔  B “만원 너 줄게“<br>A: 내가 가진 물건을 너에게 주겠다는 “약속“<br>B: 내가 가진 돈을 너에게 주겠다는 “약속“<br>A의 약속:  Promisor(A) 물건을 잃는 detriment;    Promisee(B) 물건을 얻는 benefit<br>B의 약속:  Promisor(B) 돈을 잃는 detriment;       Promisee(A) 돈을 얻는 benefit<br>나의 배네핏은 너의 데트리먼트일지 모르나, 나의 데트리먼트는 곧 너의 배네핏이잖아?!<br>우리 서로에게 약속의 징표로 배네핏과 데트리먼트를 서로 맞바꾸기로 했잖아?!</div></div></div>
@@ -265,7 +307,16 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Hypothetical 4<span class="udsl-slide-ref">slide 148</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Debtor owes Creditor $10,000.  Debtor declares bankruptcy, and the bankruptcy court discharges his debt to Creditor.  Creditor then approaches Debtor and says that he really needs the money.  Debtor promises to pay Creditor the $10,000. Is the promise enforceable at contract?<br>Yes<br>No<br>파산선고 이후에도 마찬가지!</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl1-illusory"><div class="tp-n">4</div><div class="tp-t">Illusory Promises &amp; Past Consideration</div></div>
-<div class="udsl-wrap">
+<div class="r0"><div class="r0-lbl">0회독 — 처음 읽는 사람을 위한 설명</div><div class="r0-txt"><strong>Illusory Promise가 뭐냐면...</strong> 겉보기엔 약속 같은데 실제로 아무것도 약속 안 한 거야. "내 마음이 내키면 할게" — 이건 약속이 아니야. 내키지 않으면 아무것도 안 해도 되거든. 그러면 상대방 약속의 Consideration이 없으니 계약 무효.
+
+<strong>Past Consideration이 뭐냐면...</strong> 이미 일어난 일을 Consideration으로 쓰려는 거야. "옛날에 나 도와줬잖아, 고마워서 돈 줄게" — 이미 일어난 일은 bargained-for 교환이 아니야. 미래 약속에 대한 Consideration이 될 수 없어.
+
+<strong>Pre-Existing Duty Rule:</strong> 이미 하기로 되어 있는 걸 다시 약속해도 Consideration 아님. 경찰이 범인 잡는 건 이미 의무야 — 그걸 해주는 대가로 돈 달라고 하면 집행 불가.
+
+<div class="story">판례 스토리 — Marshall Durbin Food Corp v. Baker: 회사가 "언제든 해고할 수 있는" at-will 조건에 연봉 보장을 했어. 법원은 회사가 언제든 고용 관계를 끝낼 수 있으니 회사 약속이 Illusory Promise라고 했어 — 아무 의무도 안 진 거니까.</div>
+
+<strong>예외 — Moral Obligation:</strong> 일부 법원은 도덕적 의무가 있는 상황(응급 의료 제공 후 보상 약속 등)에서 Past Consideration도 집행 가능하다고 봐. Webb v. McGowin이 대표 케이스야.</div></div>
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Illusory Promises<span class="udsl-slide-ref">slide 149</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>An illusory promise is not consideration<br>An illusory promise is a purported promise that actually promises nothing and thus does not meet the definition of a “promise” (and thus cannot be an offer or acceptance)<br>약속 같지만 약속이 아니라구!!<br>No Commitment, No promise!<br>실제로 이행할지 안할지 전적으로 약속한 사람의 마음에 달렸다면 그건 약속이 아님.</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Key Concept<span class="udsl-slide-ref">slide 150</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Promise<br>Restatement (Second) of Contracts § 2:<br>A promise is a manifestation of intent to act or refrain from acting in a specified way, so made as to justify a promisee in understanding that a commitment has been made.<br>An illusory promise does not require the promisor to act or refrain from acting in any specified way</div></div></div>
@@ -299,7 +350,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="cls" id="cl2">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">UDSL 슬라이드 원문 &mdash; Class 2 — UCC &amp; Promissory Estoppel</div>
 <div class="tp-hd" id="tp-cl2-ucc-basics"><div class="tp-n">1</div><div class="tp-t">UCC Basics &amp; Formation</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Class 2-Agenda<span class="udsl-slide-ref">slide 1</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>UCC Contract Formation<br>Battle of the Forms<br>Promissory Estoppel</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>30</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">The UCC<span class="udsl-slide-ref">slide 2</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div></div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>31</div></div></div>
@@ -340,7 +391,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Jannusch and Styberg<span class="udsl-slide-ref">slide 37</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>The courts in the two preceding cases rely on the same UCC provisions. The key factual differences between the two cases are:<br>The sophistication of the parties<br>The amount of conduct under the contract<br>Jannusch – 평소에 그렇게 거래 많이 하는 사람들도 아니고 계약서 없이 거래하는게 이상할게 없음<br>Styberg – 이렇게 큰 회사들이 계약서도 없이 거래해? 노노 이건 계약 아냐</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl2-firm-offer"><div class="tp-n">2</div><div class="tp-t">Firm Offers (UCC §2-205)</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">UCC 2-205: Firm Offers<span class="udsl-slide-ref">slide 38</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>An offer by a merchant to buy or sell goods in a signed writing which by its terms give assurance that it will be held open is not revocable, for lack of consideration, during the time stated or if no time is stated for a reasonable time, but in no event may such period of irrevocability exceed three months; but any such term of assurance on a form supplied by the offeree must be separately signed by the offeror.<br>원래 Offer는 억셉트하기 전에는 언제든지 무를 수 있지만<br>UCC는 Merchant일 경우 일정 기한까지 무를 수 없는 offer 규정!!</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Firm Offer<span class="udsl-slide-ref">slide 39</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>An offer:<br>by a merchant;<br>signed writing;<br>give assurance that it will be held open<br>lack of consideration;<br>Signed by the offeror (merchant)<br>Is irrevocable for:<br>the time stated; or<br>if no time is stated, for a reasonable time<br>But in no event may such period of irrevocability exceed three months<br>UCC 한정 요거 만족하면 오퍼에 규정한 기간 한정 낙장불입!<br>Common Law는 오퍼 철회 안하려면 별도 consideration 있어야함<br>일정기간 동안 오퍼를 무르지 않겠다는 약속을 “명확하게” 적어야 인정</div></div></div>
@@ -353,7 +404,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Hypothetical 3<span class="udsl-slide-ref">slide 46</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Rick sells cars at Rick’s Auto.  Rick shows a Hyundai to Jane that is on sale for $20,000.  When Rick is unable to convince Jane to buy the Hyundai on the spot, Rick promises to keep the car available at the sale price for one week.  In fact, Rick writes down the car’s identification number, make, and model.  He also writes the sale price of $20,000 and signs his name.  The next day, another customer stops in and wants to buy the same Hyundai.  Can Rick revoke the offer he extended to Jane?<br>Yes, because an offer can always be revoked prior to acceptance<br>Yes, because Rick did not make a firm offer under the UCC<br>No, because Rick and Jane entered into an option contract<br>No, because Rick made a firm offer under the UCC<br>Elements:<br>offer<br>by merchant<br>to buy or sell<br>goods<br>signed<br>writing<br>assurance<br>The assurance to hold the offer open is not in writing<br>종이에 적은 것은 “등록번호와 차종“<br>“1주일 안에 오면 이 가격에 줄게”는 말로만 했지 안 적음<br>&gt; No Firm Offer (오퍼를 유지하겠다고 명시해야 함)</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl2-battle-forms"><div class="tp-n">3</div><div class="tp-t">Battle of the Forms (UCC §2-207)</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Battle of the Forms<span class="udsl-slide-ref">slide 47</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Purchase Order #96<br>All disputes will be subject to binding arbitration<br>Acknowledgement<br>All disputes will be litigated in the courts of Ohio<br>Item<br>QTY<br>Unit Price<br>Total Price<br>X<br>$10<br>$30<br>Y<br>$5<br>$20<br>Item<br>QTY<br>Unit Price<br>Total Price<br>X<br>$10<br>$30<br>Y<br>$5<br>$20<br>각자 표준계약서로 거래하는 회사끼리 거래할 때 누구 표준계약서로 계약하나?</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Common Law<span class="udsl-slide-ref">slide 48</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Mirror Image Rule: an acceptance must be the mirror image of the offer.  Otherwise, it is a counteroffer<br>Last Shot Principle: if the forms do not agree, there is no contract from the exchange of forms.  However, if the parties perform, acceptance is implied from the parties conduct.  In such a case, the terms of the last counteroffer made will control.<br>계약 협상 과정에서 왔다 갔다 하는데 내가 보낸 내용이랑 내가 받은 내용에 차이가 있으면 No acceptance &gt;&gt; 단순 counteroffer.<br>Counteroffer 이후 상대 당사자가 계약 이행하면 counteroffer로 계약한 것!<br>Counteroffer한 당사자가 계약내용 이행하면??? No acceptance &gt; 상대 당사자가 performance 해야 acceptance 임!</div></div></div>
@@ -418,7 +469,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Clickwrap<span class="udsl-slide-ref">slide 107</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Because clickwrap forces the customer to agree to the terms and conditions before moving on, it is much more likely to meet the rule than browserwrap</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl2-pe"><div class="tp-n">4</div><div class="tp-t">Promissory Estoppel</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Contract law concerns itself with three types of “binding obligations”<span class="udsl-slide-ref">slide 108</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Contract<br>Promissory Estoppel<br>Restitution<br>Manifestation of mutual assent, bargain in exchange &amp; consideration<br>Promise plus detrimental reliance<br>No promise but confers a benefit that is accepted</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Promissory Estoppel<span class="udsl-slide-ref">slide 109</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Restatement (Second) Contracts § 90(1)<br>A promise which the promisor should reasonably expect to induce action or forbearance on the part of the promisee or a third person and which does induce such action or forbearance is binding if injustice can be avoided only by enforcement of the promise. The remedy granted for breach may be limited as justice requires.<br>“내가 이런 약속하면 얘가 그렇게 하겠지?”<br>“어?! 진짜로 했네!!”<br>“어랏! 쟤 저거 억울하겠네?”<br>싶으면 Promissory Estoppel! 억울함을 풀 수 있는 만큼은 보상해줘야</div></div></div>
@@ -472,7 +523,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="cls" id="cl3">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">UDSL 슬라이드 원문 &mdash; Class 3 — Restitution, SOF &amp; Interpretation</div>
 <div class="tp-hd" id="tp-cl3-restitution"><div class="tp-n">1</div><div class="tp-t">Restitution &amp; Quasi-Contract</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Agenda<span class="udsl-slide-ref">slide 1</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Promissory Estoppel<br>Restitution<br>Statute of Frauds<br>Interpretation</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>15</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Contract law concerns itself with three types of “binding obligations”<span class="udsl-slide-ref">slide 2</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Contract<br>Promissory Estoppel<br>Restitution<br>Manifestation of mutual assent, bargain in exchange &amp; consideration<br>Promise plus detrimental reliance<br>No promise but confers a benefit that is accepted</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>16</div></div></div>
@@ -538,7 +589,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Hypothetical #3<span class="udsl-slide-ref">slide 62</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>This is the same as Mills.  Son never had a legal duty to pay Mother, so his promise is not enforceable because of a lack of consideration.</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>127</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl3-sof"><div class="tp-n">2</div><div class="tp-t">Statute of Frauds</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Statute of Frauds<span class="udsl-slide-ref">slide 63</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Form of the Contract<br>Does the contract need to be in writing?<br>계약 = mutual assent + consideration<br>계약서 = evidence of (mutual assent + consideration)<br>&gt;&gt; 계약서 작성하지 않아도 valid &amp; enforceable contract!!!!<br>특정한 계약의 경우 계약서를 작성하지 않으면, 계약은 성립했으나, 계약이행을 법적으로 강제할 수 없다! &gt;&gt;&gt; Statute of Fraud</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>128</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">What does the statute of frauds do?<span class="udsl-slide-ref">slide 64</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>It stops the courts from enforcing a contract.<br>Thus it is a defense to contract enforcement.<br>We will discuss defenses to contract formation later.<br>Statute of Frauds<br>This says nothing about whether there is/is not a contract.</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>129</div></div></div>
@@ -595,7 +646,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">CL Statute of Frauds<span class="udsl-slide-ref">slide 115</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Does the SoF apply?<br>Executor, Land, Marriage, One-year, Surety?<br>Has the SoF been satisfied?<br>Writing signed by party charged with breaching the K<br>Identifies subject matter<br>Signifies K has been made<br>States essential terms with reasonable certainty<br>Exception to SoF?<br>Part performance<br>Promissory Estoppel<br>Restitution</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl3-interpretation"><div class="tp-n">3</div><div class="tp-t">Interpretation</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Interpretation<span class="udsl-slide-ref">slide 119</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>A랑 B랑 계약했는데, 계약에 사용한 말에 대해서 서로가 다르게 생각했을 때!!!</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Restatement (Second) of Contracts § 201<span class="udsl-slide-ref">slide 120</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Sometimes the parties to an agreement may attach different meaning to the term, clause, or agreement.<br>I say “blue” by which I mean:<br>You say “blue” by which you mean:<br>Why might that happen?<br>Innocent mistake.<br>Purposeful deceit on one party’s part.</div></div></div>
@@ -634,7 +685,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="cls" id="cl4">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">UDSL 슬라이드 원문 &mdash; Class 4 — Parol Evidence Rule</div>
 <div class="tp-hd" id="tp-cl4-per"><div class="tp-n">1</div><div class="tp-t">Parol Evidence Rule — Common Law</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Agenda<span class="udsl-slide-ref">slide 1</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Parol Evidence Rule</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>3</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Parol Evidence Rule: What are the express  terms?<span class="udsl-slide-ref">slide 2</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Interpretation of Explicit Terms<br>Contractual Meaning<br>Implied Terms (Good Faith; Warranties)<br>Modification</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>13</div></div></div>
@@ -692,7 +743,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Riverisland Cold Storage, Inc. v. Fresno-Madera Production Credit Association<span class="udsl-slide-ref">slide 54</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Application:<br>Credit Association’s motion for summary judgment should be denied.  Plaintiffs can admit extrinsic evidence to show that the Credit Association lied about the contents of the writing.</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl4-ucc-per"><div class="tp-n">2</div><div class="tp-t">UCC Parol Evidence &amp; Interpretation</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">UCC Parol Evidence Rule and Interpretation<span class="udsl-slide-ref">slide 55</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>U.C.C. § 2-202<br>Essentially adopts the modern view of the parol evidence rule<br>States that the agreement can be explained or supplemented by course of performance, course of dealing, or usage of trade</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">UCC Parol Evidence and Interpretation<span class="udsl-slide-ref">slide 56</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>U.C.C. § 2-202<br>Terms with respect to which the confirmatory memoranda of the parties agree or which are otherwise set forth in a writing intended by the parties as a final expression of their agreement with respect to such terms as are included therein may not be contradicted by evidence of any prior agreement or of a contemporaneous oral agreement but may be explained or supplemented<br>(a) by course of performance, course of dealing, or usage of trade (Section 1-303); and<br>(b) by evidence of consistent additional terms unless the court finds the writing to have been intended also as a complete and exclusive statement of the terms of the agreement.</div></div></div>
@@ -712,7 +763,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="cls" id="cl5">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">UDSL 슬라이드 원문 &mdash; Class 5 — Implied Terms, Breach &amp; Damages</div>
 <div class="tp-hd" id="tp-cl5-implied"><div class="tp-n">1</div><div class="tp-t">Implied Terms &amp; Good Faith</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Agenda<span class="udsl-slide-ref">slide 1</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Implied Terms<br>Good faith<br>Warranties<br>Breach<br>Begin Damages</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>3</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Parol Evidence Rule: What are the express  terms?<span class="udsl-slide-ref">slide 2</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Interpretation of Explicit Terms<br>Contractual Meaning<br>Implied Terms (Good Faith; Warranties)<br>Modification</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>4</div></div></div>
@@ -762,7 +813,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Donahue v. Federal Express Corp.<span class="udsl-slide-ref">slide 46</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Application<br>Donahue was an at-will employee.  He could be fired for any reason or no reason at all.<br>His firing violated no express right under the contract<br>Donahue was not owed a commission, and had no contractual right to any notice or grievance procedures<br>Conclusion:  The duty of good faith and fair dealing did not apply to his termination</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>53</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl5-warranties"><div class="tp-n">2</div><div class="tp-t">UCC Warranties</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">What is a warranty?<span class="udsl-slide-ref">slide 47</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>“Warranty” means an express or implied promise that something in furtherance of the contract is guaranteed by one of the contracting parties.<br>In essence, it is (1) an enforceable (2) promise (3) that something relating to the contract (4) will be a specific way.<br>Warranties<br>보증: 계약에 관한 특정한 사안은 특정한 방법으로 이루어진다는<br>법적 구속력이 있는 약속</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>54</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">(1) Express warranties by the seller are created as follows:<span class="udsl-slide-ref">slide 48</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>(a) Any affirmation of fact or promise made by the seller to the buyer which relates to the goods and becomes part of the basis of the bargain creates an express warranty that the goods shall conform to the affirmation or promise.<br>(b) Any description of the goods which is made part of the basis of the bargain creates an express warranty that the goods shall conform to the description.<br>(c) Any sample or model which is made part of the basis of the bargain creates an express warranty that the whole of the goods shall conform to the sample or model.<br>U.C.C. § 2-2-313 Express Warranty<br>판매자가 구매자에게 명시적으로 표시하는 사실이나 약속으로 계약의 근간이 되는 것<br>계약의 근간이 되는 상품/재화에 대한 설명으로<br>상품/재화가 그 설명에 부합할 것이라는 명시적 보증<br>계약의 근간이 되는 판매자가 제공하는 모형이나 샘플로<br>이후 공급하는 모든 상품/재화가 그 모형이나 샘플과 동일할 것이라는 명시적 보증</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>55</div></div></div>
@@ -790,7 +841,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Under the classic principle of caveat emptor (let the buyer beware) the seller bore no responsibility at all for the quality of the product he was selling unless he expressly guaranteed it or gave a “warranty” to the buyer.<span class="udsl-slide-ref">slide 70</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Modern courts have created warranties, such as the warranty of habitability, in limited circumstances like home construction<br>Common Law Warranties</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>80</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl5-breach"><div class="tp-n">3</div><div class="tp-t">Breach &amp; Conditions</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Implied Terms<span class="udsl-slide-ref">slide 71</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Implied in Fact<br>UCC Gap Fillers<br>Good Faith and Fair Dealing<br>Adds missing terms<br>Limits a party’s discretion<br>Satisfaction clauses<br>Reasonable person<br>Honest satisfaction<br>Warranties<br>Express<br>Merchantability<br>Fitness for particular purpose</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>81</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Has a K been formed?<span class="udsl-slide-ref">slide 72</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Mutual Assent<br>Consideration<br>UCC<br>Other Theories of Liability<br>Promissory Estoppel<br>Restitution<br>Statute of Frauds: Is the contract enforceable?<br>Contractual Meaning<br>Interpretation<br>Parol Evidence<br>Implied Terms and Warranties<br>Breach</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>85</div></div></div>
@@ -867,7 +918,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Hypothetical<span class="udsl-slide-ref">slide 144</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>NASA has entered into a contract with SpaceX to provide a rocket capable of transporting the Orion capsule and crew to a near Earth asteroid in 2030. NASA agreed to pay SpaceX $450 million on delivery in 2030.  In 2026, John Smith, the Director of NASA, contact’s Emma Jones, the  CEO of SpaceX, and asks how things are going.  Ms. Jones replies: “I’m not really sure if we’ll make the deadline.  We’ve run into some big glitches on this job.” NASA then discovers that Virgin Galactic would provide a substitute vehicle for $500 million.  Which of the following is true?<br>NASA may purchase a substitute vehicle from Virgin Galactic now without breaching the contract<br>NASA has no option but to wait until 2030 to see if SpaceX will perform before suing SpaceX or buying from Virgin Galactic<br>NASA must buy the substitute vehicle from Virgin Galactic if it wants to later sue SpaceX for breach<br>NASA may seek adequate assurances from SpaceX, and may sue SpaceX if it fails to provide such assurances</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl5-damages-intro"><div class="tp-n">4</div><div class="tp-t">Expectation Damages — Introduction</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Damages<span class="udsl-slide-ref">slide 145</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div></div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Breach of contract action<span class="udsl-slide-ref">slide 146</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Promissory estoppel action<br>Restitution/unjust enrichment action</div></div></div>
@@ -921,7 +972,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="cls" id="cl6">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">UDSL 슬라이드 원문 &mdash; Class 6 — Damages</div>
 <div class="tp-hd" id="tp-cl6-expectation"><div class="tp-n">1</div><div class="tp-t">Expectation Damages</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Agenda<span class="udsl-slide-ref">slide 1</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Damages<br>Finish expectation damages<br>Reliance damages<br>Restitution damages<br>Specific performance<br>Liquidated damages</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>2</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Expectation Damages<span class="udsl-slide-ref">slide 2</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Loss in Value<br>Mitigation<br>Other Loss<br>Cost and Loss Avoided<br>The difference between what was promised and what was received<br>Damages that the nonbreaching party avoided or should have avoided<br>Foreseeable<br>Reasonably Certain<br>Money saved because of breach</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>4</div></div></div>
@@ -960,7 +1011,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Erlich v. Menezes<span class="udsl-slide-ref">slide 35</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Rationale:<br>Again, breach is not necessarily culpable, we want to encourage efficient breach, and tort damages can be unpredictable, making it hard to have stable commercial expectations<br>Court in Erlich is concerned that awarding emotional distress damages would make construction Ks difficult to predict, making such Ks more expensive</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>45</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl6-reliance-rest"><div class="tp-n">2</div><div class="tp-t">Reliance &amp; Restitution Damages</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Other Common Law Damages<span class="udsl-slide-ref">slide 36</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Reliance Damages<br>Measure = reliance interest – loss<br>Used when expectation damages or speculative or liability is based on promissory estoppel<br>Restitution Damages<br>Measure = value of the benefit conferred<br>Used when breaching party brings suit; plaintiff was losing money on K; or liability is based on restitution<br>Specific Performance<br>Injunction ordering performance<br>Used when damages are inadequate<br>Not used for personal services<br>Liquidated Damages<br>Used when not a penalty</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>46</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Breach of contract action<span class="udsl-slide-ref">slide 37</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Promissory estoppel action<br>Breach of contract action</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>48</div></div></div>
@@ -1002,7 +1053,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Ventura v. Titan Sports<span class="udsl-slide-ref">slide 73</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Issue #2:  The measure of damages<br>What is the benefit conferred on Titan?<br>The amount by which Ventura increased the value of Titan’s videos. This is measured by a prediction of royalty rates.<br>Note that, unlike in Coastal, we are not asking what it would have cost Titan to hire someone else to do Ventura’s job.  The court may use either measure as justice requires.</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl6-sp-ld"><div class="tp-n">3</div><div class="tp-t">Specific Performance &amp; Liquidated Damages</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Specific Performance<span class="udsl-slide-ref">slide 74</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div></div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Specific Performance<span class="udsl-slide-ref">slide 75</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>What do we mean by “specific performance”?<br>An order of specific performance is intended to produce as nearly as is practicable the same effect that the performance due under a contract would have produced.<br>It usually, therefore, orders a party to render the performance that he promised.</div></div></div>
@@ -1039,7 +1090,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="cls" id="cl7">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">UDSL 슬라이드 원문 &mdash; Class 7 — Defenses</div>
 <div class="tp-hd" id="tp-cl7-unconscion"><div class="tp-n">1</div><div class="tp-t">Unconscionability, Undue Influence &amp; Infancy</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Defenses to Contract Enforcement<span class="udsl-slide-ref">slide 1</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Unconscionability<br>Undue Influence<br>Infancy<br>Incapacity<br>Duress<br>Public Policy<br>Mistake<br>Changed Circumstances</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>2</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Unconscionability<span class="udsl-slide-ref">slide 2</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div></div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>3</div></div></div>
@@ -1075,7 +1126,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Hypothetical<span class="udsl-slide-ref">slide 32</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Smith is a billionaire who suffers from a mental illness and is unable to understand the consequences of her actions. Smith enters into a contract to buy a yacht from Jones for $1 million. Smith thinks that she is merely buying a trip on the yacht.  Can Smith rescind the contract?<br>Yes, because she can use the incompetency defense<br>Yes, but only if Jones knew that Smith was not able to understand the transaction<br>No, if the contract was made on fair terms<br>No, because no contract was formed</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>43</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl7-duress-policy"><div class="tp-n">2</div><div class="tp-t">Duress &amp; Public Policy</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Duress<span class="udsl-slide-ref">slide 33</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div></div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>44</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Duress<span class="udsl-slide-ref">slide 34</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>A contract may be voided on grounds of economic duress if there is:<br>A wrongful or improper threat,<br>A lack of reasonable alternatives, and<br>Actual inducement of the contract by threat.<br>See Restatement (Second) of Contracts § 175<br>불법적인 위협을 하고, 위협에 따르는 것 외에 합리적인 대책이 없고,<br>그 위협에 기인해서 계약을 체결하면?????  &gt; No Contract!</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>55</div></div></div>
@@ -1101,7 +1152,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Hypothetical 1<span class="udsl-slide-ref">slide 54</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Pizza Co. and Pizza Corp. are competing restaurants that offer pizza delivery.  The are both located in the Jacksonville area.  They enter into an agreement whereby Pizza Co. will deliver only to the west side of the city, and Pizza Corp. will deliver only to the east side of the city.  Enforceable?<br>Yes<br>No<br>This agreement is unreasonably in restraint of trade and unenforceable on grounds of public policy.  It serves no interest other than the restraint of trade.</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>100</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl7-mistake"><div class="tp-n">3</div><div class="tp-t">Mutual &amp; Unilateral Mistake</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Mistake<span class="udsl-slide-ref">slide 55</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div></div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>101</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Mutual Mistake<span class="udsl-slide-ref">slide 56</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>What is a mistake?<br>A contractual mistake is a belief that is not in accord with the facts.<br>For the doctrine of mistake to apply, the erroneous belief must relate to a fact in existence at the time the contract is executed.<br>When will a mistake support rescission of a contract?<br>A mutual mistake supports rescission when the mistaken belief relates to a basic assumption of the parties upon which the contract is made and which materially affects the agreed performances of the parties.<br>Rescission is not available to a party that has assumed the risk of loss in connection with the mistake.<br>둘 다 착오한 경우 - 위험을 부담한 당사자가 없다면 계약철회<br>- 위험을 부담한 당사자가 있다면??? 어 그래 너 손해야</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>103</div></div></div>
@@ -1131,7 +1182,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="udsl-sub"><div class="udsl-sub-hd">Hypothetical<span class="udsl-slide-ref">slide 80</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Joe inherits a box of jewelry when his grandmother passes away.  Joe doesn’t know exactly what type of jewelry is in the box, but he thinks that his grandmother probably wouldn’t have anything too expensive and doesn’t want to go through the hassle of getting it appraised.  Joe thus sells the box and all jewelry to Kim, a friend who collects antiques, for $500.  Kim is an expert with respect to jewelry and knows it is worth $50,000.  After the purchase, Joe discovers the true value of the jewelry.  If Joe seeks to rescind the contract under mistake, what will be the result?<br>Kim will win, because she had no idea what the jewelry was worth at the time of formation<br>Joe will win, because it would be unconscionable for Kim to keep the jewelry<br>Joe will win, because both parties made a mistake as to a basic assumption at the time of contracting that had a material affect on the parties’ performances<br>Kim will win, because Joe assumed the risk that the jewelry  would be more valuable than he anticipated</div></div></div>
 </div>
 <div class="tp-hd" id="tp-cl7-changed-circ"><div class="tp-n">4</div><div class="tp-t">Changed Circumstances (Impossibility/Frustration)</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Changed Circumstances<span class="udsl-slide-ref">slide 81</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div></div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Impossibility, Impracticability &amp; Frustration<span class="udsl-slide-ref">slide 82</span></div><div class=""><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Mistake dealt with events that occurred before K formation.<br>Impossibility, impracticability and FOP result from events occurring after K formation.<br>계약은 유효하게 체결했는데…<br>그 뒤에 의도하지 않은 사건 때문에 계약을 없던 것으로 하자!!!!</div></div></div>
@@ -1169,7 +1220,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="cls" id="cl8">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">UDSL 슬라이드 원문 &mdash; Class 8 — Modification &amp; Waiver</div>
 <div class="tp-hd" id="tp-cl8-modification"><div class="tp-n">1</div><div class="tp-t">Modification &amp; Waiver</div></div>
-<div class="udsl-wrap">
+<div class="udsl-wrap r1">
 <div class="udsl-hd">📖 UDSL 슬라이드 원문<span class="udsl-bdg">1회독</span></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Agenda<span class="udsl-slide-ref">slide 1</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>Modification<br>Final Exam<br>Review<br>Practice Problems</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>2</div></div></div>
 <div class="udsl-sub"><div class="udsl-sub-hd">Modification<span class="udsl-slide-ref">slide 2</span></div><div class="udsl-cols"><div class="udsl-en"><div class="udsl-lang">🇺🇸 Slide Content</div>A modification is a change in one or more respects which leaves the general purpose and effect of the contract undisturbed.<br>A modification is permanent. The original agreement merges into the new (modified) agreement and is extinguished.<br>계약을 일부 개정하는데, 실질적으로 계약의 전체 맥락을 방해하지 않으면 modification<br>Modification 하면 원래계약은 개정계약에 들어가면서 사라짐.</div><div class="udsl-ko"><div class="udsl-lang">📝 Notes</div>3</div></div></div>
