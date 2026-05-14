@@ -77,93 +77,243 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 </div>
 </div>
 <div class="ctabs">
-  <div class="ctab on" onclick="showCls('g0')">⚖️ 적용법 (Governing Law)</div>
-  <div class="ctab" onclick="showCls('g1')">📝 계약 형성 (Contract Formation)</div>
-  <div class="ctab" onclick="showCls('g2')">🔒 집행 가능성 (Enforceability)</div>
-  <div class="ctab" onclick="showCls('g3')">⚙️ 이행과 면책 (Performance &amp; Excuse)</div>
-  <div class="ctab" onclick="showCls('g4')">💥 위반과 구제 (Breach &amp; Remedies)</div>
-  <div class="ctab" onclick="showCls('g5')">🤝 제3자 권리 (Third-Party Rights)</div>
+  <div class="ctab on" onclick="showCls('g0')">Class 1 — Common Law Formation</div>
+  <div class="ctab" onclick="showCls('g1')">Class 2 — UCC Formation &amp; Promissory Estoppel</div>
+  <div class="ctab" onclick="showCls('g2')">Class 3 — Restitution, SOF &amp; Interpretation</div>
+  <div class="ctab" onclick="showCls('g3')">Class 4 — Parol Evidence Rule</div>
+  <div class="ctab" onclick="showCls('g4')">Class 5 — Implied Terms, Warranties &amp; Breach</div>
+  <div class="ctab" onclick="showCls('g5')">Class 6 — Damages</div>
+  <div class="ctab" onclick="showCls('g6')">Class 7 — Defenses</div>
+  <div class="ctab" onclick="showCls('g7')">Class 8 — Modification &amp; Waiver</div>
   <div class="ctab" onclick="showCls('ktk_prac')">&#128203; KTK 문제풀이 (21문제)</div>
 </div>
 <div class="cls on" id="g0">
-<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 3토픽</div>
+<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 4토픽</div>
 <div class="th-block">
-<div class="th-block-hd">⚖️ 적용법 (Governing Law)</div>
+<div class="th-block-hd">Class 1 — Common Law Formation</div>
 <div class="th-card">
-<div class="th-card-hd">Common Law vs UCC</div>
+<div class="th-card-hd">Common Law vs UCC — 적용법 선택</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
 <h4>적용 기준</h4>
 <ul>
 <li><b>Common Law</b> — 서비스·부동산·고용 계약</li>
-<li><b>UCC Article 2</b> — 동산(<i>Goods</i>) 매매</li>
-<li><b>혼합 계약</b> → 주된 목적 기준 (Predominant Purpose Test)</li>
+<li><b>UCC Article 2</b> — 동산(<i>Goods</i>) 매매 (식별 가능한 이동 물건)</li>
+<li><b>혼합 계약</b> → 주된 목적 기준 (Predominant Purpose Test): 언어·사업 성격·물건 가치 고려</li>
 </ul>
-<div class="rule-box">📌 Goods = 계약 체결 시 식별 가능한 모든 이동 물건<br>
-(화폐·서비스·무형자산·부동산 제외)</div>
+<div class="rule-box">UCC §1-103: UCC가 침묵하면 Common Law로 보충. 상충 시 UCC 우선.</div>
 <h4>UCC 상인 (Merchant)</h4>
 <ul>
-<li>해당 물품을 거래하거나 전문 지식 보유자</li>
-<li>상인 간 특별 규칙 적용 (Battle of Forms, SOF 확인서 등)</li>
+<li>해당 물품 거래업자 OR 전문 지식 보유자</li>
+<li>상인 간 특별 규칙 적용: Battle of Forms, SOF 확인서, Firm Offer 등</li>
 </ul>
-<div class="warn-box">⚠️ UCC가 침묵하면 Common Law로 보충</div>
+<div class="warn-box">MBE 함정: 서비스+물품 혼합 계약 — 지배적 목적이 서비스면 CL 적용</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
 <h4>Governing Law</h4>
 <ul>
 <li><b>Common Law</b> — Services, real property, employment</li>
-<li><b>UCC Article 2</b> — Sale of <i>goods</i></li>
-<li><b>Mixed K</b> → Predominant Purpose Test</li>
+<li><b>UCC Article 2</b> — Sale of <i>goods</i> (movable, identifiable things)</li>
+<li><b>Mixed K</b> → Predominant Purpose Test: contract language, business nature, intrinsic worth of materials</li>
 </ul>
-<div class="rule-box">📌 Goods = all movable things identified at time of contracting<br>
-(excludes money, services, intangibles, real property)</div>
+<div class="rule-box">UCC §1-103: Where UCC is silent, Common Law fills the gap. UCC controls when there is conflict.</div>
 <h4>Merchant</h4>
 <ul>
 <li>Deals in goods of the kind OR holds out as having special knowledge</li>
-<li>Special rules apply between merchants (Battle of Forms, SOF confirmation)</li>
+<li>Special rules between merchants: Battle of Forms, SOF confirmation, Firm Offer</li>
 </ul>
-<div class="warn-box">⚠️ Where UCC is silent → Common Law fills the gap</div>
+<div class="warn-box">MBE trap: Mixed service/goods K — if predominant purpose is services, apply Common Law</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Offer — 청약</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>청약의 성립 요건 (RS §24)</h4>
+<ul>
+<li>계약을 체결하려는 <b>의지 표명</b> (manifestation of willingness)</li>
+<li>상대방이 자신의 동의가 <b>초청된 것</b>임을 이해할 수 있는 내용</li>
+<li>계약의 <b>확정적 조건</b>: 당사자·목적물·가격·수량 등</li>
+</ul>
+<h4>청약 소멸 사유</h4>
+<ul>
+<li>철회 (Revocation) / 거절 (Rejection) / 반청약 / 기간 경과 / 사망·무능력</li>
+</ul>
+<div class="rule-box">Mailbox Rule: 승낙은 <b>발송 시</b> 효력 발생 (도착 불필요)<br>
+예외: 옵션 계약 / 청약자가 다른 방법 지정</div>
+<div class="warn-box">광고는 원칙상 청약이 아닌 <b>청약의 유인</b> (invitation to offer)</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Offer Elements (RS §24)</h4>
+<ul>
+<li>Manifestation of willingness to enter into a bargain</li>
+<li>That justifies another person in understanding that his assent is invited and will conclude it</li>
+<li>Definite terms: parties, subject matter, price, quantity</li>
+</ul>
+<h4>Termination of Offer</h4>
+<ul>
+<li>Revocation / Rejection / Counter-offer / Lapse / Death or incapacity</li>
+</ul>
+<div class="rule-box">Mailbox Rule: acceptance effective upon <b>dispatch</b> (not receipt)<br>
+Exceptions: option contracts / offeror specifies other method</div>
+<div class="warn-box">Advertisements are generally invitations to offer, NOT offers themselves</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Acceptance &amp; Mirror Image Rule — 승낙</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>승낙의 방법</h4>
+<ul>
+<li>CL: 청약이 지정한 방식 / 합리적 방식 모두 가능</li>
+<li>Bilateral K: 약속으로 승낙 / Unilateral K: <b>행위 완성</b>으로 승낙</li>
+<li>Unilateral K: 이행 시작 = 청약 철회 불가 (완성 시 지급)</li>
+</ul>
+<h4>Mirror Image Rule (CL)</h4>
+<ul>
+<li>승낙은 청약을 <b>정확히 반영</b>해야 함</li>
+<li>어떤 변경이라도 → <b>반청약</b>(Counter-Offer), 원 청약 소멸</li>
+<li>Grumbling acceptance: 불만 표명 + 승낙 → 유효한 승낙</li>
+</ul>
+<div class="tip-box">침묵은 원칙상 승낙 아님. 단, 과거 거래 관행·계약 규정·이익 수령 시 예외</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Method of Acceptance</h4>
+<ul>
+<li>CL: by specified means, or by any reasonable means</li>
+<li>Bilateral K: accepted by promise / Unilateral K: accepted by <b>completed performance</b></li>
+<li>Unilateral K: beginning performance = offer irrevocable (payment conditioned on completion)</li>
+</ul>
+<h4>Mirror Image Rule (CL)</h4>
+<ul>
+<li>Acceptance must <b>exactly mirror</b> the offer</li>
+<li>Any variation → <b>Counter-Offer</b>, original offer terminated</li>
+<li>Grumbling acceptance: expressions of dissatisfaction + acceptance = valid acceptance</li>
+</ul>
+<div class="tip-box">Silence is generally NOT acceptance. Exceptions: prior dealings, contract provision, retention of benefit</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Consideration — 약인</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>성립 요건</h4>
+<ul>
+<li>① <b>교환적 성격</b> (Bargained-for exchange) ② 법적 가치 ③ 쌍방 존재</li>
+<li>법적 가치 = 법적 이익(benefit) 또는 법적 불이익(detriment)</li>
+</ul>
+<h4>주요 함정</h4>
+<ul>
+<li><b>과거 약인</b> (Past Consideration) → 무효. 단, RS §86 예외: 이전 받은 이익에 대한 사후 약속</li>
+<li><b>기존 의무 원칙</b> (Pre-Existing Duty Rule) → 이미 할 의무 있는 행위는 약인 불가<br>
+예외: ① 예상치 못한 어려움 ② UCC 물품계약 수정 ③ 제3자에 대한 의무</li>
+<li><b>허위 약속</b> (Illusory Promise) — 의무 없는 약속 = 약인 무효</li>
+<li><b>선물</b> (Gift) — 약인 없음. 단, 실행된 선물(executed gift)은 취소 불가</li>
+</ul>
+<div class="rule-box">Dougherty v. Salt: "착한 아이"라는 이유의 약속 = 선물, 약인 없음. 사전 기재 약인도 무효.</div>
+<div class="tip-box">약인의 <b>충분성</b>은 요구되지 않음 (peppercorn theory) — 단, 사기·무능력 판단 시 참고</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Elements</h4>
+<ul>
+<li>① <b>Bargained-for exchange</b> ② Legal value ③ Present on both sides</li>
+<li>Legal value = legal benefit to promisor OR legal detriment to promisee</li>
+</ul>
+<h4>Key Traps</h4>
+<ul>
+<li><b>Past Consideration</b> → invalid. RS §86 exception: promise for benefit previously received</li>
+<li><b>Pre-Existing Duty Rule</b> → performing existing duty = no consideration<br>
+Exceptions: ① Unforeseen difficulty ② UCC goods modification ③ Duty owed to third party</li>
+<li><b>Illusory Promise</b> — no real obligation imposed = no consideration</li>
+<li><b>Gift</b> — no consideration. Executed gifts are irrevocable (no consideration needed)</li>
+</ul>
+<div class="rule-box">Dougherty v. Salt: Note for being a "good boy" = gift, no consideration. Stated consideration in form only is sham.</div>
+<div class="tip-box">Adequacy of consideration NOT required (peppercorn theory) — but courts examine it for fraud/incapacity</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cls" id="g1">
+<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 4토픽</div>
+<div class="th-block">
+<div class="th-block-hd">Class 2 — UCC Formation &amp; Promissory Estoppel</div>
+<div class="th-card">
+<div class="th-card-hd">UCC Formation &amp; Gap Fillers — UCC 계약 형성</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>UCC §2-204 — 계약 형성</h4>
+<ul>
+<li>어떠한 방식으로도 합의를 <b>보여주면</b> 계약 성립 (행위 포함)</li>
+<li>일부 조건 미결이어도 당사자가 계약 의도가 있으면 유효</li>
+</ul>
+<h4>UCC Gap Fillers (빠진 조건 보충)</h4>
+<ul>
+<li>§2-305: 가격 미결 → 합리적 가격</li>
+<li>§2-306: Output/Requirements 계약 → 선의 기준 (best efforts)</li>
+<li>§2-307: 단일 인도 원칙 (달리 합의 없으면)</li>
+<li>§2-308: 인도 장소 미지정 → 매도인 영업소</li>
+<li>§2-309: 시간 미지정 → 합리적 시간</li>
+</ul>
+<div class="rule-box">Jannusch v. Naffziger: 정식 계약서 없어도 행위(점유·운영)로 UCC 계약 성립</div>
+<div class="warn-box">UCC: 수량(quantity) 조건 없으면 SOF 요건 불충족 → Output/Requirements는 예외</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>UCC §2-204 — Formation</h4>
+<ul>
+<li>K for sale of goods may be made in <b>any manner sufficient to show agreement</b>, including conduct</li>
+<li>K does not fail for indefiniteness if parties intended to make a K and there is a reasonably certain basis for giving remedy</li>
+</ul>
+<h4>UCC Gap Fillers</h4>
+<ul>
+<li>§2-305: Open price → reasonable price at time of delivery</li>
+<li>§2-306: Output/Requirements → actual output/requirements in good faith (best efforts)</li>
+<li>§2-307: Delivery in single lot (unless circumstances require otherwise)</li>
+<li>§2-308: Place of delivery → seller's place of business</li>
+<li>§2-309: Time for delivery → reasonable time</li>
+</ul>
+<div class="rule-box">Jannusch v. Naffziger: No signed contract needed — conduct (possession, operation) sufficient for UCC K</div>
+<div class="warn-box">UCC SOF: No quantity term = not enforceable. Output/Requirements contracts are an exception</div>
 </div>
 </div>
 </div><div class="th-card">
 <div class="th-card-hd">UCC §2-207 — Battle of the Forms</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>Mirror Image Rule (Common Law)</h4>
+<h4>Mirror Image Rule (CL) vs UCC §2-207</h4>
 <ul>
-<li>승낙은 청약을 그대로 반영해야 함</li>
-<li>추가/변경 → 반청약(Counter-Offer), 원 청약 소멸</li>
+<li>CL: 추가/변경 → 반청약. UCC: 추가 조건 있어도 <b>승낙으로 취급</b></li>
 </ul>
-<h4>UCC §2-207</h4>
+<h4>UCC §2-207 분석</h4>
 <ul>
-<li>추가 조건 있어도 <b>승낙으로 취급</b></li>
-<li><b>상인 간</b> 추가 조건 → 자동 계약 편입 (단, ①중요 변경 ②청약자 반대 ③10일 내 이의 시 제외)</li>
-<li>비상인: 추가 조건 = 제안에 불과</li>
+<li>Step 1: 승낙 의도 있는가? → 추가 조건 있어도 승낙</li>
+<li>Step 2 <b>상인 간</b>: 추가 조건 → 자동 편입 (3가지 예외 제외)<br>
+예외: ①중요 변경(material alteration) ②청약자 반대 ③10일 내 이의</li>
+<li>Step 2 <b>비상인</b>: 추가 조건 = 제안에 불과, 상대방 수락 필요</li>
+<li><b>상충 조건</b> (Conflicting terms) → Knock-out Rule: 공통 조건만 계약 편입</li>
 </ul>
-<div class="rule-box">📌 대용 선적 (Accommodation) = Counter-Offer<br>
-→ 비합치 물품 + 설명 메모 발송 = 상대방 수락/거절 자유</div>
-<div class="warn-box">⚠️ 상충 조건(Conflicting terms) → Knock-out Rule: 공통 조건만 계약에 편입</div>
+<div class="rule-box">대용 선적 (Accommodation) = Counter-Offer<br>
+비합치 물품 + 설명 메모 → 매수인이 수락/거절 선택 가능 (승낙+위반 아님)</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Common Law — Mirror Image Rule</h4>
+<h4>Mirror Image Rule (CL) vs UCC §2-207</h4>
 <ul>
-<li>Acceptance must exactly mirror the offer</li>
-<li>Any addition/change → Counter-Offer, original offer terminated</li>
+<li>CL: any variation → counter-offer. UCC: additional terms → still an <b>acceptance</b></li>
 </ul>
-<h4>UCC §2-207</h4>
+<h4>UCC §2-207 Analysis</h4>
 <ul>
-<li>Additional terms → still an <b>acceptance</b></li>
-<li><b>Between merchants</b>: additional terms become part of K automatically<br>
-(unless ①material alteration ②offeror objects ③objected within 10 days)</li>
-<li>Non-merchants: additional terms = mere proposals only</li>
+<li>Step 1: Intent to accept? → acceptance despite additional terms</li>
+<li>Step 2 <b>Between merchants</b>: additional terms become part of K automatically<br>
+UNLESS: ①material alteration ②offeror objects ③objected within 10 days</li>
+<li>Step 2 <b>Non-merchants</b>: additional terms = mere proposals only</li>
+<li><b>Conflicting terms</b> → Knock-out Rule: only common terms remain</li>
 </ul>
-<div class="rule-box">📌 Accommodation shipment = Counter-Offer<br>
-→ Non-conforming goods + explanatory note = buyer may accept or reject</div>
-<div class="warn-box">⚠️ Conflicting terms → Knock-out Rule: only common terms remain in K</div>
+<div class="rule-box">Accommodation shipment = Counter-Offer (NOT acceptance + breach)<br>
+Non-conforming goods + explanatory note → buyer may accept or reject freely</div>
 </div>
 </div>
 </div><div class="th-card">
-<div class="th-card-hd">Firm Offer &amp; Option Contract</div>
+<div class="th-card-hd">UCC §2-205 — Firm Offer — 확정 청약</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
 <h4>Common Law — 옵션 계약</h4>
@@ -171,13 +321,14 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 <li>청약은 원칙상 수락 전 언제든 <b>철회 가능</b></li>
 <li>옵션 계약: 철회 포기 약속 + <b>약인 필수</b> → 철회 불가</li>
 </ul>
-<h4>UCC §2-205 — 확정 청약 (Firm Offer)</h4>
+<h4>UCC §2-205 — Firm Offer (확정 청약)</h4>
 <ul>
-<li><b>상인</b>이 <b>서면</b>으로 청약 유지 명시</li>
-<li>약인 없어도 명시 기간 동안(최대 <b>3개월</b>) 철회 불가</li>
-<li>비상인 → UCC Firm Offer 적용 불가 → CL로 환원</li>
+<li>적용 요건: ① <b>상인</b>이 ② <b>서면</b>으로 ③ 청약 유지 명시</li>
+<li>약인 없어도 명시 기간(최대 <b>3개월</b>) 철회 불가</li>
+<li><b>비상인</b> → UCC Firm Offer 적용 불가 → CL로 환원 (약인 없으면 철회 가능)</li>
 </ul>
-<div class="warn-box">⚠️ MBE 함정: 비상인의 "유지" 약속 + 약인 없음 → 철회 가능!</div>
+<div class="warn-box">MBE 핵심: 비상인의 서면 "유지" 약속 + 약인 없음 → <b>철회 가능!</b></div>
+<div class="tip-box">계약서 포함된 확정 청약 → 서명 요건 충족. 타인의 서식에 서명도 유효</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
 <h4>Common Law — Option Contract</h4>
@@ -187,389 +338,254 @@ body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f8f6ff;font-size:1
 </ul>
 <h4>UCC §2-205 — Firm Offer</h4>
 <ul>
-<li><b>Merchant</b> gives <b>written</b> assurance offer will be held open</li>
-<li>Irrevocable for stated period (max <b>3 months</b>) without consideration</li>
-<li>Non-merchant → UCC Firm Offer inapplicable → back to Common Law</li>
+<li>Requirements: ① <b>Merchant</b> ② gives <b>written</b> assurance ③ offer will be held open</li>
+<li>Irrevocable for stated period (max <b>3 months</b>) WITHOUT consideration</li>
+<li><b>Non-merchant</b> → UCC Firm Offer inapplicable → back to CL (freely revocable without consideration)</li>
 </ul>
-<div class="warn-box">⚠️ MBE trap: Non-merchant's written "hold open" + no consideration → freely revocable!</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cls" id="g1">
-<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 3토픽</div>
-<div class="th-block">
-<div class="th-block-hd">📝 계약 형성 (Contract Formation)</div>
-<div class="th-card">
-<div class="th-card-hd">Offer &amp; Acceptance — 청약과 승낙</div>
-<div class="th-row">
-<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>청약 요소</h4>
-<ul>
-<li>① 명확한 조건 ② 계약 의도 ③ 상대방 전달</li>
-</ul>
-<h4>청약 소멸</h4>
-<ul>
-<li>철회 (Revocation) / 거절 (Rejection) / 반청약 / 기간 경과 / 사망·무능력</li>
-<li><b>Mailbox Rule</b>: 승낙은 <b>발송 시</b> 효력 발생 (도착 불필요)</li>
-</ul>
-<h4>Mirror Image Rule (CL)</h4>
-<ul>
-<li>승낙에 변경 있으면 → 반청약, 원 청약 소멸</li>
-</ul>
-<div class="rule-box">📌 Unilateral K: 행위 시작 = 철회 불가 + 완성 조건부 지급</div>
-<div class="warn-box">⚠️ Mailbox Rule 예외: 청약자가 다른 방법 지정 / 옵션 계약 / 이메일은 논쟁적</div>
-</div>
-<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Offer Elements</h4>
-<ul>
-<li>① Definite terms ② Intent to contract ③ Communication to offeree</li>
-</ul>
-<h4>Termination of Offer</h4>
-<ul>
-<li>Revocation / Rejection / Counter-offer / Lapse / Death or incapacity</li>
-<li><b>Mailbox Rule</b>: acceptance effective upon <b>dispatch</b> (not receipt)</li>
-</ul>
-<h4>Mirror Image Rule (CL)</h4>
-<ul>
-<li>Any variation in acceptance → Counter-offer, original offer terminated</li>
-</ul>
-<div class="rule-box">📌 Unilateral K: part performance = offer irrevocable + payment conditioned on completion</div>
-<div class="warn-box">⚠️ Mailbox Rule exceptions: offeror specifies other method / option contract / electronic communications disputed</div>
+<div class="warn-box">MBE key: Non-merchant's written "hold open" promise + no consideration → <b>freely revocable!</b></div>
+<div class="tip-box">Firm offer on buyer's form → merchant must separately sign the firm offer assurance</div>
 </div>
 </div>
 </div><div class="th-card">
-<div class="th-card-hd">Consideration — 약인</div>
+<div class="th-card-hd">Promissory Estoppel — 약속적 금반언</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>성립 요건</h4>
+<h4>성립 요건 (RS §90)</h4>
 <ul>
-<li>① 교환적 성격 (Bargained-for) ② 법적 가치 ③ 쌍방 존재</li>
-<li>법적 가치 = 법적 이익 또는 법적 불이익</li>
+<li>① <b>명확한 약속</b> (clear and definite promise)</li>
+<li>② 약속자가 신뢰를 예상하거나 합리적으로 예상해야 함</li>
+<li>③ 수약자의 <b>합리적 신뢰</b> (reasonable reliance)</li>
+<li>④ 신뢰로 인한 <b>실질적 불이익</b> (substantial detriment)</li>
+<li>⑤ 약속 집행이 <b>불의를 방지</b>하는 유일한 방법</li>
 </ul>
-<h4>주요 함정</h4>
+<h4>구제 수단</h4>
 <ul>
-<li><b>과거 약인</b> (Past Consideration) → 무효</li>
-<li><b>기존 의무 원칙</b> (Pre-existing Duty Rule) → 이미 할 의무 있는 행위는 약인 불가<br>
-단, 예외: ① 예상치 못한 어려움 ② UCC 물품계약 수정 ③ 제3자에 대한 의무</li>
-<li><b>허위 약속</b> (Illusory Promise) → 선택권만 있고 의무 없는 약속 = 약인 무효</li>
+<li>약인 없어도 집행 가능 — 단, 정의가 요구하는 범위 내에서</li>
+<li>이행이익 대신 <b>신뢰이익</b>(reliance damages)이 일반적</li>
 </ul>
-<h4>약속적 금반언 (Promissory Estoppel)</h4>
-<ul>
-<li>① 명확한 약속 ② 합리적 신뢰 ③ 실질적 불이익 → 약인 없어도 집행 가능</li>
-</ul>
-<div class="rule-box">📌 UCC: 물품계약 수정은 약인 불필요</div>
+<div class="rule-box">가족 약속, 하청업자 입찰 신뢰, 고용 계약 선(先)이행 — 전형적인 PE 사례</div>
+<div class="warn-box">단순 기대감이나 희망 ≠ 합리적 신뢰. 신뢰의 실질적 변화가 있어야 함</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Elements</h4>
+<h4>Elements (RS §90)</h4>
 <ul>
-<li>① Bargained-for exchange ② Legal value ③ Presence on both sides</li>
-<li>Legal value = legal benefit OR legal detriment</li>
+<li>① <b>Clear and definite promise</b></li>
+<li>② Promisor reasonably expected or should expect to induce reliance</li>
+<li>③ <b>Reasonable reliance</b> by promisee</li>
+<li>④ <b>Substantial detriment</b> caused by reliance</li>
+<li>⑤ Enforcement is the <b>only way to prevent injustice</b></li>
 </ul>
-<h4>Key Traps</h4>
+<h4>Remedy</h4>
 <ul>
-<li><b>Past Consideration</b> → invalid</li>
-<li><b>Pre-Existing Duty Rule</b> → performing existing duty = no consideration<br>
-Exceptions: ① Unforeseen difficulty ② UCC goods modification ③ Duty owed to third party</li>
-<li><b>Illusory Promise</b> → appears to bind but actually imposes no obligation = no consideration</li>
+<li>Enforceable without consideration — but limited to what justice requires</li>
+<li>Usually <b>reliance damages</b> rather than expectation damages</li>
 </ul>
-<h4>Promissory Estoppel</h4>
-<ul>
-<li>① Clear promise ② Reasonable reliance ③ Substantial detriment → enforceable without consideration</li>
-</ul>
-<div class="rule-box">📌 UCC: modification of goods contract needs NO new consideration</div>
-</div>
-</div>
-</div><div class="th-card">
-<div class="th-card-hd">Capacity — 계약 능력</div>
-<div class="th-row">
-<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>미성년자 (Minors)</h4>
-<ul>
-<li>미성년 계약 = <b>취소 가능</b> (Voidable)</li>
-<li>18세 전 또는 성인 후 합리적 기간 내 취소 가능</li>
-<li>예외: <b>생필품</b> (Necessaries) — 취소 불가, 합리적 가격 지불</li>
-</ul>
-<h4>추인 (Ratification)</h4>
-<ul>
-<li>성인 후 이행 계속 / 이행 약속 / 장기간 침묵 → 묵시적 추인</li>
-<li>추인 후 취소권 소멸</li>
-</ul>
-<h4>정신장애</h4>
-<ul>
-<li>법원 선고 무능력자: <b>Void</b> (무효)</li>
-<li>미선고: <b>Voidable</b> — 사후 추인 가능</li>
-</ul>
-<div class="warn-box">⚠️ "as soon as possible" = 허위 약속 아님 — 이행 시기 유보에 불과</div>
-</div>
-<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Minors</h4>
-<ul>
-<li>Minor's contract = <b>Voidable</b></li>
-<li>Can disaffirm before 18 OR within reasonable time after majority</li>
-<li>Exception: <b>Necessaries</b> — cannot disaffirm; pay reasonable value</li>
-</ul>
-<h4>Ratification</h4>
-<ul>
-<li>Continue performing / promise to perform / long silence after majority → implied ratification</li>
-<li>Once ratified, cannot disaffirm</li>
-</ul>
-<h4>Mental Incompetence</h4>
-<ul>
-<li>Court-adjudicated: <b>Void</b></li>
-<li>Non-adjudicated: <b>Voidable</b> — may ratify later</li>
-</ul>
-<div class="warn-box">⚠️ "as soon as possible" ≠ illusory — it is merely a timing caveat, not negating obligation</div>
+<div class="rule-box">Classic PE cases: family promises, subcontractor bids, employment promises before starting</div>
+<div class="warn-box">Mere hope or expectation ≠ reasonable reliance. Must show actual substantial change of position</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="cls" id="g2">
-<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 2토픽</div>
+<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 3토픽</div>
 <div class="th-block">
-<div class="th-block-hd">🔒 집행 가능성 (Enforceability)</div>
+<div class="th-block-hd">Class 3 — Restitution, SOF &amp; Interpretation</div>
 <div class="th-card">
+<div class="th-card-hd">Restitution / Quasi-Contract — 원상회복</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>부당이득반환 (Unjust Enrichment) — RS §1</h4>
+<ul>
+<li>타인의 비용으로 <b>부당하게 이득</b>을 얻은 자는 반환 의무</li>
+<li>요건: ① 이익 수령 ② 이익 보유가 불공정 ③ 관여가 비간섭적(officious X)</li>
+</ul>
+<h4>3가지 구속력 있는 의무</h4>
+<ul>
+<li><b>계약</b>: 상호 합의 + 약인</li>
+<li><b>약속적 금반언</b>: 약속 + 합리적 신뢰</li>
+<li><b>원상회복</b>: 약속 불필요, 이익 수령 + 보유 불공정</li>
+</ul>
+<div class="rule-box">Credit Bureau v. Pelo: 무의식 환자 치료 → 원상회복 가능 (동의 불가 = 간섭 아님)</div>
+<div class="warn-box">RS §2: 관여자(officious intermeddler)는 원상회복 불가 — 긴급성·미리 합의 시도 필요</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Unjust Enrichment — RS §1</h4>
+<ul>
+<li>A person unjustly enriched at another's expense must make restitution</li>
+<li>Elements: ① benefit conferred ② unjust to retain without paying ③ not an officious intermeddler</li>
+</ul>
+<h4>3 Types of Binding Obligations</h4>
+<ul>
+<li><b>Contract</b>: mutual assent + consideration</li>
+<li><b>Promissory Estoppel</b>: promise + reasonable reliance</li>
+<li><b>Restitution</b>: no promise needed; benefit conferred + unjust to retain</li>
+</ul>
+<div class="rule-box">Credit Bureau v. Pelo: treating unconscious patient → restitution (inability to consent ≠ interference)</div>
+<div class="warn-box">RS §2: Officious intermeddler = no restitution — need urgency or prior attempt to obtain agreement</div>
+</div>
+</div>
+</div><div class="th-card">
 <div class="th-card-hd">Statute of Frauds — 사기방지법</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
 <h4>MY LEGS — 서면 필요 계약</h4>
 <ul>
 <li><b>M</b>arriage — 결혼 약속</li>
-<li><b>Y</b>ear — 1년 내 이행 불가 계약</li>
+<li><b>Y</b>ear — 1년 내 이행 <u>불가능한</u> 계약 (이행 가능성 있으면 제외)</li>
 <li><b>L</b>and — 토지 이익 관련 계약</li>
 <li><b>E</b>xecutor — 유언 집행인의 개인 채무 보증</li>
-<li><b>G</b>oods — UCC $500 이상 동산 매매</li>
-<li><b>S</b>uretyship — 타인 채무 보증</li>
+<li><b>G</b>oods — UCC §2-201: $500 이상 동산 매매</li>
+<li><b>S</b>uretyship — 타인 채무 보증 (주된 목적 예외 있음)</li>
 </ul>
-<h4>서면 요건</h4>
+<h4>서면 요건 & 예외</h4>
 <ul>
 <li>핵심 조건 + <b>이행 강제 대상 당사자의 서명</b></li>
+<li>예외: 부분 이행(토지) / 특별 제작품 / 사법상 인낙 / UCC 상인 확인서</li>
 </ul>
-<h4>SOF 예외</h4>
-<ul>
-<li>부분 이행 (특히 토지) / 특별 제작품 / 사법상 인낙 / UCC 상인 확인서</li>
-</ul>
-<div class="rule-box">📌 UCC SOF: 수량 기재만으로 충분 / 상인 간 확인서 10일 내 이의 없으면 구속</div>
+<div class="rule-box">UCC §2-201: 수량 기재만으로 충분. 상인 확인서: 10일 내 이의 없으면 구속.</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
 <h4>MY LEGS — Writing Required</h4>
 <ul>
 <li><b>M</b>arriage — promise in consideration of marriage</li>
-<li><b>Y</b>ear — cannot be performed within 1 year</li>
+<li><b>Y</b>ear — cannot <u>possibly</u> be performed within 1 year (possible = no SOF)</li>
 <li><b>L</b>and — interests in real property</li>
 <li><b>E</b>xecutor — executor's personal debt guarantee</li>
-<li><b>G</b>oods — UCC sale of goods ≥ $500</li>
-<li><b>S</b>uretyship — promise to answer for another's debt</li>
+<li><b>G</b>oods — UCC §2-201: sale of goods ≥ $500</li>
+<li><b>S</b>uretyship — answer for another's debt (main purpose exception applies)</li>
 </ul>
-<h4>Writing Requirements</h4>
+<h4>Writing Requirements &amp; Exceptions</h4>
 <ul>
 <li>Essential terms + <b>signature of party to be charged</b></li>
+<li>Exceptions: Part performance (land) / Specially manufactured goods / Judicial admission / UCC merchant confirmation</li>
 </ul>
-<h4>Exceptions</h4>
-<ul>
-<li>Part performance (esp. land) / Specially manufactured goods / Judicial admission / UCC merchant confirmation</li>
-</ul>
-<div class="rule-box">📌 UCC SOF: quantity term sufficient / Merchant confirmation — no objection within 10 days = bound</div>
+<div class="rule-box">UCC §2-201: quantity term sufficient. Merchant confirmation: no objection within 10 days = bound.</div>
 </div>
 </div>
 </div><div class="th-card">
-<div class="th-card-hd">Parol Evidence Rule — 구두증거배제원칙</div>
+<div class="th-card-hd">Interpretation — 계약 해석</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>원칙</h4>
+<h4>Frigaliment — '닭'의 의미</h4>
 <ul>
-<li>완전 통합 서면 계약의 조건을 <b>사전 또는 동시 합의</b>로 변경·모순하는 증거 배제</li>
-</ul>
-<h4>배제되는 증거</h4>
-<ul>
-<li>서명 전 구두 합의 / 서명 전 서면 합의 / 계약 내용과 모순되는 증거</li>
-</ul>
-<h4>허용되는 증거</h4>
-<ul>
-<li>계약 <b>이후</b> 수정 / 조건(Condition)의 미발생 / 사기·강박·착오 / 계약 해석 목적</li>
+<li>계약상 단어가 모호할 때 → 당사자의 <b>공통 의도</b>에서 출발</li>
+<li>명확한 공통 의도 없으면 → 맥락·업계 관행·이전 거래 참고</li>
+<li>여전히 불명확하면 → 작성자(draftsperson)에게 불리하게 해석</li>
 </ul>
 <h4>UCC 해석 위계</h4>
-<div class="rule-box">Course of Performance &gt; Course of Dealing &gt; Trade Usage<br>
-(실제 이행 &gt; 거래 관행 &gt; 업계 관례)</div>
-<div class="warn-box">⚠️ 계약이 "침묵"하면 모순 아님 → Course of Performance로 보충 가능</div>
+<div class="rule-box">Course of Performance (실제 이행) &gt; Course of Dealing (거래 관행) &gt; Trade Usage (업계 관례)</div>
+<h4>Classical vs Modern Approach</h4>
+<ul>
+<li><b>Four corners (classical)</b>: 계약서 문면만 참고 (외부 증거 불허)</li>
+<li><b>Modern approach</b>: 외부 증거로 언어 해석 가능 (모순 아니면 허용)</li>
+</ul>
+<div class="warn-box">해석(interpretation)과 모순(contradiction) 구별 — 해석 목적 증거는 PER 적용 안 됨</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Rule</h4>
+<h4>Frigaliment — What is "chicken"?</h4>
 <ul>
-<li>Bars use of <b>prior or contemporaneous</b> agreements to vary or contradict terms of a fully integrated written K</li>
-</ul>
-<h4>Excluded Evidence</h4>
-<ul>
-<li>Prior oral agreements / Prior written agreements / Contradicting express terms</li>
-</ul>
-<h4>Admissible Evidence</h4>
-<ul>
-<li><b>Subsequent</b> modifications / Condition precedent not occurring / Fraud, duress, mistake / Interpretation purposes</li>
+<li>When contract term is ambiguous → start with <b>common meaning of the parties</b></li>
+<li>No clear common meaning → look to context, industry practice, prior dealings</li>
+<li>Still unclear → construe against the draftsperson</li>
 </ul>
 <h4>UCC Interpretation Hierarchy</h4>
 <div class="rule-box">Course of Performance &gt; Course of Dealing &gt; Trade Usage</div>
-<div class="warn-box">⚠️ Contract "silent" ≠ contradiction → CoP can supplement (not contradict) a silent term</div>
+<h4>Classical vs Modern Approach</h4>
+<ul>
+<li><b>Four corners (classical)</b>: only look at the document face (no extrinsic evidence)</li>
+<li><b>Modern approach</b>: extrinsic evidence to interpret language (allowed if not contradicting)</li>
+</ul>
+<div class="warn-box">Distinguish interpretation from contradiction — evidence to interpret (not contradict) is NOT barred by PER</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="cls" id="g3">
-<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 4토픽</div>
+<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 2토픽</div>
 <div class="th-block">
-<div class="th-block-hd">⚙️ 이행과 면책 (Performance &amp; Excuse)</div>
+<div class="th-block-hd">Class 4 — Parol Evidence Rule</div>
 <div class="th-card">
-<div class="th-card-hd">Conditions — 조건</div>
+<div class="th-card-hd">Parol Evidence Rule — 구두증거배제원칙 (기본)</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>조건의 종류</h4>
+<h4>원칙</h4>
 <ul>
-<li><b>선행 조건</b> (Precedent): 이행 전 발생해야 하는 사건 — 엄격 이행 요구</li>
-<li><b>해제 조건</b> (Subsequent): 발생하면 기존 의무 소멸</li>
-<li><b>동시 조건</b> (Concurrent): 쌍방이 동시에 이행해야 함</li>
+<li>통합된 서면 계약의 조건을 <b>사전 또는 동시 합의</b>로 변경·모순하는 증거 배제</li>
+<li>증거법이 아닌 <b>실체 계약법</b> 규칙 — 계약의 조건 자체를 규정</li>
 </ul>
-<h4>조건 면제 방법</h4>
+<h4>통합 수준 (Integration)</h4>
 <ul>
-<li><b>포기</b> (Waiver): 구두도 가능 — 한번 포기하면 철회 시 신뢰이익 보호</li>
-<li><b>금반언</b> (Estoppel): 포기 후 신뢰 행위 → 철회 불가</li>
-<li><b>불능</b>: 조건 발생이 불가능해진 경우</li>
+<li><b>완전 통합</b> (Totally integrated): 모순 증거 + 추가 조건 증거 모두 배제</li>
+<li><b>부분 통합</b> (Partially integrated): 모순 증거 배제, 일치하는 추가 조건은 허용</li>
 </ul>
-<div class="warn-box">⚠️ 조건 = 엄격 이행! 실질적 이행(Substantial Performance) 원칙 적용 안 됨</div>
+<h4>3단계 분석</h4>
+<ul>
+<li>Step 1: 증거의 목적 (추가? 모순? 해석? 사기?)</li>
+<li>Step 2: 통합 수준 결정 (완전/부분)</li>
+<li>Step 3: PER 적용</li>
+</ul>
+<div class="tip-box">Thompson v. Libby: 합의 서면이 완전 통합이면 구두 보증 증거 배제</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Types of Conditions</h4>
+<h4>Rule</h4>
 <ul>
-<li><b>Precedent</b>: event must occur before duty arises — strict compliance required</li>
-<li><b>Subsequent</b>: occurrence terminates existing duty</li>
-<li><b>Concurrent</b>: both parties must perform simultaneously</li>
+<li>Bars use of <b>prior or contemporaneous</b> agreements to vary or contradict terms of an integrated written K</li>
+<li>NOT a rule of evidence — it is <b>substantive contract law</b> governing the terms themselves</li>
 </ul>
-<h4>Excusing Conditions</h4>
+<h4>Integration Level</h4>
 <ul>
-<li><b>Waiver</b>: can be oral — once waived with reliance, cannot retract</li>
-<li><b>Estoppel</b>: waiver + reliance → cannot retract</li>
-<li><b>Impossibility</b>: condition's occurrence becomes impossible</li>
+<li><b>Totally integrated</b>: bars both contradictory AND consistent additional terms</li>
+<li><b>Partially integrated</b>: bars only contradictory terms; consistent additional terms admissible</li>
 </ul>
-<div class="warn-box">⚠️ Conditions = strict compliance! Substantial performance doctrine does NOT apply to conditions</div>
+<h4>3-Step Analysis</h4>
+<ul>
+<li>Step 1: Purpose of evidence (add? contradict? interpret? prove fraud?)</li>
+<li>Step 2: Determine integration level (total/partial)</li>
+<li>Step 3: Apply PER</li>
+</ul>
+<div class="tip-box">Thompson v. Libby: Totally integrated agreement → oral warranty evidence excluded</div>
 </div>
 </div>
 </div><div class="th-card">
-<div class="th-card-hd">Impossibility / Frustration of Purpose</div>
+<div class="th-card-hd">PER — 허용되는 증거와 예외</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>이행 불능 (Impossibility)</h4>
+<h4>항상 허용되는 증거</h4>
 <ul>
-<li>대상물 멸실 / 특정인 사망 / 법률 변경 → 이행 자체 불가</li>
+<li>계약 <b>이후</b> 수정 (subsequent modification)</li>
+<li>선행 조건(Condition Precedent)의 미발생</li>
+<li>사기·강박·착오·무능력 입증</li>
+<li>계약 해석 목적 (four corners vs modern approach)</li>
+<li>담보 계약 (collateral contract): 별도 약인·별도 주제·모순 없으면 허용</li>
 </ul>
-<h4>상업적 이행 곤란 (Commercial Impracticability)</h4>
+<h4>조건 선례 (Condition Precedent)</h4>
 <ul>
-<li>① 계약 후 예상치 못한 사건 ② 위험 미배분 ③ 상업적으로 비실용적</li>
-<li>단순 비용 증가 = 불충분. 극단적이어야 함</li>
+<li>계약 의무 발생 전 충족해야 할 조건 → 미발생 시 의무 없음</li>
+<li>구두 조건 선례 증거 → PER에도 불구하고 허용 (의무를 부가하지 않고 제한하므로)</li>
 </ul>
-<h4>목적 좌절 (Frustration of Purpose)</h4>
-<ul>
-<li>이행 가능하나 이행 목적이 완전히 소멸</li>
-<li>① 목적 예견 가능했을 것 ② 예상치 못한 사건 ③ 목적 완전 좌절</li>
-</ul>
-<h4>위험 부담 원칙</h4>
-<div class="warn-box">⚠️ 전문가가 해당 위험을 예상했어야 함 → 이행 곤란 항변 실패</div>
+<div class="rule-box">UCC 해석: Course of Performance &gt; Course of Dealing &gt; Trade Usage<br>
+계약이 "침묵"하면 모순 아님 → Course of Performance로 보충 가능</div>
+<div class="warn-box">완전 통합 서면의 추가 조건 증거는 아무리 합리적이어도 배제</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Impossibility</h4>
+<h4>Always Admissible Evidence</h4>
 <ul>
-<li>Destruction of subject matter / Death of specified person / Supervening illegality → performance literally impossible</li>
+<li><b>Subsequent</b> modifications (after contract signing)</li>
+<li>Non-occurrence of a condition precedent</li>
+<li>Fraud, duress, mistake, incapacity</li>
+<li>Interpretation (not contradiction)</li>
+<li>Collateral contract: separate consideration, separate subject, no contradiction</li>
 </ul>
-<h4>Commercial Impracticability</h4>
+<h4>Condition Precedent</h4>
 <ul>
-<li>① Unanticipated event after K ② Risk not allocated to promisor ③ Commercially impracticable</li>
-<li>Mere cost increase = insufficient. Must be extreme</li>
+<li>An event that must occur before a duty arises → no duty if condition not met</li>
+<li>Oral condition precedent evidence → admissible despite PER (limits rather than adds to duties)</li>
 </ul>
-<h4>Frustration of Purpose</h4>
-<ul>
-<li>Performance possible, but purpose completely destroyed</li>
-<li>① Purpose foreseeable at K formation ② Unanticipated event ③ Purpose completely frustrated</li>
-</ul>
-<h4>Risk Allocation</h4>
-<div class="warn-box">⚠️ Expert should have foreseen the risk → impracticability defense fails</div>
-</div>
-</div>
-</div><div class="th-card">
-<div class="th-card-hd">Mutual Mistake — 착오</div>
-<div class="th-row">
-<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>쌍방 착오 (Mutual Mistake)</h4>
-<ul>
-<li>양측이 중대한 사실에 대해 <b>공통으로 잘못 가정</b></li>
-<li>요건: ① 계약 당시 착오 ② 중대한 사실 ③ 위험 미배분</li>
-<li>구제: 취소(Rescission) 또는 개혁(Reformation)</li>
-</ul>
-<h4>일방 착오 (Unilateral Mistake)</h4>
-<ul>
-<li>원칙: 구제 없음</li>
-<li>예외: 상대방이 착오를 알았거나 알아야 했던 경우 / 사기적 유인</li>
-</ul>
-<h4>위험 부담</h4>
-<ul>
-<li>착오 주장자가 위험을 부담한 경우 → 취소 불가</li>
-</ul>
-<div class="rule-box">📌 Reformation: 계약서 오기(Scrivener's error) → 실제 합의대로 수정</div>
-</div>
-<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Mutual Mistake</h4>
-<ul>
-<li>Both parties share a <b>common erroneous assumption</b> about a material fact</li>
-<li>Elements: ① Mistake at time of K ② Material fact ③ Risk not allocated</li>
-<li>Remedy: Rescission or Reformation</li>
-</ul>
-<h4>Unilateral Mistake</h4>
-<ul>
-<li>General rule: no relief</li>
-<li>Exception: other party knew or should have known / fraudulent inducement</li>
-</ul>
-<h4>Risk Allocation</h4>
-<ul>
-<li>If mistaken party bore the risk → NO rescission</li>
-</ul>
-<div class="rule-box">📌 Reformation: scrivener's error (typo in contract) → rewrite to reflect actual agreement</div>
-</div>
-</div>
-</div><div class="th-card">
-<div class="th-card-hd">UCC Perfect Tender &amp; Right to Cure</div>
-<div class="th-row">
-<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>완전 이행 원칙 (Perfect Tender Rule)</h4>
-<ul>
-<li>UCC: 물품이 계약과 <b>조금이라도 다르면</b> 매수인은 거절 가능</li>
-<li>Common Law의 실질적 이행 원칙 적용 안 됨</li>
-</ul>
-<h4>치유권 (Right to Cure)</h4>
-<ul>
-<li>하자 발견 당시 <b>이행 기한이 남아있으면</b> 매도인에게 치유 기회 부여</li>
-<li>이행 기한 경과 후: 치유권 제한적 (합리적 믿음이 있었던 경우 일부 허용)</li>
-</ul>
-<h4>매수인의 선택</h4>
-<ul>
-<li>① 거절 (Reject) ② 수락 후 손해배상 ③ 일부 수락·일부 거절</li>
-</ul>
-<div class="warn-box">⚠️ 수락 후 취소(Revocation of Acceptance): 중대 하자 + 발견 어려웠던 경우만 가능</div>
-</div>
-<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Perfect Tender Rule</h4>
-<ul>
-<li>UCC: buyer may reject goods if they fail to conform <b>in any respect</b></li>
-<li>Common Law's substantial performance doctrine does NOT apply</li>
-</ul>
-<h4>Right to Cure</h4>
-<ul>
-<li>If defect found <b>before performance deadline</b> → seller gets opportunity to cure</li>
-<li>After deadline: Right to Cure limited (allowed if seller had reasonable belief tender was acceptable)</li>
-</ul>
-<h4>Buyer's Options</h4>
-<ul>
-<li>① Reject ② Accept + sue for damages ③ Accept part, reject the rest</li>
-</ul>
-<div class="warn-box">⚠️ Revocation of Acceptance: only if substantial impairment + difficulty of discovery</div>
+<div class="rule-box">UCC interpretation: Course of Performance &gt; Course of Dealing &gt; Trade Usage<br>
+Contract "silent" ≠ contradiction → CoP can supplement a silent term</div>
+<div class="warn-box">Consistent additional terms to a totally integrated agreement are always excluded, however reasonable</div>
 </div>
 </div>
 </div>
@@ -578,163 +594,173 @@ Exceptions: ① Unforeseen difficulty ② UCC goods modification ③ Duty owed t
 <div class="cls" id="g4">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 4토픽</div>
 <div class="th-block">
-<div class="th-block-hd">💥 위반과 구제 (Breach &amp; Remedies)</div>
+<div class="th-block-hd">Class 5 — Implied Terms, Warranties &amp; Breach</div>
 <div class="th-card">
-<div class="th-card-hd">Material Breach vs Substantial Performance</div>
+<div class="th-card-hd">Implied Terms &amp; Good Faith — 묵시적 조건·선의</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>중대 위반 (Material Breach)</h4>
+<h4>묵시적 조건 (Implied Terms)</h4>
 <ul>
-<li>비위반 당사자: 이행 정지 + 손해배상 청구 가능</li>
+<li><b>사실상 묵시</b> (Implied-in-fact): 당사자 행위에서 추론되는 실제 합의</li>
+<li><b>법적 묵시</b> (Implied-in-law): 법이 당사자 의도와 무관하게 편입하는 조건</li>
 </ul>
-<h4>중대 위반 판단 요소</h4>
+<h4>선의 의무 (Good Faith)</h4>
 <ul>
-<li>① 박탈된 이익 ② 금전 배상 충분성 ③ 이행 정도 ④ 선의 ⑤ 치유 가능성 ⑥ 몰수 불균형</li>
+<li>모든 계약에 묵시적으로 존재 (CL: 이행 및 집행 / UCC: 모든 단계)</li>
+<li>Wood v. Lucy: 독점권 계약 → 이익 추구 최선 노력 의무 묵시</li>
 </ul>
-<h4>실질적 이행 (Substantial Performance)</h4>
+<h4>UCC Gap Fillers와 선의 결합</h4>
 <ul>
-<li>대부분 이행 + 경미한 부족 → 계약금 청구 가능 (미흡분 손해배상 의무)</li>
+<li>Output/Requirements 계약: 선의 기준 (good faith) 수량 — 극단적 변동 불가</li>
+<li>독점 대리 계약: 판매 최선 노력 의무 (UCC §2-306(2))</li>
 </ul>
-<h4>경미한 위반 (Minor Breach)</h4>
-<ul>
-<li>손해배상만 청구 가능, 계약 자체는 존속</li>
-</ul>
-<div class="rule-box">📌 UCC: Perfect Tender (조금이라도 다르면 거절 가능) — Substantial Performance 원칙 적용 안 됨</div>
+<div class="rule-box">Wood v. Lady Duff-Gordon: 선의 이행 의무 묵시 → 허위 약속 아님, 유효한 약인</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Material Breach</h4>
+<h4>Implied Terms</h4>
 <ul>
-<li>Non-breaching party may: suspend performance + sue for full damages</li>
+<li><b>Implied-in-fact</b>: inferred from parties' conduct — actual (not expressed) agreement</li>
+<li><b>Implied-in-law</b>: court imposes term regardless of parties' actual intent</li>
 </ul>
-<h4>Factors for Material Breach</h4>
+<h4>Good Faith Obligation</h4>
 <ul>
-<li>① Benefit deprived ② Adequacy of money damages ③ Extent of performance ④ Good faith ⑤ Likelihood of cure ⑥ Forfeiture</li>
+<li>Implied in every contract (CL: performance/enforcement; UCC: every obligation)</li>
+<li>Wood v. Lucy: exclusive endorsement deal → implied best efforts obligation</li>
 </ul>
-<h4>Substantial Performance</h4>
+<h4>UCC Gap Fillers + Good Faith</h4>
 <ul>
-<li>Mostly performed + minor shortfall → may collect contract price (less damages for deficiency)</li>
+<li>Output/Requirements: good faith quantities — no unreasonably disproportionate demands</li>
+<li>Exclusive dealing: seller/buyer must use best efforts (UCC §2-306(2))</li>
 </ul>
-<h4>Minor Breach</h4>
-<ul>
-<li>Damages only; contract continues</li>
-</ul>
-<div class="rule-box">📌 UCC: Perfect Tender Rule (any deviation = right to reject) — Substantial Performance does NOT apply</div>
+<div class="rule-box">Wood v. Lady Duff-Gordon: implied obligation of good faith performance → NOT illusory, valid consideration</div>
 </div>
 </div>
 </div><div class="th-card">
-<div class="th-card-hd">Anticipatory Repudiation — 예상 위반</div>
+<div class="th-card-hd">Warranties — 보증</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>성립</h4>
+<h4>UCC 명시적 보증 (Express Warranty) §2-313</h4>
 <ul>
-<li>이행기 <b>전</b>에 이행 거절을 <b>명확하게</b> 표시</li>
-<li>명확한 거절 OR 이중 매매 등 이행 불가 행위</li>
-<li>모호한 발언 → 예상 위반 아님 (이행 확약 요청 가능)</li>
+<li>매도인의 <b>사실 확인·설명·견본</b>이 계약의 일부가 됨</li>
+<li>단, 단순한 의견이나 가치 평가 (puffery) 는 보증 아님</li>
 </ul>
-<h4>피해 당사자의 4가지 선택</h4>
+<h4>묵시적 보증 — 상품성 (Implied Warranty of Merchantability) §2-314</h4>
 <ul>
-<li>① 즉시 소송 ② 이행 촉구 ③ 계약 해제 ④ 기다리기</li>
+<li><b>상인</b>이 판매 시 자동 적용: 물품이 해당 용도에 <b>통상적으로 적합</b>해야 함</li>
+</ul>
+<h4>묵시적 보증 — 적합성 (Implied Warranty of Fitness) §2-315</h4>
+<ul>
+<li>매도인이 매수인의 <b>특정 목적</b>을 알고, 매수인이 매도인 판단 신뢰 시 적용</li>
+</ul>
+<h4>보증 면제 (Disclaimer)</h4>
+<ul>
+<li>명시적 보증: 계약 전체 해석으로 면제 불가 (일부 제한 가능)</li>
+<li>묵시적 보증: "as is", "with all faults" 문구로 면제 가능</li>
+</ul>
+<div class="warn-box">UCC 보증 위반: 물품 거절(rejection) OR 수락 후 손해배상 청구</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>UCC Express Warranty §2-313</h4>
+<ul>
+<li>Any <b>affirmation of fact, description, or sample</b> that becomes part of the basis of the bargain</li>
+<li>Mere opinion or puffery does NOT create a warranty</li>
+</ul>
+<h4>Implied Warranty of Merchantability §2-314</h4>
+<ul>
+<li>Auto-applies when <b>merchant</b> sells goods: goods must be fit for the <b>ordinary purpose</b></li>
+</ul>
+<h4>Implied Warranty of Fitness §2-315</h4>
+<ul>
+<li>Applies when seller knows buyer's <b>particular purpose</b> and buyer relies on seller's judgment</li>
+</ul>
+<h4>Disclaimer</h4>
+<ul>
+<li>Express warranty: cannot fully disclaim (read contract as whole)</li>
+<li>Implied warranty: "as is" / "with all faults" language effective disclaimer</li>
+</ul>
+<div class="warn-box">UCC warranty breach: buyer may reject goods OR accept and sue for damages</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Breach — Material, Substantial &amp; Total</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>위반의 수준</h4>
+<ul>
+<li><b>경미한 위반</b> (Partial/Minor): 실질적 이행 → 계약 존속, 손해배상만</li>
+<li><b>중대한 위반</b> (Material): 이행 정지 가능 (치유 기회 부여 후)</li>
+<li><b>전면 위반</b> (Total): 계약 해제 + 전체 손해배상</li>
+</ul>
+<h4>중대 위반 판단 요소 (RS §241)</h4>
+<ul>
+<li>① 박탈된 이익 ② 금전 배상 충분성 ③ 이행 정도 ④ 치유 가능성 ⑤ 선의 ⑥ 몰수 불균형</li>
+</ul>
+<h4>Jacob &amp; Youngs v. Kent — 실질적 이행</h4>
+<ul>
+<li>Reading 파이프 대신 동등품 설치 → 실질적 이행, 중대 위반 아님</li>
+<li>Kent는 계약금 받을 수 없으나 → 손해배상(차액 또는 완성 비용)은 청구 가능</li>
+</ul>
+<div class="rule-box">UCC: Perfect Tender Rule — 어떤 부적합이라도 거절 권리. CL의 실질적 이행 규칙 적용 안 됨.</div>
+<div class="warn-box">비위반 당사자가 과도 대응(해제) 시 오히려 위반 당사자가 됨!</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Levels of Breach</h4>
+<ul>
+<li><b>Partial/Minor breach</b>: substantial performance → contract continues, damages only</li>
+<li><b>Material breach</b>: may suspend performance (after opportunity to cure)</li>
+<li><b>Total breach</b>: may rescind + sue for all damages</li>
+</ul>
+<h4>Material Breach Factors (RS §241)</h4>
+<ul>
+<li>① Benefit deprived ② Adequacy of money damages ③ Extent of performance ④ Likelihood of cure ⑤ Good faith ⑥ Forfeiture</li>
+</ul>
+<h4>Jacob &amp; Youngs v. Kent — Substantial Performance</h4>
+<ul>
+<li>Non-Reading pipe installed → substantial performance, NOT material breach</li>
+<li>Kent cannot withhold contract price BUT gets diminution-in-value damages</li>
+</ul>
+<div class="rule-box">UCC: Perfect Tender Rule — any nonconformity = right to reject. Substantial Performance does NOT apply.</div>
+<div class="warn-box">Non-breaching party who wrongfully rescinds (overreacts to minor breach) BECOMES the breaching party!</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Anticipatory Repudiation &amp; Right to Assurance</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>예상 위반 (Anticipatory Repudiation)</h4>
+<ul>
+<li>이행기 <b>전</b>에 <b>명확하고 확정적인</b> 이행 거절 표시</li>
+<li>명확한 거절 OR 이행 불가 행위 (이중 매매 등)</li>
+<li>모호한 발언 → 예상 위반 아님 → 이행 확약 요청 가능</li>
+</ul>
+<h4>피해 당사자의 선택 (RS §253)</h4>
+<ul>
+<li>① 즉시 소송 ② 이행 촉구 ③ 계약 해제 ④ 기다리기 (위험 존재)</li>
 </ul>
 <h4>철회 (Retraction)</h4>
 <ul>
-<li>이행기 전까지 철회 가능 — 단, 상대방이 이미 계약 해제/입장 변경/소 제기 시 불가</li>
+<li>이행기 전까지 철회 가능 — 단, 상대방이 이미 해제/입장 변경/소 제기 시 불가</li>
 </ul>
-<div class="rule-box">📌 UCC §2-609: 이행 불안 시 서면으로 이행 확약 요청 → 30일 내 미응답 = 예상 위반</div>
+<div class="rule-box">UCC §2-609: 이행 불안 시 서면으로 이행 확약 요청 → 30일 내 미응답 = 예상 위반<br>
+Truman Flatt: "지금은 아니다"는 모호한 표현 → 예상 위반 아님, 기한까지 이행 가능</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Elements</h4>
+<h4>Anticipatory Repudiation</h4>
 <ul>
-<li><b>Unequivocal</b> statement of intent NOT to perform, made <b>before</b> due date</li>
-<li>Clear refusal OR making performance impossible (e.g., double sale)</li>
-<li>Ambiguous statement → NOT repudiation (request adequate assurance instead)</li>
+<li><b>Unequivocal, definite</b> statement of intent NOT to perform, made <b>before</b> due date</li>
+<li>Clear refusal OR voluntary act making performance impossible (e.g., double sale)</li>
+<li>Ambiguous statement → NOT repudiation → demand adequate assurance instead</li>
 </ul>
-<h4>4 Options for Aggrieved Party</h4>
+<h4>Aggrieved Party's Options (RS §253)</h4>
 <ul>
-<li>① Sue immediately ② Urge performance ③ Rescind ④ Wait</li>
+<li>① Sue immediately ② Urge performance ③ Rescind ④ Wait (risky)</li>
 </ul>
 <h4>Retraction</h4>
 <ul>
-<li>Can retract before due date — NOT if aggrieved party has already rescinded / changed position / filed suit</li>
+<li>Can retract before due date — NOT if aggrieved party has rescinded / changed position / filed suit</li>
 </ul>
-<div class="rule-box">📌 UCC §2-609: Demand for adequate assurance in writing → no response within 30 days = repudiation</div>
-</div>
-</div>
-</div><div class="th-card">
-<div class="th-card-hd">Damages — 손해배상</div>
-<div class="th-row">
-<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>이행이익 (Expectation Damages)</h4>
-<ul>
-<li>계약이 이행됐다면 받을 이익 = 가장 일반적</li>
-<li>= 이행이익 - 비용 절감액 - 다른 곳에서 벌 수 있는 이익</li>
-</ul>
-<h4>신뢰이익 (Reliance Damages)</h4>
-<ul>
-<li>계약을 믿고 지출한 비용 — 이행이익 증명 어려울 때 대안</li>
-</ul>
-<h4>원상회복 (Restitution)</h4>
-<ul>
-<li>피고의 부당이득 반환</li>
-</ul>
-<h4>손해경감 의무 (Duty to Mitigate)</h4>
-<ul>
-<li>합리적 노력으로 피할 수 있었던 손해 → 배상 불가</li>
-</ul>
-<div class="warn-box">⚠️ 예상 위반 통보 후에도 계속 지출 → 추가 지출 배상 불가!</div>
-<div class="rule-box">📌 Hadley v. Baxendale: 예견 가능한 손해만 배상 (특별손해 = 통지 필요)</div>
-</div>
-<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Expectation Damages</h4>
-<ul>
-<li>Put P in position they would have been in if K performed = most common</li>
-<li>= Expected profit - Costs saved - Income from other sources</li>
-</ul>
-<h4>Reliance Damages</h4>
-<ul>
-<li>Expenses incurred in reliance on K — alternative when expectation uncertain</li>
-</ul>
-<h4>Restitution</h4>
-<ul>
-<li>Return of defendant's unjust enrichment</li>
-</ul>
-<h4>Duty to Mitigate</h4>
-<ul>
-<li>Avoidable losses → NOT recoverable</li>
-</ul>
-<div class="warn-box">⚠️ Continued spending after notice of repudiation → no recovery for post-notice expenses!</div>
-<div class="rule-box">📌 Hadley v. Baxendale: only foreseeable damages recoverable (special damages require notice)</div>
-</div>
-</div>
-</div><div class="th-card">
-<div class="th-card-hd">Liquidated Damages &amp; Specific Performance</div>
-<div class="th-row">
-<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>위약금 조항 (Liquidated Damages)</h4>
-<ul>
-<li>유효 요건: ① 계약 당시 손해 예측 어려움 ② 합리적 사전 추정</li>
-<li>실제 손해와 지나치게 다르면 → 페널티 = 무효</li>
-</ul>
-<h4>특정 이행 (Specific Performance)</h4>
-<ul>
-<li>금전 배상 부적절할 때만 허용</li>
-<li>허용: <b>부동산</b> (항상 고유), <b>독특한 동산</b> (희귀품·예술품)</li>
-<li>불허: <b>개인 서비스</b> (노예 금지 조항), 시장에서 대체 가능한 물품</li>
-</ul>
-<div class="rule-box">📌 대안: 개인 서비스의 경우 → 금지 명령(Injunction)으로 경쟁 활동 제한 가능</div>
-</div>
-<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Liquidated Damages (LD)</h4>
-<ul>
-<li>Valid if: ① Damages difficult to estimate at time of K ② Amount is reasonable forecast</li>
-<li>Grossly disproportionate to actual harm → Penalty = void</li>
-</ul>
-<h4>Specific Performance (SP)</h4>
-<ul>
-<li>Available ONLY when money damages are inadequate</li>
-<li>Available: <b>Real property</b> (always unique), <b>Unique chattels</b> (rare items, artwork)</li>
-<li>Unavailable: <b>Personal services</b> (13th Amendment), fungible goods</li>
-</ul>
-<div class="rule-box">📌 Alternative for personal services: Negative Injunction — bar competitive activities</div>
+<div class="rule-box">UCC §2-609: Written demand for adequate assurance → no response within 30 days = repudiation<br>
+Truman Flatt: "would not perform within upcoming weeks" = ambiguous → NOT repudiation</div>
 </div>
 </div>
 </div>
@@ -743,121 +769,401 @@ Exceptions: ① Unforeseen difficulty ② UCC goods modification ③ Duty owed t
 <div class="cls" id="g5">
 <div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 3토픽</div>
 <div class="th-block">
-<div class="th-block-hd">🤝 제3자 권리 (Third-Party Rights)</div>
+<div class="th-block-hd">Class 6 — Damages</div>
 <div class="th-card">
-<div class="th-card-hd">Third-Party Beneficiary — 제3자 수혜자</div>
+<div class="th-card-hd">Expectation Damages — 이행이익 손해배상</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>의도적 수혜자 (Intended) vs 우연적 수혜자 (Incidental)</h4>
+<h4>기본 공식 (RS §347)</h4>
+<div class="rule-box">손해배상 = 이행이익 손실 + 기타 손실 - 비용 절감액 - 대체 이익</div>
 <ul>
-<li><b>의도적</b>: 계약이 그 제3자에게 혜택을 주려는 목적 → <b>집행 가능</b></li>
-<li><b>우연적</b>: 부수적 이익 → <b>집행 불가</b></li>
+<li><b>이행이익 손실 (Loss in Value)</b>: 받았어야 할 이행의 가치 - 실제 받은 것의 가치</li>
+<li><b>기타 손실 (Other Loss)</b>: 부수적 손해 + 결과적 손해 (foreseeable)</li>
+<li><b>비용 절감액 (Cost Avoided)</b>: 위반으로 지출 안 한 비용</li>
+<li><b>대체 이익 (Loss Avoided)</b>: 다른 거래에서 번 이익</li>
 </ul>
-<h4>의도적 수혜자 유형</h4>
+<h4>대표 사례</h4>
 <ul>
-<li>채권자형 (Creditor): 수약자가 기존 채무 이행하기 위해</li>
-<li>증여형 (Donee): 수약자가 선물하기 위해</li>
+<li>부동산: 계약가 - 공정시장가치</li>
+<li>고용: 계약 급여 - 얻은 대체 급여 + 고용 비용</li>
+<li>건설: 완성 비용 OR 가치 감소 (거의 완공 시 후자 적용)</li>
 </ul>
-<h4>권리 확정 (Vesting)</h4>
-<ul>
-<li>① 신뢰 행위 ② 소 제기 ③ 동의 표시 → 수정·취소 불가</li>
-<li>확정 전: 당사자들이 자유롭게 수정 가능</li>
-</ul>
-<div class="rule-box">📌 약속자 vs 수혜자: 약속자는 수약자에게 쓸 수 있는 방어 사유 수혜자에게도 주장 가능</div>
+<div class="rule-box">Hawkins v. McGee: "완벽한 손" 약속 → 이행이익 = 완벽한 손의 가치 - 실제 손의 가치</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Intended vs Incidental Beneficiary</h4>
+<h4>Basic Formula (RS §347)</h4>
+<div class="rule-box">Damages = Loss in Value + Other Loss - Cost Avoided - Loss Avoided</div>
 <ul>
-<li><b>Intended</b>: K made for purpose of benefiting that third party → <b>enforceable rights</b></li>
-<li><b>Incidental</b>: merely a side effect → <b>no enforceable rights</b></li>
+<li><b>Loss in Value</b>: value of promised performance - value of what was actually received</li>
+<li><b>Other Loss</b>: incidental + consequential damages (must be foreseeable)</li>
+<li><b>Cost Avoided</b>: costs NOT incurred due to breach</li>
+<li><b>Loss Avoided</b>: earnings from alternative employment/contract</li>
 </ul>
-<h4>Types of Intended Beneficiaries</h4>
+<h4>Key Cases</h4>
 <ul>
-<li>Creditor beneficiary: promisee discharging a debt to TPB</li>
-<li>Donee beneficiary: promisee making a gift to TPB</li>
+<li>Real estate: contract price - fair market value</li>
+<li>Employment: contract salary - substitute earnings + employment agency fee</li>
+<li>Construction: cost to complete OR diminution in value (when near completion)</li>
 </ul>
-<h4>Vesting of Rights</h4>
-<ul>
-<li>① Reliance ② Filing suit ③ Manifesting assent → parties cannot modify/rescind without TPB's consent</li>
-<li>Before vesting: parties may freely modify or rescind</li>
-</ul>
-<div class="rule-box">📌 Promisor vs TPB: promisor may raise any defense available against promisee</div>
+<div class="rule-box">Hawkins v. McGee: promise of "perfect hand" → expectation = perfect hand value - actual hairy-hand value</div>
 </div>
 </div>
 </div><div class="th-card">
-<div class="th-card-hd">Assignment &amp; Delegation — 양도와 위임</div>
+<div class="th-card-hd">Reliance, Restitution Damages &amp; Mitigation</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>권리 양도 (Assignment)</h4>
+<h4>신뢰이익 손해배상 (Reliance Damages)</h4>
 <ul>
-<li>계약상 <b>권리</b>를 제3자에게 이전</li>
-<li>원칙: 자유롭게 양도 가능</li>
-<li>예외 X: ① 의무를 실질적으로 증가시킬 때 ② 개인적 서비스 ③ 계약이 금지</li>
-<li><b>채무자 통지</b>: 통지 전 양도인에게 지불 = 면책 / 통지 후 = 면책 불가</li>
+<li>계약을 믿고 지출한 비용 회복 — 이행이익 증명 어려울 때 대안</li>
+<li>약속적 금반언에서 주로 사용</li>
 </ul>
-<h4>의무 위임 (Delegation)</h4>
+<h4>원상회복 손해배상 (Restitution Damages)</h4>
 <ul>
-<li>계약상 <b>의무</b> 이행을 제3자에게 위탁</li>
-<li>위임 후에도 <b>위임자(Delegator) 여전히 책임</b></li>
-<li>불가: 개인적 신뢰 기반 / 계약 금지</li>
+<li>피고의 <b>부당이득</b> 반환 — 계약이 취소되거나 집행 불가 시</li>
+<li>예: 선금 지급 후 피고 위반 → 선금 반환</li>
 </ul>
-<h4>경개 (Novation)</h4>
+<h4>손해경감 의무 (Duty to Mitigate)</h4>
 <ul>
-<li>위임 + 채권자 동의 + 위임자 면책 = Novation → 위임자 완전 면책</li>
+<li>합리적 노력으로 <b>피할 수 있었던</b> 손해 → 배상 불가</li>
+<li>Rockingham v. Luten: 위반 통보 후 교량 완공 → 완공 후 비용 불회수</li>
+<li>Parker v. TCF: 실질적으로 다른 대체 고용 거절 → 미이행 아님</li>
 </ul>
+<div class="rule-box">Hadley v. Baxendale: 예견 가능한 손해만 배상<br>
+특별손해(special circumstances) = 계약 시 통지 필요</div>
+<div class="warn-box">예상 위반 통보 후 계속 지출 → 추가 지출 배상 불가!</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Assignment of Rights</h4>
+<h4>Reliance Damages</h4>
 <ul>
-<li>Transfer of contractual <b>rights</b> to a third party</li>
-<li>Generally freely assignable</li>
-<li>Not assignable if: ① Materially increases obligor's burden ② Personal services ③ Contract prohibits</li>
-<li><b>Notice to Obligor</b>: before notice → pay assignor = discharged / after notice → must pay assignee</li>
+<li>Recovery of expenses incurred in reliance on K — alternative when expectation too uncertain</li>
+<li>Commonly used in promissory estoppel claims</li>
 </ul>
-<h4>Delegation of Duties</h4>
+<h4>Restitution Damages</h4>
 <ul>
-<li>Delegating performance of contractual <b>duties</b> to a third party</li>
-<li>After delegation: <b>delegator still remains liable</b></li>
-<li>Non-delegable: personal trust-based / prohibited by contract</li>
+<li>Return of defendant's <b>unjust enrichment</b> — when K rescinded or unenforceable</li>
+<li>Example: down payment returned after defendant's breach</li>
 </ul>
-<h4>Novation</h4>
+<h4>Duty to Mitigate</h4>
 <ul>
-<li>Delegation + obligee's consent + delegator's release = Novation → delegator fully released</li>
+<li>Losses <b>reasonably avoidable</b> → NOT recoverable</li>
+<li>Rockingham v. Luten: bridge completed after notice of breach → no recovery for post-notice work</li>
+<li>Parker v. TCF: rejecting substantially different substitute employment ≠ failure to mitigate</li>
 </ul>
+<div class="rule-box">Hadley v. Baxendale: only <b>foreseeable</b> damages recoverable<br>
+Special circumstances damages require prior notice at time of contracting</div>
+<div class="warn-box">Continued spending after notice of repudiation → no recovery for post-notice expenses!</div>
 </div>
 </div>
 </div><div class="th-card">
-<div class="th-card-hd">Accord &amp; Satisfaction + Implied Contract</div>
+<div class="th-card-hd">Specific Performance &amp; Liquidated Damages</div>
 <div class="th-row">
 <div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
-<h4>대체변제합의 (Accord & Satisfaction)</h4>
+<h4>특정 이행 (Specific Performance)</h4>
 <ul>
-<li><b>Accord</b>: 기존 의무 대신 다른 이행을 수락하기로 한 합의 (기존 채무 아직 소멸 안 됨)</li>
-<li><b>Satisfaction</b>: Accord 실제 이행 → 기존 채무 소멸</li>
-<li>"Payment in Full" 수표 현금화 = Accord 동의</li>
-<li>선의 분쟁 (Good Faith Dispute): 약인으로 충분</li>
+<li>금전 배상이 <b>부적절</b>할 때만 허용 (equitable remedy)</li>
+<li>허용: <b>부동산</b> (항상 고유), <b>독특한 동산</b> (희귀품·예술품·특정 주식)</li>
+<li>불허: <b>개인 서비스</b> (13th Amendment), 시장에서 대체 가능한 물품</li>
+<li>개인 서비스 대안: <b>금지 명령</b>(Injunction)으로 경쟁 활동 제한</li>
 </ul>
-<div class="warn-box">⚠️ Accord 위반 시: 채권자는 원래 채무 OR Accord 중 선택 가능</div>
-<h4>묵시적 계약</h4>
+<h4>위약금 조항 (Liquidated Damages)</h4>
 <ul>
-<li><b>사실상 묵시적 계약</b>: 행동에서 계약 추론 (알고 받아들임 + 묵인)</li>
-<li><b>준계약</b> (Quasi-Contract): 부당이득 방지 위한 법적 의제 → 원상회복 청구</li>
+<li>유효 요건: ① 계약 당시 손해 예측 어려움 ② 합리적 사전 추정</li>
+<li>실제 손해와 <b>심각하게 불균형</b> → 페널티(Penalty) = 무효</li>
+<li>Barrie School v. Patch: 등록금 위약금 → 예측 어렵고 합리적 → 유효</li>
 </ul>
+<div class="rule-box">위약금 조항 유효 → 실제 손해 증명 불필요. 손해경감 의무 추가 검토 불요.</div>
+<div class="warn-box">위약금 조항이 실제 손해의 2배 이상 → 페널티 의심. 계약 체결 시점 기준 판단.</div>
 </div>
 <div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
-<h4>Accord & Satisfaction</h4>
+<h4>Specific Performance (SP)</h4>
 <ul>
-<li><b>Accord</b>: agreement to accept different performance instead of original duty (original duty NOT yet discharged)</li>
-<li><b>Satisfaction</b>: performance of accord → original duty discharged</li>
-<li>Depositing "Payment in Full" check = acceptance of accord</li>
-<li>Good Faith Dispute: sufficient consideration for accord</li>
+<li>Available ONLY when money damages are <b>inadequate</b> (equitable remedy)</li>
+<li>Available: <b>Real property</b> (always unique), <b>Unique chattels</b> (rare items, artwork, specific stock)</li>
+<li>Unavailable: <b>Personal services</b> (13th Amendment), fungible goods</li>
+<li>Alternative for personal services: <b>Negative Injunction</b> — bar competitive activities</li>
 </ul>
-<div class="warn-box">⚠️ If Accord breached: creditor may sue on original duty OR accord</div>
-<h4>Implied Contracts</h4>
+<h4>Liquidated Damages (LD)</h4>
 <ul>
-<li><b>Implied-in-Fact</b>: contract inferred from conduct (knowingly accepts + acquiesces)</li>
-<li><b>Quasi-Contract</b>: legal fiction to prevent unjust enrichment → restitution remedy</li>
+<li>Valid if: ① Damages difficult to estimate at time of K ② Amount is a reasonable forecast</li>
+<li>Grossly disproportionate to actual harm → <b>Penalty</b> = void</li>
+<li>Barrie School v. Patch: tuition forfeiture clause → hard to predict, reasonable → enforceable</li>
 </ul>
+<div class="rule-box">Valid LD clause → no need to prove actual damages. No further mitigation inquiry.</div>
+<div class="warn-box">LD clause = 2x+ actual damages → suspect penalty. Judged at time of contracting, not breach.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cls" id="g6">
+<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 4토픽</div>
+<div class="th-block">
+<div class="th-block-hd">Class 7 — Defenses</div>
+<div class="th-card">
+<div class="th-card-hd">Unconscionability &amp; Undue Influence</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>비양심성 (Unconscionability) UCC §2-302</h4>
+<ul>
+<li>대부분 법원: <b>절차적 + 실체적</b> 비양심성 모두 요구</li>
+<li><b>절차적</b>: 계약 조건에 대한 의미 있는 선택 결여 (소자체 인쇄·협상력 불균형)</li>
+<li><b>실체적</b>: 불공정하고 가혹한 조건 (한 쪽만 이익)</li>
+<li>법원의 선택: ① 전체 계약 거부 ② 비양심적 조항만 삭제 ③ 적용 제한</li>
+</ul>
+<div class="rule-box">In re Checking Account Overdraft: 소자체 인쇄 인출 재순서 → 절차적·실체적 비양심성 모두 충족</div>
+<h4>부당한 압박 (Undue Influence) RS §177</h4>
+<ul>
+<li>한쪽이 상대방을 <b>지배</b>하거나 신뢰 관계에 기반한 <b>불공정한 설득</b></li>
+<li>관계 유형: 부모-자녀, 부부, 의사-환자, 성직자-신도</li>
+<li>단순한 허약함·노령 = 불충분. 지배+설득 조합 필요</li>
+</ul>
+<div class="warn-box">계약 당시 비양심성 판단. 이후 사정 변경으로 소급 적용 안 됨.</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Unconscionability UCC §2-302</h4>
+<ul>
+<li>Most courts require BOTH <b>procedural AND substantive</b> unconscionability</li>
+<li><b>Procedural</b>: lack of meaningful choice (fine print, unequal bargaining power)</li>
+<li><b>Substantive</b>: unfair, harsh term benefiting only one party</li>
+<li>Court may: ① Refuse entire K ② Strike unconscionable clause ③ Limit its application</li>
+</ul>
+<div class="rule-box">In re Checking Account Overdraft: buried reordering provision → both procedural and substantive unconscionability</div>
+<h4>Undue Influence RS §177</h4>
+<ul>
+<li>Unfair persuasion of party under another's <b>domination</b> or a <b>trust relationship</b></li>
+<li>Relations: parent-child, spouses, physician-patient, clergyman-parishioner</li>
+<li>Mere weakness or old age = insufficient. Need domination + unfair persuasion</li>
+</ul>
+<div class="warn-box">Unconscionability judged at time of contracting. Cannot apply retroactively based on changed circumstances.</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Infancy &amp; Incapacity — 미성년·무능력</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>미성년 (Infancy)</h4>
+<ul>
+<li>18세 미만과의 계약 = <b>취소 가능</b> (voidable) — 성인에게는 구속력 있음!</li>
+<li>미성년자: 18세 전 또는 성인 후 합리적 기간 내 취소 가능</li>
+<li>예외: <b>생필품</b> (Necessaries) — 취소 불가, 합리적 가격 지불 의무</li>
+<li><b>Dobson v. Shrader</b>: 현대 규칙 → 트럭이 이미 손상된 경우 전액 환급 불가 (감가 고려)</li>
+</ul>
+<h4>추인 (Ratification)</h4>
+<ul>
+<li>성인 후: 이행 계속 / 이행 약속 / 장기간 침묵 → 묵시적 추인</li>
+<li>추인 후 취소권 소멸</li>
+</ul>
+<h4>정신 무능력 & 취중 (Incapacity & Intoxication)</h4>
+<ul>
+<li>무능력: 계약의 성격·결과 이해 불가 → <b>취소 가능</b></li>
+<li>극도 취중: 상대방이 알았거나 알아야 했던 경우 → 취소 가능</li>
+</ul>
+<div class="warn-box">무능력자는 생필품에 대해 원상회복(restitution) 의무 있음</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Infancy</h4>
+<ul>
+<li>Contract with person under 18 = <b>voidable</b> by minor — binding on adult!</li>
+<li>Minor may disaffirm before 18 OR within reasonable time after majority</li>
+<li>Exception: <b>Necessaries</b> — cannot disaffirm; must pay reasonable value</li>
+<li><b>Dobson v. Shrader</b>: modern rule → minor may not recover full price if goods deteriorated through use/fault</li>
+</ul>
+<h4>Ratification</h4>
+<ul>
+<li>After majority: continue performance / promise to pay / long silence → implied ratification</li>
+<li>Once ratified, cannot disaffirm</li>
+</ul>
+<h4>Mental Incapacity &amp; Intoxication</h4>
+<ul>
+<li>Incapacity: unable to understand nature/consequences → <b>voidable</b></li>
+<li>Extreme intoxication: other party knew or should have known → voidable</li>
+</ul>
+<div class="warn-box">Incompetents are liable under restitution for necessities (food, medicine, shelter)</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Duress, Fraud &amp; Public Policy</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>강박 (Duress) RS §175</h4>
+<ul>
+<li>① <b>부당하거나 불법적 위협</b> ② 합리적 대안 없음 ③ 위협이 계약 체결의 실제 유인</li>
+<li>경제적 강박: 법적 소송이 대안이지만 파산·긴급 상황 시 "합리적 대안" 없을 수 있음</li>
+<li>Totem Marine: 즉시 파산 직면 + 아무도 대출 안 해줌 → 경제적 강박 성립</li>
+</ul>
+<h4>사기적 허위진술 (Fraudulent Misrepresentation)</h4>
+<ul>
+<li>① 사실의 허위 진술 (은폐 포함) ② 사기적 또는 중요 ③ 합리적 신뢰 → 취소 가능</li>
+<li>적극적 은폐 (concealment) = 허위진술과 동일</li>
+<li>사기 in factum (당사자 기망): 계약 자체 Void (취소 불가)</li>
+</ul>
+<h4>공서양속 (Public Policy)</h4>
+<ul>
+<li>경쟁 제한 약정 (non-compete): 합리적 범위(기간·지역·활동)여야 집행 가능</li>
+<li>Valley Medical v. Farber: 과도한 범위 → 공서양속 위반 집행 불가</li>
+</ul>
+<div class="warn-box">경쟁 제한 약정 — 의사·변호사 등 공익 관련 직종은 더 엄격하게 해석</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Duress RS §175</h4>
+<ul>
+<li>① <b>Wrongful or improper threat</b> ② No reasonable alternative ③ Threat actually induced K</li>
+<li>Economic duress: lawsuit is an alternative but may not be "reasonable" if facing bankruptcy</li>
+<li>Totem Marine: immediate bankruptcy + no financing available → economic duress established</li>
+</ul>
+<h4>Fraudulent Misrepresentation</h4>
+<ul>
+<li>① False statement of fact (including concealment) ② Fraudulent or material ③ Reasonable reliance → voidable</li>
+<li>Active concealment = equivalent to affirmative false statement</li>
+<li>Fraud in the factum (tricking someone into signing): contract is <b>Void</b> (not just voidable)</li>
+</ul>
+<h4>Public Policy</h4>
+<ul>
+<li>Non-compete covenants: must be reasonable in scope (duration, area, activity)</li>
+<li>Valley Medical v. Farber: overbroad scope → unenforceable on public policy grounds</li>
+</ul>
+<div class="warn-box">Non-compete clauses for doctors, lawyers (public service professions) → strictly construed for reasonableness</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Mistake &amp; Changed Circumstances</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>쌍방 착오 (Mutual Mistake) RS §152</h4>
+<ul>
+<li>요건: ① 계약 당시 ② 쌍방의 착오 ③ 중요한 기본 가정 ④ 이행에 중대한 영향 ⑤ 위험 미배분</li>
+<li>Lenawee County v. Messerly: 정화조 불량 + "현재 상태로" 조항 → 매수인이 위험 부담 → 취소 불가</li>
+</ul>
+<h4>일방 착오 (Unilateral Mistake)</h4>
+<ul>
+<li>원칙: 구제 없음. 예외: ① 집행이 비양심적 ② 상대방이 착오를 알았거나 야기</li>
+<li>Wil-Fred's v. Metropolitan SD: 입찰 착오 + 도시 행위가 착오 유발 → 취소 허용</li>
+</ul>
+<h4>이행 불능·곤란·목적 좌절 (Changed Circumstances)</h4>
+<ul>
+<li>착오: 계약 <b>전</b> 사건 / 불능·곤란·좌절: 계약 <b>후</b> 사건</li>
+<li>요건: ① 기본 가정 ② 예상치 못한 사건 ③ 위험 미배분</li>
+<li>단순 비용 증가 = 불충분. 전문가가 예상해야 할 위험 → 항변 실패</li>
+</ul>
+<div class="rule-box">Frustration of Purpose: 이행 가능하나 목적이 실질적으로 소멸<br>
+Mel Frank v. Di-Chem: 화학물질 위험 지정 → 임대 목적 좌절 성립</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Mutual Mistake RS §152</h4>
+<ul>
+<li>Elements: ① At time of contracting ② Both parties mistaken ③ Basic assumption ④ Material effect on performances ⑤ Risk not allocated</li>
+<li>Lenawee County v. Messerly: defective septic + "as is" clause → Pickles assumed risk → no rescission</li>
+</ul>
+<h4>Unilateral Mistake</h4>
+<ul>
+<li>General rule: no relief. Exceptions: ① enforcement unconscionable ② other party knew or caused the mistake</li>
+<li>Wil-Fred's v. Metropolitan SD: bid mistake + city's conduct induced mistake → rescission allowed</li>
+</ul>
+<h4>Impossibility, Impracticability &amp; Frustration of Purpose</h4>
+<ul>
+<li>Mistake: events BEFORE contracting / Changed circumstances: events AFTER contracting</li>
+<li>Elements: ① Basic assumption ② Unanticipated event ③ Risk not allocated</li>
+<li>Mere cost increase = insufficient. Expert should have foreseen risk → defense fails</li>
+</ul>
+<div class="rule-box">Frustration of Purpose: performance possible but purpose substantially destroyed<br>
+Mel Frank v. Di-Chem: chemicals declared hazardous → frustrated purpose of lease</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cls" id="g7">
+<div style="padding:.6rem 1rem .2rem;font-size:.75rem;color:#666">한글이론(좌) &#8644; 영문이론(우) 병렬배치 &mdash; 2토픽</div>
+<div class="th-block">
+<div class="th-block-hd">Class 8 — Modification &amp; Waiver</div>
+<div class="th-card">
+<div class="th-card-hd">Modification — 계약 수정</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>Modification 기본 원칙</h4>
+<ul>
+<li>계약의 일부를 변경하되 전반적 목적·효과는 유지 → <b>영구적</b> 변경 (원 합의 소멸)</li>
+<li>CL: 수정에는 <b>새로운 약인</b> 필요 (Pre-Existing Duty Rule 적용)</li>
+<li>UCC: 수정에 약인 <b>불필요</b> (§2-209)</li>
+</ul>
+<h4>Pre-Existing Duty Rule의 예외</h4>
+<ul>
+<li>① 예상치 못한 사정으로 인한 공정한 수정 (RS §89)</li>
+<li>② 수정에 대한 신뢰 이행</li>
+</ul>
+<div class="rule-box">Alaska Packers v. Domenico: 이미 의무 있는 고기잡이 = 약인 없음 → 수정 불집행<br>
+예외: 불량 그물 = 예상 못한 사정 → 수정 허용 가능</div>
+<h4>UCC 수정과 행위</h4>
+<ul>
+<li>비합치 물품 수령·사용·재판매 → 수정 증거로 볼 수 있음</li>
+<li>수정된 가격으로 물품 수락 → 수정 인정 (NOM 조항에도 불구하고)</li>
+</ul>
+<div class="tip-box">SOF 대상 계약의 수정은 서면으로 해야 집행 가능</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Modification Basics</h4>
+<ul>
+<li>Change in one or more respects leaving overall purpose undisturbed → <b>permanent</b> change (original merges in)</li>
+<li>CL: modification requires <b>new consideration</b> (Pre-Existing Duty Rule applies)</li>
+<li>UCC: modification needs <b>no consideration</b> (§2-209)</li>
+</ul>
+<h4>Exceptions to Pre-Existing Duty Rule</h4>
+<ul>
+<li>① Fair modification due to unforeseen circumstances (RS §89)</li>
+<li>② Reliance on a promised modification</li>
+</ul>
+<div class="rule-box">Alaska Packers v. Domenico: fishermen already obligated = no consideration → modification unenforceable<br>
+Exception: defective nets = unforeseen → modification might be allowed</div>
+<h4>UCC Modification by Conduct</h4>
+<ul>
+<li>Accepting, using, and reselling non-conforming goods → evidence of modification</li>
+<li>Accepting goods at modified price → demonstrates modification (despite NOM clause)</li>
+</ul>
+<div class="tip-box">Modification of SOF-covered contract must be in writing to be enforceable</div>
+</div>
+</div>
+</div><div class="th-card">
+<div class="th-card-hd">Waiver &amp; NOM Clauses — 포기·불구두변경 조항</div>
+<div class="th-row">
+<div class="th-col th-col-ko"><div class="th-lang ko">&#127472;&#127479; 한국어</div>
+<h4>포기 (Waiver)</h4>
+<ul>
+<li>알려진 권리를 <b>의도적으로 포기</b> (intentional relinquishment of known right)</li>
+<li>Modification vs. Waiver: 수정 = 영구적 / 포기 = 일회적 권리 포기</li>
+<li>예: "5월 배달 이틀 지연 OK" = 5월만의 포기, 6월 지연은 여전히 위반</li>
+</ul>
+<h4>No Oral Modification (NOM) 조항 UCC §2-209</h4>
+<ul>
+<li>NOM 조항 집행 가능 (서면 수정만 유효)</li>
+<li>단, SOF 요건도 충족해야 함</li>
+<li>구두 수정 시도 → 수정 무효 but <b>포기로 작용 가능</b></li>
+</ul>
+<h4>포기 철회</h4>
+<ul>
+<li>집행 전까지 합리적 통지로 철회 가능</li>
+<li>단, 상대방이 포기를 신뢰하여 중대하게 입장 변경 시 → 철회 불가 (estoppel)</li>
+</ul>
+<div class="warn-box">비위반 당사자가 반복적으로 조건 위반을 수락하면 → 포기로 볼 수 있음. NOM 조항 있어도!</div>
+</div>
+<div class="th-col th-col-en"><div class="th-lang en">&#127482;&#127480; English</div>
+<h4>Waiver</h4>
+<ul>
+<li>Intentional relinquishment of a <b>known right</b></li>
+<li>Modification vs. Waiver: modification = permanent / waiver = one-time relinquishment</li>
+<li>Example: "May delivery delay OK" = only May waived; June delay still a breach</li>
+</ul>
+<h4>No Oral Modification (NOM) Clause UCC §2-209</h4>
+<ul>
+<li>NOM clauses are enforceable (only written modifications valid)</li>
+<li>SOF requirements must also be satisfied if modified K is within SOF</li>
+<li>Failed oral modification attempt → NOT modification BUT <b>may operate as waiver</b></li>
+</ul>
+<h4>Retraction of Waiver</h4>
+<ul>
+<li>Party who waived may retract by reasonable notice before performance</li>
+<li>UNLESS other party materially changed position in reliance on the waiver → estoppel bars retraction</li>
+</ul>
+<div class="warn-box">Repeated acceptance of condition violations → can constitute waiver even with NOM clause!</div>
 </div>
 </div>
 </div>
