@@ -45,10 +45,10 @@ body.m3 .r0{opacity:.06;pointer-events:none;}
 body.m3 .r1{opacity:.1;pointer-events:none;}
 body.m3 .r3{background:#fff8e6;border-left:3px solid var(--acc2);padding-left:.5rem;}
 /* 토픽 2단 그리드 — 한글 왼쪽 / 영문 오른쪽 */
-.tp-grid{display:grid;grid-template-columns:340px 1fr;border:1px solid var(--brd);border-top:none;border-radius:0 0 8px 8px;overflow:hidden;}
-.tp-ko-col{border-right:2px solid var(--r0brd);background:var(--r0bg);overflow:auto;}
+.tp-grid{display:grid;grid-template-columns:320px 1fr;border:1px solid var(--brd);border-top:none;border-radius:0 0 8px 8px;}
+.tp-ko-col{min-width:0;border-right:2px solid var(--r0brd);background:var(--r0bg);}
 .tp-ko-col .r0{border:none;border-radius:0;height:100%;box-sizing:border-box;}
-.tp-en-col{overflow:hidden;background:#fcfcfa;}
+.tp-en-col{min-width:0;overflow:hidden;background:#fcfcfa;}
 @media(max-width:860px){.tp-grid{grid-template-columns:1fr;}.tp-ko-col{border-right:none;border-bottom:2px solid var(--r0brd);}}
 /* UDSL */
 .udsl-wrap{border:none;background:#fcfcfa;}
